@@ -9,35 +9,30 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+$theme_locations = get_nav_menu_locations();
+$menu_obj_1 = get_term($theme_locations['Bottom-Menu-1'], 'nav_menu');
+$menu_name_1 = $menu_obj_1->name;
+$menu_obj_2 = get_term($theme_locations['Bottom-Menu-2'], 'nav_menu');
+$menu_name_2 = $menu_obj_2->name;
+$menu_obj_3 = get_term($theme_locations['Bottom-Menu-3'], 'nav_menu');
+$menu_name_3 = $menu_obj_3->name;
+$menu_obj_4 = get_term($theme_locations['Bottom-Menu-Social'], 'nav_menu');
+$menu_name_4 = $menu_obj_4->name;
 ?>
 
 <div id="footer">
     <div class="left">
         <div class="column">
-            <h3>quick links</h3>
-            <ul>
-                <li><a href="">about us</a></li>
-                <li><a href="">in schools</a></li>
-                <li><a href="">in stores</a></li>
-                <li><a href="">careers</a></li>
-            </ul>
+            <h3 class="ftr"><?php echo $menu_name_1;?></h3>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-1', 'container' => '', 'menu_class' => '')); ?>
         </div>
         <div class="column">
-            <h3>help</h3>
-            <ul>
-                <li><a href="">faq + support</a></li>
-                <li><a href="">where to buy</a></li>
-                <li><a href="">login</a></li>
-            </ul>
+            <h3 class="ftr"><?php echo $menu_name_2;?></h3>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-2', 'container' => '', 'menu_class' => '')); ?>
         </div>
-        <div class="column">
-            <h3>contact us</h3>
-            <ul>
-                <li><a href="">general inquires</a></li>
-                <li><a href="">school inquires</a></li>
-                <li><a href="">retail products</a><span class="message"></span></li>
-                <li><a href="">press inquires</a><span class="message"></span></li>
-            </ul>
+        <div class="column col3">
+            <h3 class="ftr"><?php echo $menu_name_3;?></h3>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-3', 'container' => '', 'menu_class' => '','link_after'      => '<span class="message"></span>',)); ?>
         </div>
     </div>
     <div class="center">
@@ -53,9 +48,10 @@
 
         </div>
         <div class="column2">
-            <h3>follow us: </h3>
+            <h3 class="lc"><?php echo $menu_name_4;?></h3>
             <a href="http://www.facebook.com/RevolutionFoods" target="_blank"><span class="facebook"></span></a>
             <a href="https://twitter.com/RevolutionFoods" target="_blank"><span class="twet"></span></a>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-Social', 'container' => '', 'menu_class' => 'bottom-menu-social','link_after' => '<span></span>',)); ?>
         </div>
     </div>
 </div>

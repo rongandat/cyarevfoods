@@ -3,7 +3,7 @@ Theme Name: Revfoods themes
 Theme URI: http://wordpress.org/extend/themes/revfoods
 Author: the WordPress team
 Author URI: http://wordpress.org/
-Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Description:  in admin manage menu [add class (fb, tw, jr) for menu social.] [add class (fbg, twg) for menu follow us.] [add class (message) for menu bottom 3.]
 Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -117,6 +117,9 @@ table{border-collapse: collapse; border-spacing: 0;}
 .gtx{
     font-family: 'gothamx';
 }
+.ftr{
+    font-family: 'futura';
+}
 .lc{
     text-transform: lowercase;
 }
@@ -152,6 +155,7 @@ site-footer
 .pfixed{
     position: fixed;
     width: 1024px;
+    z-index: 100;
     /*border: 1px solid red;*/
 }
 .site-header{
@@ -383,11 +387,17 @@ span.topsocial{
 #footer .column{
     float: left;
     width: 100px;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+#footer .column.col3{
+    width: 120px;
 }
 #footer .column h3{
     color: #fff;
     margin: 0px;
+    text-transform: lowercase;
+    font-size: 14px;
+    font-weight: normal;
 }
 #footer .column ul{
     margin-top: 0px;
@@ -397,15 +407,17 @@ span.topsocial{
 
 }
 #footer .column ul li {
-    padding: 3px 0 4px 0px;
+    padding: 1px 0px;
 }
 #footer .column a {
     text-decoration: none;
     color: #a2a4a6;
-    font-size: 12px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: lowercase;
+    font-family: 'futura';
 }
-#footer .column span.message{
+#footer .column li.message span.message{
     background: url("images/message.png") no-repeat 10px 5px;
     padding: 0px 15px;
 }
@@ -443,13 +455,13 @@ span.topsocial{
     float: right;
     width: 65px;
 }
-#footer .right .facebook{
+#footer .right ul.bottom-menu-social li.fbg span{
     float: left;
     background: url("images/facebook.png") no-repeat;
     height: 28px;
     width: 28px;
 }
-#footer .right .twet{
+#footer .right ul.bottom-menu-social li.twg span{
     float: left;
     background: url("images/twiet.png") no-repeat;
     height: 28px;
@@ -525,3 +537,12 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 /* END footer
 -------------------------------------------------------------- */
+
+
+/*BEGIN note
+ in admin
+ -  add class (fb, tw, jr) for menu social.
+ -  add class (fbg, twg) for menu follow us
+ -  add class (message) for menu bottom 3.
+END note
+-----------------------------------------------------------------*/
