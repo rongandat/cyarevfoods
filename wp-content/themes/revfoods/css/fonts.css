@@ -1,0 +1,24 @@
+/* BEGIN Gotham
+-----------------------------------*/
+@font-face {
+    font-family: 'gothamblack';
+    src: url('../fonts/gotham/Gotham-Black.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothambook';
+    src: url('../fonts/gotham/Gotham-Book.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothammedium';
+    src: url('../fonts/gotham/Gotham-Medium.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothamx';
+    src: url('../fonts/gotham/GothamXNarrow-Book.otf') format('opentype');
+    font-style: normal;
+}
+/* END Gotham
+-----------------------------------*/

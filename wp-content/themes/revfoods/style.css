@@ -1,0 +1,527 @@
+/*
+Theme Name: Revfoods themes
+Theme URI: http://wordpress.org/extend/themes/revfoods
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: revfoods
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+        padding: 5px 0;
+        padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+        font-size: 16px
+        font-size: 1.142857143rem; (16 / $rembase)
+        line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+        margin: 24px 0;
+        margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* BEGIN Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
+dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub,
+sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; text-decoration:none;
+}
+
+body { line-height: 1;
+}
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+
+/* focus style */
+:focus, a:focus, a:active{ outline: 0; }
+
+ins{ text-decoration: none; }
+del{ text-decoration: line-through; }
+
+/* table */
+table{border-collapse: collapse; border-spacing: 0;}
+
+/* clear */
+.clear{clear:both;}
+.clear-l{clear:left;}
+.clear-r{clear:right;}
+
+
+/* END Reset
+-------------------------------------------------------------- */
+/* BEGIN General
+-------------------------------------------------------------- */
+.circle span{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -89px -24px;
+    padding: 0px 4px;
+    width: 0;
+    height: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clr{
+    clear: both;
+}
+.wrapper{
+    /*height: 1200px;*/
+    background: violet;
+}
+.gtblack{
+    font-family: 'gothamblack';
+}
+.gtbook{
+    font-family: 'gothambook';
+}
+.gtmedium{
+    font-family: 'gothammedium';
+}
+.gtx{
+    font-family: 'gothamx';
+}
+.lc{
+    text-transform: lowercase;
+}
+.uc{
+    text-transform: lowercase;
+}
+.learnmore{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -78px -8px;
+    margin: 10px 0px 0px 10px;
+    cursor: pointer;
+}
+/* END General
+-------------------------------------------------------------- */
+/* BEGIN head
+-------------------------------------------------------------- */
+
+#page{
+    margin: 0 auto;
+    padding: 0;
+}
+.site-header,
+.wrapper,
+site-footer
+{
+    margin: 0 auto;
+    width: 1024px;
+
+}
+.pfixed{
+    position: fixed;
+    width: 1024px;
+    /*border: 1px solid red;*/
+}
+.site-header{
+    height: 166px;
+}
+.site-header-1{
+    top: 0px;
+    height: 20px;
+    text-align: right;
+    background: #4D4D4D;
+}
+.site-header-2{
+    top: 20px;
+    height: 103px;
+    background: #FFFFFF;
+}
+.site-header-3{
+    top: 123px;
+    height: 43px;
+    background:#E2E1E1 url('images/bg_header_3.jpg') repeat-x;
+    text-align: center;
+}
+.wrapper{
+    height: 1000px;
+}
+ul.top-menu-1{
+    display: block;
+    margin-right: 38px;
+}
+ul.top-menu-1 li{
+    display: inline-block;
+}
+ul.top-menu-1 li a{
+    font-family: 'gothammedium';
+    font-size: 11px;
+    line-height: 18px;
+    color: #A2A4A6;
+    padding: 0px 5px;
+    text-transform: lowercase;
+}
+a.logohome{
+    display: inline-block;
+    margin: 10px 0px 0px 125px;
+}
+img.logo{
+    width: 244px;
+    height: 88px;
+}
+ul.top-menu-2{
+    display: inline-block;
+    margin: 50px 20px 0px 34px;
+}
+ul.top-menu-2 li{
+    display: inline-block;
+}
+ul.top-menu-2 li.current_page_item a{
+    color: #000;
+}
+ul.top-menu-2 li a{
+    font-family: 'gothammedium';
+    font-size: 17px;
+    line-height: 18px;
+    color: #a2a4a6;
+    padding: 0px 10px;
+    text-transform: lowercase;
+}
+ul.top-menu-2 li a:hover{
+    color: #000;
+}
+ul.top-menu-3{
+    display: inline-block;
+    margin: 15px 0px 0px 0px;
+}
+ul.top-menu-3 li{
+    display: inline-block;
+}
+ul.top-menu-3 li a{
+    font-family: 'gothammedium';
+    padding: 0px 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #a2a4a6;
+    text-transform: lowercase;
+}
+ul.top-menu-3 li a:hover{
+    color: #000;
+}
+span.question {
+    font-family: 'futura';
+    font-size: 10.5px;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    box-shadow: 0px 2px 15px #AAA;
+    width: 90px;
+    height: 22px;
+    color: #FFF;
+    text-transform: uppercase;
+    background: #E51B2C url('images/bg_question.jpg') repeat-x;
+    line-height: 22px;
+}
+ul.top-menu-social{
+    display: inline-block;
+    margin: 46px 0px 0px 0px;
+}
+ul.top-menu-social li{
+    display: inline-block;
+}
+ul.top-menu-social li.current_page_item a{
+    color: #000;
+}
+ul.top-menu-social li a{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+ul.top-menu-social li.fb a{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -3px -169px;
+}
+ul.top-menu-social li.fb a:hover{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat ;
+    background-position: -4px -76px;
+}
+ul.top-menu-social li.fb a:active{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat ;
+    background-position: -4px -76px;
+}
+ul.top-menu-social li.tw a{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -30px -169px;
+}
+ul.top-menu-social li.tw a:hover{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -31px -76px;
+}
+ul.top-menu-social li.tw a:visited{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -31px -76px;
+}
+ul.top-menu-social li.jr a{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -59px -169px;
+}
+ul.top-menu-social li.jr a:hover{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -59px -76px;
+}
+ul.top-menu-social li.jr a:visited{
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: -58px -76px;
+}
+span.topsocial{
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
+    background-position: 0px -102px;
+    margin: 34px 0px 0px 10px;
+}
+/* END head
+-------------------------------------------------------------- */
+/* BEGIN home
+-------------------------------------------------------------- */
+.RealFoodsForAll{
+    height: 624px;
+    background: #fff;
+    padding-top: 25px;
+    background: #F6F6F6 url("images/bg_real_foods_for_all.jpg")  repeat-x;
+}
+.topdotted{
+    height: 16px;
+    background:transparent url("images/bg_dotted.png")  repeat-x;
+    text-align: center;
+}
+.titledotted{
+    padding: 0px 5px;
+    text-transform: lowercase;
+    color: #333;
+    font-size: 17px;
+
+}
+.dottedrealfoodsforall{
+    background: #F6F6F6;
+}
+.widgetheadertitle{
+    font-family: arial;
+    font-size: 74px;
+    font-weight: bold;
+    color: #F8C53A;
+    width: 400px;
+    height: 165px;
+    margin: 150px 0px 0px 70px;
+}
+.widgetheaderdes{
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    width: 280px;
+    height: 100px;
+    margin: 0px 0px 0px 70px;
+}
+.widgetheaderlink{
+    display: block;
+    margin: 10px 0px 0px 70px;
+    color: #000;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+/* END home
+-------------------------------------------------------------- */
+/* BEGIN footer
+-------------------------------------------------------------- */
+#footer {
+    background: url("images/footer_bg.png") #4d4d4d repeat-x;
+    width: 1024px;
+    height: 327px;
+    font-size: 14px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#footer .left {
+    float: left;
+    width: 355px;
+    margin-top: 67px;
+    margin-left: 80px;
+}
+#footer .column{
+    float: left;
+    width: 100px;
+    padding-left: 10px;
+}
+#footer .column h3{
+    color: #fff;
+    margin: 0px;
+}
+#footer .column ul{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+
+}
+#footer .column ul li {
+    padding: 3px 0 4px 0px;
+}
+#footer .column a {
+    text-decoration: none;
+    color: #a2a4a6;
+    font-size: 12px;
+    line-height: 19px;
+}
+#footer .column span.message{
+    background: url("images/message.png") no-repeat 10px 5px;
+    padding: 0px 15px;
+}
+
+#footer .column a:hover {
+    text-decoration: none;
+    color: #dd64b2;
+}
+#footer .center{
+    float: left;
+    width: 135px;
+    margin-top: 50px;
+}
+#footer .center .icon {
+    background: url("images/iconlarg.png") no-repeat;
+    width: 135px;
+    height: 135px;
+}
+#footer .right{
+    float: left;
+    margin-top: 67px;
+    margin-right:115px;
+    width: 330px;
+}
+#footer .right .column1{
+    float: left;
+    width: 205px;
+    margin: 0px 30px;
+}
+#footer .right h3{
+    color: #52a444;
+    margin: 0px 0px 5px;
+}
+#footer .right .column2{
+    float: right;
+    width: 65px;
+}
+#footer .right .facebook{
+    float: left;
+    background: url("images/facebook.png") no-repeat;
+    height: 28px;
+    width: 28px;
+}
+#footer .right .twet{
+    float: left;
+    background: url("images/twiet.png") no-repeat;
+    height: 28px;
+    width: 28px;
+    margin-left:5px;
+}
+
+#footer input.emailIp{
+    background: url("images/bg_email.png") 0px -1px repeat-x;
+    height: 22px;
+    padding: 0px 9px;
+    width: 183px;
+}
+input[type=checkbox].css-checkbox {
+    display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 23x;
+    background-repeat: no-repeat;
+    background-position: -3px -26px;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: -3px -6px;
+}
+
+.css-label{
+    background-image:url("images/checkbox2.png");
+    color: #a2a4a6;
+}
+#footer .right .column1 a.sumbit{
+    background: url("images/submit.png") no-repeat;
+    width: 60px;
+    height: 16px;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#power {
+    width: 1024px;
+    margin: 0px auto;
+    text-align: center;
+}
+#power .textA {
+    font-size: 23px;
+    font-weight: bold;
+}
+#power a,.text2,.text3{
+    text-decoration: none;
+    color: #a2a4a6;
+}
+#power .text1,.text2,.text3{
+    background: url("images/cham.png") 0px 9px no-repeat;
+    width: 4px;
+    height: 4px;
+    padding: 0px 15px;
+}
+#power .text1:hover,#power .text2v:hover{
+    color: #dd64b2;
+}
+#power sup{
+    font-size: 9px;
+}
+/* END footer
+-------------------------------------------------------------- */
