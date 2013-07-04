@@ -11,15 +11,16 @@ and open the template in the editor.
         <script type='text/javascript' src='js/jquery/jquery.js?ver=1.8.3'></script>
     </head>
     <body>
+        
         <div id="page" class="hfeed site">
-<!--            <header role="banner" class="site-header" id="masthead">
-                <div style="top:28px;" class="site-header-1 pfixed">
+            <header role="banner" class="site-header" id="masthead">
+                <div style="top:0px;" class="site-header-1 pfixed">
                     <ul class="top-menu-1" id="menu-topmenu-1"><li class="circle menu-item menu-item-type-post_type menu-item-object-page menu-item-31" id="menu-item-31"><a href="http://revfoods.lc/?page_id=18">Where to buy</a><span></span></li>
                         <li class="circle menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="http://revfoods.lc/?page_id=28">Contact us</a><span></span></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="http://revfoods.lc/?page_id=26">Login</a><span></span></li>
                     </ul>           
                 </div>
-                <div style="top:48px;" class="site-header-2 pfixed">
+                <div style="" class="site-header-2 pfixed">
                     <a href="http://revfoods.lc" class="logohome fl">
                         <img class="logo" src="http://revfoods.lc/wp-content/themes/revfoods/images/logo.png">
                     </a>
@@ -32,15 +33,29 @@ and open the template in the editor.
                         <li class="jr menu-item menu-item-type-post_type menu-item-object-page menu-item-54" id="menu-item-54"><a href="http://revfoods.lc/?page_id=53"></a></li>
                     </ul>                <span class="topsocial"></span>
                 </div>
-                <div style="top:151px;" class="site-header-3 pfixed">
+                <div style="" class="site-header-3 pfixed">
                     <span class="question">QUESTION</span>
-                    <ul class="top-menu-3" id="menu-topmenu-3"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36" id="menu-item-36"><a href="http://revfoods.lc/?page_id=9">Real Food for All</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a href="http://revfoods.lc/?page_id=11">Real Food for in schools</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38" id="menu-item-38"><a href="http://revfoods.lc/?page_id=13">Real Food for in stores</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39" id="menu-item-39"><a href="http://revfoods.lc/?page_id=14">Real Press</a></li>
+                    <ul class="top-menu-3" id="menu-topmenu-3">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36" id="menu-item-36"><a href="http://revfoods.lc/?page_id=9">Real Food for All</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a rel="our_story" href="#">Real Food for in schools</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38" id="menu-item-38"><a rel="foot_philosophy" href="#">Real Food for in stores</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39" id="menu-item-39"><a rel="nutrition_education" href="#">Real Press</a></li>
                     </ul>           
                 </div>
-            </header>-->
+                
+                <script>
+                    jQuery(document).ready(function(){
+                        jQuery('.menu-item').click(function(){
+                           
+                            var id =jQuery(this).children('a').attr('rel');
+                            jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 150)}, 1000);
+                            
+                        })
+                        
+
+                    })
+                </script>
+            </header>
             <div id="main" class="wrapper">
 
 
@@ -58,7 +73,7 @@ and open the template in the editor.
                         <a href="#" class="om_join_revolution">join the revolution</a>
                     </div>
                 </div>
-
+                <div class="clear"></div>
                 <div id="our_story">
                     <div class="about_topdotted"><span class="titledotted dottedour_story">Our story</span></div>
                     <div class="main_image">
@@ -80,7 +95,7 @@ and open the template in the editor.
                         </p>
                     </div>
                 </div>
-                
+                <div class="clear"></div>
                 <div id="foot_philosophy">
                     <div class="about_topdotted"><span class="titledotted dottedour_story">Foot philosophy</span></div>
                     <div class="main_content">
@@ -93,7 +108,7 @@ and open the template in the editor.
                     </div>
                     <div class="clear"></div>
                 </div>
-                
+                <div class="clear"></div>
                 <div id="nutrition_education">
                     <div class="about_topdotted"><span class="titledotted dottedour_story">nutrition education</span></div>
                     <div class="main_image">
@@ -108,18 +123,103 @@ and open the template in the editor.
                         </p>
                     </div>
                 </div>
-                
+                <div class="clear"></div>
                 <div id="careers">
-                    <div class="about_topdotted"><span class="titledotted dottedour_story">careers</span></div>
+                    <div class="about_topdotted">
+                        <div class="left-topdotted"></div>
+                        <span class="titledotted dottedour_story">careers</span>
+                        <div class="right-topdotted"></div>
+                    </div>
                     <div class="main_content">
-                        <h1>join <br/>our team</h1>
-                        <p>To us, the front line of education is the lunch line. 
-                            It's not just about serving healthy meals, it's about nurturing healthier habits.
-                            That's why we partner with our schools to deliver a wide range of nutrition education programs aimed at empowering students to make smarter eating decisions.
-                        </p>
+                        <div class="content_text">
+                            <h1>join <br/>our team</h1>
+                            <p>To us, the front line of education is the lunch line. 
+                                It's not just about serving healthy meals, it's about nurturing healthier habits.
+                                That's why we partner with our schools to deliver a wide range of nutrition education programs aimed at empowering students to make smarter eating decisions.
+                            </p>
+                            <a href="#" class="careers_href">current openings</a>
+                        </div>
                     </div>
                 </div>
-                
+                <div class="clear"></div>
+                <div id="leadership">
+                    <div class="about_topdotted"><span class="titledotted dottedour_story">leadership</span></div>
+
+                    <div class="main_content">
+                        <div class="preview"></div>
+                        <div class="next"></div>
+                        <h1>our team</h1>
+                        <div class="content">
+                            <div class="inner-content fl">
+                                <h3 class="pink">
+                                    kristin groos richmond
+                                </h3>
+                                <div class="meta-des">co-founder & ceo</div>
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla scelerisque tincidunt. Fusce in dapibus libero. Maecenas rhoncus augue id purus dictum, at dictum sem adipiscing. Pellentesque varius dolor nec bibendum ultricies. Etiam faucibus urna est, ac semper quam feugiat eu. Proin eu tortor suscipit, placerat ligula in, venenatis libero. Nulla elit ipsum, elementum id leo ut, lacinia aliquet elit. Ut sagittis id erat non tincidunt. 
+                                    In ut nibh mi. Phasellus eu ipsum sit amet lacus aliquet commodo vel vitae dui. 
+                                    Nullam tellus ipsum, facilisis lobortis dignissim at, dapibus eu sem.
+                                </div>
+                            </div>
+                            <div class="inner-content fr">
+                                <h3 class="orange">
+                                    richard schnieders
+                                </h3>
+                                <div class="meta-des">board ovserver</div>
+                                <div class="description">
+                                    Former CEO, Sysco Corporation, Holds community board positions at Save the Children, Stone Barns, UNFI and Revolution Foods.
+                                    He founded mobile grocery, MoGro, to provide healthy affordable food to underserved communities.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div id="board_directors">
+
+                    <div class="main_content">
+                        <div class="preview"></div>
+                        <div class="next"></div>
+                        <h1>our team</h1>
+                        <div class="content">
+                            <div class="inner-content">
+                                <h3 class="c_f9ce5b">
+                                    richard schnieders
+                                </h3>
+                                <div class="meta-des">co-founder & ceo</div>
+                                <div class="description">
+                                    Westly Group, Managing Partner
+                                    Has served on the company’s board since the inception of Revolution Foods, 
+                                    Currently serves on the Board of Directors of United Way of the Bay Area and several advisory boards of Stanford University
+                                </div>
+                            </div>
+                            <div class="inner-content">
+                                <h3 class="c_587607">
+                                    mike dorsey
+                                </h3>
+                                <div class="meta-des">board ovserver</div>
+                                <div class="description">
+                                    Westly Group, Managing Partner
+                                    Has served on the company’s board since the inception of Revolution Foods, 
+                                    Currently serves on the Board of Directors of United Way of the Bay Area and several advisory boards of Stanford University
+                                </div>
+                            </div>
+                            <div class="inner-content fr">
+                                <h3 class="pink">
+                                    jerry gallagher
+                                </h3>
+                                <div class="meta-des">board ovserver</div>
+                                <div class="description">
+                                    Westly Group, Managing Partner
+                                    Has served on the company’s board since the inception of Revolution Foods, 
+                                    Currently serves on the Board of Directors of United Way of the Bay Area and several advisory boards of Stanford University
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- EOF Content About Us  -->
 
                 <div id="footer">

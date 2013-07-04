@@ -52,6 +52,33 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 /* BEGIN Reset
 -------------------------------------------------------------- */
 
+
+/* BEGIN Gotham
+-----------------------------------*/
+@font-face {
+    font-family: 'gothamblack';
+    src: url('fonts/gotham/Gotham-Black.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothambook';
+    src: url('fonts/gotham/Gotham-Book.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothammedium';
+    src: url('fonts/gotham/Gotham-Medium.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothamx';
+    src: url('fonts/gotham/GothamXNarrow-Book.otf') format('opentype');
+    font-style: normal;
+}
+/* END Gotham
+-----------------------------------*/
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
 dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub,
@@ -213,7 +240,7 @@ ul.top-menu-2 li.current_page_item a{
 }
 ul.top-menu-2 li a{
     font-family: 'gothammedium';
-    font-size: 17px;
+    font-size: 15px;
     line-height: 18px;
     color: #a2a4a6;
     padding: 0px 10px;
@@ -332,7 +359,8 @@ span.topsocial{
     padding: 0px 5px;
     text-transform: lowercase;
     color: #333;
-    font-size: 17px;
+    font-size: 15px;
+    font-family: Futura;
 
 }
 .dottedrealfoodsforall{
@@ -359,7 +387,7 @@ span.topsocial{
     display: block;
     margin: 10px 0px 0px 70px;
     color: #000;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 18px;
 }
 
@@ -393,10 +421,10 @@ span.topsocial{
 }
 #our_mission .om_content a.om_join_revolution{
     color: #000;
-    font-size: 17px;
+    font-size: 15px;
     background: url('images/om_arrow.png') no-repeat right 3px;
     padding-right: 20px;
-    font-family: gotham;
+    font-family: 'gothammedium';
 }
 .c_048cac{
     color:#048cac;
@@ -412,10 +440,15 @@ span.topsocial{
 }
 
 .about_topdotted{
-    background: url("images/bg_dotted.png") repeat-x scroll 0 30px transparent;
+    background: url("images/bg_dotted.png") repeat-x scroll 0 31px transparent;
     text-align: center;
     padding: 30px 0 80px;
 }
+
+#our_story .about_topdotted{
+    padding: 30px 0 60px;
+}
+
 
 #our_story .main_image{
     padding: 0 75px 103px 100px;
@@ -444,9 +477,9 @@ span.topsocial{
 #our_story p{
     color: #333;
     font-size: 13px;
-    line-height: 17px;
+    line-height: 15px;
     padding: 10px 0;
-    font-family: gotham;
+    font-family: 'gothammedium';
 }
 .dottedour_story{
     background: none repeat scroll 0 0 #fff;
@@ -477,23 +510,26 @@ span.topsocial{
     margin: 10px 0;
     color: #333;
     font-size: 13px;
-    font-family: gotham;
-    line-height: 17px
+    font-family: 'gothammedium';
+    line-height: 15px
 }
 
 #foot_philosophy .main_content a.foot_philosophy_href{
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
     color: #000000;
-    font-size: 17px;
+    font-size: 15px;
     padding-right: 20px;
-    font-family: gotham;
+    font-family: 'gothammedium';
 }
 
 
 #nutrition_education{
     background: #fff;
     height: 645px;
+    position: relative;
 }
+
+
 
 #nutrition_education .main_image{
     padding: 0 30px 0 65px;
@@ -511,11 +547,12 @@ span.topsocial{
 }
 
 #nutrition_education .main_content p{
-    font-family: Gotham;
+    font-family: 'gothammedium';
     color: #333;
     font-size: 13px;
     width: 320px;
     float: left;
+    line-height: 15px;
 }
 
 
@@ -525,17 +562,223 @@ span.topsocial{
     text-align: center;
 }
 
+#careers .about_topdotted{
+    padding: 27px 0 115px;
+    background: none;
+}
 
+#careers .left-topdotted{
+    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+    text-align: center;
+    width: 46%;
+    height: 10px;
+    float: left
+}
+#careers .right-topdotted{
+    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+    text-align: center;
+    width: 46%;
+    height: 10px;
+    float: left
+}
+
+#careers .titledotted {
+    background: none;
+    text-align: center;
+    line-height: 12px;
+    float: left
+}
 #careers{
-    background: url('images/job_cycle.png') no-repeat left top;
+    background: url('images/job_imge.png') no-repeat left top;
     height: 655px;
 }
 
 
-#careers .about_topdotted{
+#careers .titledotted{
     background: none;
 }
 
+#careers .main_content{
+    background: url('images/job_cycle.png') no-repeat left top;
+    width: 374px;
+    height: 374px;
+    float: right;
+    margin: 0 140px;
+}
+#careers .main_content h1{
+    font-size: 47px;
+    font-weight: bold;
+    font-family: futura;
+    color: #f8c439;
+    
+}
+#careers .main_content p{
+    font-size: 13px;
+    font-family: 'gothammedium';
+    color: #fff;
+    margin: 10px 0 15px;
+    line-height: 13px;
+    
+}
+
+#careers .content_text{
+    margin: 60px 70px;
+}
+#careers .content_text a.careers_href{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-family: 'gothammedium';
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+#leadership {
+    height: 650px;
+    background: #fff;
+    position: relative;
+}
+
+#leadership .preview{
+    background: url(images/arror_leadership.png) no-repeat left top;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
+#leadership .next{
+    background: url(images/arror_leadership.png) no-repeat right top;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 320px;
+    right: 35px;
+}
+
+#leadership .about_topdotted{
+    padding: 28px 0 104px;
+}
+
+#leadership h1{
+    font-family: Futura;
+    color: #45acc4;
+    text-align: center;
+    font-size: 47px;
+    font-weight: bold;
+}
+#leadership .content{
+    margin:45px 145px 0 130px;
+}
+
+.orange{
+    color: #ff9331
+}
+
+.pink{
+    color: #db5bad;
+}
+
+#leadership .inner-content{
+    width: 355px;
+    
+}
+
+#leadership .inner-content h3{
+    font-size: 20px;
+    font-family: Futura;
+    font-weight: bold;
+    text-align: center;
+}
+
+#leadership .inner-content .meta-des{
+    text-align: center;
+    font-family: gothamblack;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+#leadership .inner-content .description{
+    text-align: center;
+    font-family: 'gothammedium';
+    font-size: 13px;
+    color: #333;
+    text-align: justify;
+    line-height: 15px;
+}
+
+#leadership .titledotted{
+    background: #fff;
+}
+
+#board_directors{
+    background: #8eb624;
+    height: 655px;
+    position: relative;
+}
+
+#board_directors .main_content{
+    padding: 165px 120px 0 70px
+}
+
+#board_directors .main_content h1{
+    font-family: Futura;
+    font-size: 47px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 55px;
+}
+
+#board_directors .main_content .inner-content{
+    float: left;
+    margin-left: 45px;
+    width: 233px;
+    
+}
+
+#board_directors .main_content h3{
+    font-family: Futura;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+#board_directors .main_content div.meta-des{
+    font-weight: 13px;
+    color: #fff;
+    font-family: gothamblack;
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+#board_directors .main_content div.description{
+    text-align: justify;
+    color: #fff;
+}
+
+#board_directors .preview{
+    background: url(images/board_directors_arrow.png) no-repeat left top;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
+#board_directors .next{
+    background: url(images/board_directors_arrow.png) no-repeat right top;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 320px;
+    right: 35px;
+}
+
+.c_f9ce5b{
+   color: #f9ce5b; 
+}
+.c_587607{
+    color: #587607;
+}
 /* End Aboutus
 -------------------------------------------------------------- */
 
