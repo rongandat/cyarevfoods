@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
     jQuery( "ul.top-menu-social li a" ).html('');
+    jQuery( "ul.bottom-menu-social li a" ).html('<span></span>');
     jQuery( "ul.top-menu-social li.jr a" ).hover(function(){
         jQuery( "span.topsocial" ).css('background-position','-92px -92px');
     });

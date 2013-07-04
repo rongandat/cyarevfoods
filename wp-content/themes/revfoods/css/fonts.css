@@ -20,5 +20,15 @@
     src: url('../fonts/gotham/GothamXNarrow-Book.otf') format('opentype');
     font-style: normal;
 }
+@font-face {
+    font-family: 'futura';
+    src: url('../fonts/futura/Futura-Regular.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'futurab';
+    src: url('../fonts/futura/Futura-Bold.otf') format('opentype');
+    font-style: normal;
+}
 /* END Gotham
 -----------------------------------*/
