@@ -11,7 +11,7 @@ and open the template in the editor.
         <script type='text/javascript' src='js/jquery/jquery.js?ver=1.8.3'></script>
     </head>
     <body>
-        
+
         <div id="page" class="hfeed site">
             <header role="banner" class="site-header" id="masthead">
                 <div style="top:0px;" class="site-header-1 pfixed">
@@ -22,7 +22,7 @@ and open the template in the editor.
                 </div>
                 <div style="" class="site-header-2 pfixed">
                     <a href="http://revfoods.lc" class="logohome fl">
-                        <img class="logo" src="http://revfoods.lc/wp-content/themes/revfoods/images/logo.png">
+                        <img class="logo" src="http://wpvalet.cyahost.com/revfoods/wp-content/themes/revfoods/images/logo.png">
                     </a>
                     <ul class="top-menu-2 fl" id="menu-topmenu-2"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32" id="menu-item-32"><a href="http://revfoods.lc/">Home</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33" id="menu-item-33"><a href="http://revfoods.lc/?page_id=2">About</a></li>
@@ -36,26 +36,27 @@ and open the template in the editor.
                 <div style="" class="site-header-3 pfixed">
                     <span class="question">QUESTION</span>
                     <ul class="top-menu-3" id="menu-topmenu-3">
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36" id="menu-item-36"><a href="http://revfoods.lc/?page_id=9">Real Food for All</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36" id="menu-item-36"><a rel="our_mission" href="#">Real Food for All</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a rel="our_story" href="#">Real Food for in schools</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38" id="menu-item-38"><a rel="foot_philosophy" href="#">Real Food for in stores</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39" id="menu-item-39"><a rel="nutrition_education" href="#">Real Press</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39" id="menu-item-39"><a rel="careers" href="#">Join Out Team</a></li>
                     </ul>           
                 </div>
-                
                 <script>
                     jQuery(document).ready(function(){
                         jQuery('.menu-item').click(function(){
                            
                             var id =jQuery(this).children('a').attr('rel');
-                            jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 150)}, 1000);
+                            jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 115)}, 1000);
                             
                         })
-                        
-
+                    
                     })
                 </script>
+
             </header>
+
             <div id="main" class="wrapper">
 
 

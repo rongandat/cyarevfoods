@@ -75,6 +75,15 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
     src: url('fonts/gotham/GothamXNarrow-Book.otf') format('opentype');
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'futura';
+    src: url('fonts/futura/FutuMd__.ttf');
+}
+@font-face {
+    font-family: 'futurabold';
+    src: url('fonts/futura/Futura Bold BT.ttf');
+}
 /* END Gotham
 -----------------------------------*/
 
@@ -409,13 +418,13 @@ span.topsocial{
 #our_mission .om_content p{
     color: #fff;
     font-size: 35px;
-
+    font-family: gothambook;
 
 }
 #our_mission .om_content div.om_description{
     color: #fff;
     font-size: 48px;
-    font-weight: bold;
+    font-family: futurabold;
     margin: 10px 0 20px
 
 }
@@ -479,7 +488,7 @@ span.topsocial{
     font-size: 13px;
     line-height: 15px;
     padding: 10px 0;
-    font-family: 'gothammedium';
+    font-family: 'gothambook';
 }
 .dottedour_story{
     background: none repeat scroll 0 0 #fff;
@@ -510,7 +519,7 @@ span.topsocial{
     margin: 10px 0;
     color: #333;
     font-size: 13px;
-    font-family: 'gothammedium';
+    font-family: 'gothambook';
     line-height: 15px
 }
 
@@ -537,6 +546,9 @@ span.topsocial{
 }
 #nutrition_education .main_content{
     padding-top: 105px;
+    display: block;
+    float: left;
+    width: 400px;
 }
 
 #nutrition_education .main_content h1{
@@ -547,7 +559,7 @@ span.topsocial{
 }
 
 #nutrition_education .main_content p{
-    font-family: 'gothammedium';
+    font-family: 'gothambook';
     color: #333;
     font-size: 13px;
     width: 320px;
@@ -565,6 +577,7 @@ span.topsocial{
 #careers .about_topdotted{
     padding: 27px 0 115px;
     background: none;
+
 }
 
 #careers .left-topdotted{
@@ -586,7 +599,8 @@ span.topsocial{
     background: none;
     text-align: center;
     line-height: 12px;
-    float: left
+    float: left;
+    width: 7%;
 }
 #careers{
     background: url('images/job_imge.png') no-repeat left top;
@@ -610,15 +624,15 @@ span.topsocial{
     font-weight: bold;
     font-family: futura;
     color: #f8c439;
-    
+
 }
 #careers .main_content p{
     font-size: 13px;
-    font-family: 'gothammedium';
+    font-family: 'gothambook';
     color: #fff;
     margin: 10px 0 15px;
     line-height: 13px;
-    
+
 }
 
 #careers .content_text{
@@ -680,7 +694,7 @@ span.topsocial{
 
 #leadership .inner-content{
     width: 355px;
-    
+
 }
 
 #leadership .inner-content h3{
@@ -699,7 +713,7 @@ span.topsocial{
 
 #leadership .inner-content .description{
     text-align: center;
-    font-family: 'gothammedium';
+    font-family: 'gothambook';
     font-size: 13px;
     color: #333;
     text-align: justify;
@@ -733,7 +747,7 @@ span.topsocial{
     float: left;
     margin-left: 45px;
     width: 233px;
-    
+
 }
 
 #board_directors .main_content h3{
@@ -758,23 +772,23 @@ span.topsocial{
 
 #board_directors .preview{
     background: url(images/board_directors_arrow.png) no-repeat left top;
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
     position: absolute;
     top: 320px;
     left: 30px;
 }
 #board_directors .next{
     background: url(images/board_directors_arrow.png) no-repeat right top;
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
     position: absolute;
     top: 320px;
     right: 35px;
 }
 
 .c_f9ce5b{
-   color: #f9ce5b; 
+    color: #f9ce5b; 
 }
 .c_587607{
     color: #587607;
@@ -945,3 +959,127 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 /* END footer
 -------------------------------------------------------------- */
+
+
+
+@media (max-width: 1000px) {
+    .site-header, .wrapper, site-footer {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+
+    #our_story .main_image{
+        padding: 0 75px 103px 60px;
+    }
+
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 340px;
+    }
+
+
+    #foot_philosophy {
+        background: url("images/foot_philosophy.png") no-repeat scroll center top transparent;
+        height: 583px;
+    }
+
+    #foot_philosophy .main_content {
+        float: left;
+        margin: 0 0 0 45px;
+        width: 367px;
+
+    }
+
+    #nutrition_education .main_image {
+        float: left;
+        padding: 0 30px 0 35px;
+    }
+
+
+    #nutrition_education .main_content{
+        padding-top: 105px;
+        display: block;
+        float: left;
+        width: 200px;
+    }
+
+
+    #careers {
+        background: url("images/job_imge.png") no-repeat scroll center top transparent;
+        height: 655px;
+    }
+
+    #careers .left-topdotted {
+        background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+        float: left;
+        height: 10px;
+        text-align: center;
+        width: 44%;
+    }
+
+
+    #careers .titledotted {
+        background: none repeat scroll 0 0 transparent;
+        width: 10%;
+    }
+
+    #careers .right-topdotted {
+        background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+        float: left;
+        height: 10px;
+        text-align: center;
+        width: 44%;
+    }
+
+
+    #leadership .inner-content {
+        width: 47%;
+    }
+
+    #board_directors .main_content .inner-content {
+        float: left;
+        margin-left: 3%;
+        width: 30%;
+    }
+
+
+    #nutrition_education .main_image {
+        float: left;
+        padding: 0 30px 0 35px;
+        width: 55%;
+    }
+
+    #nutrition_education .main_image img{
+        width: 100%
+    }
+}
+
+@media (max-width: 850px){
+    #our_story .main_image {
+        padding: 0 75px 103px 20px;
+        width: 50%
+    }
+
+    #our_story .main_image img{
+        width: 100%
+    }
+
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 35%;
+    }
+
+}
+
+@media (max-width: 650px){
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 30%;
+    }
+}
