@@ -45,13 +45,18 @@ add_action('widgets_init', create_function('', 'register_widget( "Revfoods_RealF
 
 function get_RealFoodsForAll($t) {
     ?>
-        <div class="RealFoodsForAll">
-            <div class="topdotted"><span class="titledotted dottedrealfoodsforall">Real Foods For All</span></div>
-            <h1 class="widgetheadertitle lc">Real Foods For All</h1>
-            <p class="gtbook widgetheaderdes">
-                We create healthy, fresh, real food for schools and retailers across the country. Our meals are made from all natural ingredients. Nothing fake. Nothing artificial. Because you deserve nothing less.
-            </p>
-            <a href="" class="lc widgetheaderlink fl">Learn more</a><span class="learnmore fl"></span>
+    <div class="RealFoodsForAll">
+        <div class="topdotted">
+            <div class="topdotted_l fl"></div>
+            <span class="titledotted dottedrealfoodsforall">Real Foods For All</span>
+            <div class="topdotted_r fr"></div>
         </div>
+        <div class="clr"></div>
+        <h1 class="widgetheadertitle lc">Real Foods For All</h1>
+        <p class="gtbook widgetheaderdes">
+            We create healthy, fresh, real food for schools and retailers across the country. Our meals are made from all natural ingredients. Nothing fake. Nothing artificial. Because you deserve nothing less.
+        </p>
+        <a href="" class="lc widgetheaderlink fl">Learn more</a><span class="learnmore fl"></span>
+    </div>
     <?php
 }

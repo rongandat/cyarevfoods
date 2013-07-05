@@ -2,33 +2,27 @@
 -----------------------------------*/
 @font-face {
     font-family: 'gothamblack';
-    src: url('../fonts/gotham/Gotham-Black.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/gotham/Gotham-Black.otf');
 }
 @font-face {
     font-family: 'gothambook';
-    src: url('../fonts/gotham/Gotham-Book.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/gotham/Gotham-Book.otf');
 }
 @font-face {
     font-family: 'gothammedium';
-    src: url('../fonts/gotham/Gotham-Medium.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/gotham/Gotham-Medium.otf');
 }
 @font-face {
     font-family: 'gothamx';
-    src: url('../fonts/gotham/GothamXNarrow-Book.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/gotham/GothamXNarrow-Book.otf');
 }
 @font-face {
     font-family: 'futura';
-    src: url('../fonts/futura/Futura-Regular.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/futura/FutuMd__.ttf');
 }
 @font-face {
     font-family: 'futurab';
-    src: url('../fonts/futura/Futura-Bold.otf') format('opentype');
-    font-style: normal;
+    src: url('../fonts/futura/Futura Bold BT.ttf');
 }
 /* END Gotham
 -----------------------------------*/

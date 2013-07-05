@@ -465,7 +465,7 @@ if (!function_exists('revfoods_comment')) :
     add_action('widgets_init', 'revfoods_widgets_init');
     /* END include siderbar */
     /* BEGIN include widgets */
-    include 'Widgets/RealFoodsForAll.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
     /* END include widgets */
 
 
