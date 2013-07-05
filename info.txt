@@ -1,0 +1,12 @@
+mình sẽ demo trên này nhé:
+http://wpvalet.cyahost.com/
+revfoods thì sẽ là: http://wpvalet.cyahost.com/revfoods
+halo thì sẽ là : http://wpvalet.cyahost.com/halo
+T đã tạo ra 2 database cho 2 sites đó trên demo rồi. Khi mọi ng up lên thì nhớ up đúng vào db đó nhé.
+[03/07/2013 9:48:07 SA] bimtoc_nguquen: Domain: wpvalet.cyahost.com
+| Ip: 174.121.3.252 (n)
+| HasCgi: y
+| UserName: wpvaletc
+| PassWord: Ch]I%43lh*N}
+[03/07/2013 9:48:18 SA] bimtoc_nguquen: ftp: huyen@wpvalet.cyahost.com
+h-#SU+WSObG?
