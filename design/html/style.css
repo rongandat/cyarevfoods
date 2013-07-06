@@ -433,7 +433,7 @@ span.topsocial{
     font-size: 15px;
     background: url('images/om_arrow.png') no-repeat right 3px;
     padding-right: 20px;
-    font-family: 'gothammedium';
+    font-family: 'futura';
 }
 .c_048cac{
     color:#048cac;
@@ -479,7 +479,7 @@ span.topsocial{
 
 #our_story h1{
     font-size: 64px;
-    font-weight: bold;
+    font-family: futurabold;
     color: #f28834;
 }
 
@@ -514,6 +514,7 @@ span.topsocial{
 #foot_philosophy .main_content h1{
     font-size: 63px;
     color: #db5bad;
+    font-family: futurabold;
 }
 #foot_philosophy .main_content p{
     margin: 10px 0;
@@ -528,7 +529,7 @@ span.topsocial{
     color: #000000;
     font-size: 15px;
     padding-right: 20px;
-    font-family: 'gothammedium';
+    font-family: 'futura';
 }
 
 
@@ -552,9 +553,9 @@ span.topsocial{
 }
 
 #nutrition_education .main_content h1{
-    font-family: Futura;
+    font-family: futurabold;
     color: #902b8c;
-    font-weight: bold;
+
     font-size: 63px;
 }
 
@@ -621,8 +622,7 @@ span.topsocial{
 }
 #careers .main_content h1{
     font-size: 47px;
-    font-weight: bold;
-    font-family: futura;
+    font-family: futurabold;
     color: #f8c439;
 
 }
@@ -636,12 +636,12 @@ span.topsocial{
 }
 
 #careers .content_text{
-    margin: 60px 70px;
+    margin: 60px 40px 0 80px;
 }
 #careers .content_text a.careers_href{
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
     color: #000000;
-    font-family: 'gothammedium';
+    font-family: 'futura';
     font-size: 15px;
     padding-right: 20px;
 }
@@ -674,11 +674,10 @@ span.topsocial{
 }
 
 #leadership h1{
-    font-family: Futura;
+    font-family: futurabold;
     color: #45acc4;
     text-align: center;
     font-size: 47px;
-    font-weight: bold;
 }
 #leadership .content{
     margin:45px 145px 0 130px;
@@ -735,9 +734,8 @@ span.topsocial{
 }
 
 #board_directors .main_content h1{
-    font-family: Futura;
+    font-family: futurabold;
     font-size: 47px;
-    font-weight: bold;
     color: #fff;
     text-align: center;
     padding-bottom: 55px;
@@ -794,6 +792,237 @@ span.topsocial{
     color: #587607;
 }
 /* End Aboutus
+-------------------------------------------------------------- */
+
+
+
+
+/* BEGIN REV INSTORES
+-------------------------------------------------------------- */
+
+#feature{
+    background: url('images/feature.png') no-repeat top center;
+    height: 522px;
+}
+
+#meal_kits{
+    background: url('images/meal_kits.png') no-repeat bottom left;
+    height: 650px;
+    background-color: #fff;
+}
+
+#meal_kits .main_content{
+    width: 340px;
+    float: right;
+    margin-right: 140px;
+}
+
+#meal_kits .main_content h1{
+    color: #44acc4;
+    font-family: futurabold;
+    font-size: 54px;
+}
+
+#meal_kits .main_content p{
+    color: #333;
+    font-family: 'gothambook';
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+#meal_kits .main_content ul{
+    
+}
+#meal_kits .main_content ul li{
+    background: url("images/check_green.png") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    margin: 10px 0;
+    padding: 8px 0 0 40px;
+    color: #82be14;
+    font-family: 'gotham';
+    font-size: 13px;
+}
+
+#meal_kits .main_content p.info{
+    margin: 15px 45px;
+}
+
+
+#product_details{
+    background: #f9d061;
+    height: 650px;
+}
+
+#product_details .main-content{
+    padding: 90px 0 35px;
+    margin: 0 auto;
+    width: 600px
+}
+
+#product_details h1{
+    color: #fff;
+    font-family: futurabold;
+    font-size: 47px;
+    text-align: center;
+}
+#product_details p{
+    text-align: center;
+}
+#product_details p.description{
+    color: #666;
+    font-family: gothambook;
+    font-size: 13px;
+    text-align: center;
+    padding: 7px 0 13px;
+}
+
+#product_details .products{
+    margin: 0 55px;
+}
+
+#product_details .products .product{
+    float: left;
+}
+
+#product_details a.plearnmore{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futura';
+    text-align: center;
+}
+
+
+#where_to_buy{
+    background: #f6f6f6;
+    height: 648px;
+    
+}
+
+
+#where_to_buy .about_topdotted {
+    padding: 30px 0 135px;
+    text-align: center;
+}
+
+#where_to_buy .dottedour_story {
+    background: none repeat scroll 0 0 #f6f6f6;
+}
+
+#where_to_buy .main_content{
+    margin: 0 75px;
+    text-align: center;
+}
+#where_to_buy .image{
+    height: 50px;
+}
+#where_to_buy .main_content h1{
+    font-family: futurabold;
+    color: #45acc4;
+    font-size: 47px;
+    margin-bottom: 35px;
+}
+
+#where_to_buy .contents .content{
+    float: left;
+    text-align: center;
+    width: 265px;
+    margin-left: 25px;
+}
+#where_to_buy .contents .content:first-child{
+    margin-left: 0;
+}
+
+#where_to_buy p.description{
+    color: #333;
+    font-size: 13px;
+    font-family: gothambook;
+    margin: 15px 0 10px
+}
+
+
+#where_to_buy a {
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-family: 'futura';
+    font-size: 15px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+
+#testimonials{
+    height: 655px;
+    position: relative;
+}
+
+
+#testimonials .about_topdotted {
+    padding: 30px 0 140px;
+    text-align: center;
+}
+
+#testimonials .main_content{
+    margin: 0 135px;
+}
+
+#testimonials h1{
+    font-family: futurabold;
+    color: #f38834;
+    font-size: 47px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#testimonials .content{
+    width: 225px;
+    float: left;
+    margin-left: 39px;
+    text-align: center;
+}
+.yellow{
+    color: #f8c439;
+}
+.green{
+    color: #8eb624;
+}
+#testimonials .content p.description{
+    font-family: futurabold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#testimonials .content p.person{
+    font-family: gothambook;
+    font-size: 13px;
+    color: #333;    
+}
+
+#testimonials .content:first-child{
+    margin-left: 0;
+}
+
+
+#testimonials .preview {
+    background: url("images/arror_leadership.png") no-repeat scroll left top transparent;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    top: 320px;
+    width: 40px;
+}
+
+
+#testimonials .next {
+    background: url("images/arror_leadership.png") no-repeat scroll right top transparent;
+    height: 40px;
+    position: absolute;
+    right: 35px;
+    top: 320px;
+    width: 40px;
+}
+
+/* END REV INSTORES
 -------------------------------------------------------------- */
 
 
