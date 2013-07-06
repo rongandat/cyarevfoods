@@ -59,7 +59,7 @@
             </div>
             <div class="site-header-3 pfixed" style="<?php if ( is_user_logged_in() ) { echo "top:151px;"; } ?>">
                 <span class="question"><?php _e('QUESTION');?></span>
-                <?php wp_nav_menu( array( 'theme_location' => 'Top-Menu-3', 'container'=>'','menu_class' => 'top-menu-3' ) ); ?>
+                <ul class="sub_menu" id="submenu"></ul>
             </div>
 	</header>
     <!-- #masthead -->

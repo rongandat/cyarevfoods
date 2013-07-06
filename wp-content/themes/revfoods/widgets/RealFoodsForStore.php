@@ -1,12 +1,12 @@
 <?php
-class Revfoods_RealFoodsForAll extends WP_Widget {
+class Revfoods_RealFoodsForStore extends WP_Widget {
     var $image_field = 'image';  // the image field ID
     
     public function __construct() {
         parent::__construct(
-                'Revfoods_RealFoodsForAll', // Base ID
-                'Revfoods_RealFoodsForAll', // Name
-                array('description' => 'Revfoods Real Foods For All')
+                'Revfoods_RealFoodsForStore', // Base ID
+                'Revfoods_RealFoodsForStore', // Name
+                array('description' => 'Revfoods Real Foods For Store')
         );
     }
 
@@ -17,36 +17,29 @@ class Revfoods_RealFoodsForAll extends WP_Widget {
         $image      = new WidgetImageField( $this, $image_id );
     ?>
     <style>
-        .RealFoodsForAll{
+        .RealFoodsInStore{
+            background: transparent url("<?php echo $image->get_image_src( 'full' ); ?>")  no-repeat;
             height: 650px;
-            background: #fff;
-            background: #F6F6F6 url("<?php echo $image->get_image_src( 'full' ); ?>")  repeat-x;
         }
-        .RealFoodsForAll .widget_header {
+        .RealFoodsInStore .headline_instore{
             font-family: 'futurab';
-            font-size: <?php echo $instance['headline_font_size']?>;
-            font-weight: bold;
+            text-transform: lowercase;
             color: <?php echo $instance['headline_font_color']?>;
             width: 400px;
-            height: 165px;
-            margin: 150px 0px 0px 70px;
-         }
-         .RealFoodsForAll .widgetheader_content{
-            color: #333;
-            font-size: 13px;
-            line-height: 18px;
-            width: 280px;
-            height: 100px;
-            margin: 0px 0px 0px 70px;
+            display: inline-block;
+            font-size: <?php echo $instance['headline_font_size']?>;
+            font-weight: bold;
+            margin: 60px 0px 0px 507px;
+            float: left;
         }
- 
+             
     </style>
     <?php    
     if($instance['add_submenu']=='on'){?>
     <script>
         jQuery(document).ready( function(){
             var submenu="<?php echo $instance['title'];?>";
-           jQuery("ul.sub_menu").append("<li class='menu-item'><a rel='RealFoodsForAll' href='#'>"+submenu+"</a></li>");
+           jQuery("ul.sub_menu").append("<li class='menu-item'><a rel='RealFoodsInStore' href='#'>"+submenu+"</a></li>");
            jQuery('.menu-item').click(function(){                        
                 var id =jQuery(this).children('a').attr('rel');
                 jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 115)}, 1000);                         
@@ -54,20 +47,21 @@ class Revfoods_RealFoodsForAll extends WP_Widget {
         });   
     </script>
     <?php }?>
-    <div class="RealFoodsForAll" id="RealFoodsForAll">
+    <div class="RealFoodsInStore" id="RealFoodsInStore">
         <div class="topdotted">
-            <div class="topdotted_l fl"></div>
-            <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title']?></span>
-            <div class="topdotted_r fr"></div>
+        <div class="topdotted_l fl"></div>
+        <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title'];?></span>
+        <div class="topdotted_r fr"></div>
         </div>
         <div class="clr"></div>
-        <h1 class="widget_header lc"><?php echo $instance['headline']?></h1>
-        <p class="gtbook widgetheader_content">
-            <?php echo $instance['content']?>
+            <span class="headline_instore"><?php echo $instance['headline'];?></span>
+            <div class="clr"></div>
+        <p class="gtbook widgetheaderdes instore fl">
+            <?php echo $instance['content'];?>
         </p>
-        <a href="<?php echo $instance['link']?>" class="lc widgetheaderlink fl"><?php echo $instance['learn_more_text'];?></a><span class="learnmore fl"></span>
+        <div class="clr"></div>
+        <a href="<?php echo $instance['link'];?>" class="lc widgetheaderlink instore fl"><?php echo $instance['learn_more_text'];?></a><span class="learnmore fl"></span>
     </div>
-    <div class="clr"></div>
     <?php
     }
 
@@ -136,4 +130,4 @@ class Revfoods_RealFoodsForAll extends WP_Widget {
 
 }
 
-add_action('widgets_init', create_function('', 'register_widget( "Revfoods_RealFoodsForAll" );'));
+add_action('widgets_init', create_function('', 'register_widget( "Revfoods_RealFoodsForStore" );'));
