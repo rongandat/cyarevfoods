@@ -25,14 +25,12 @@ class Revfoods_RealFoodsForSchool extends WP_Widget {
             margin: 30px 0px 30px 70px;
             width: 288px;
             height: 288px;
-            background: #81BE41;
-            color: <?php echo $instance['headline_font_color']?>;
+            background: transparent;
             border-radius: 144px;
          }
          .RealFoodsInSchool .title_inschool_1 {
             font-family: 'futurab';
             text-transform: uppercase;
-            font-size: <?php echo $instance['headline_font_size']?>;
             width: 100px;
             font-weight: bold;
             display: inline-block;
@@ -61,8 +59,8 @@ class Revfoods_RealFoodsForSchool extends WP_Widget {
         </div>
         <div class="clr"></div>
         <div class="widgetstitleschool lc">
-            <span class="title_inschool_1"><?php echo $instance['headline'];?></span>
-            <span class="title_inschool_2">Student</span>
+            <span class="title_inschool_1"></span>
+            <span class="title_inschool_2"></span>
         </div>
         <p class="gtbook widgetheaderdes inschool">
             <?php echo $instance['content'];?>
@@ -77,9 +75,9 @@ class Revfoods_RealFoodsForSchool extends WP_Widget {
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['add_submenu'] = strip_tags( $new_instance['add_submenu'] );
         $instance[$this->image_field]    = intval( strip_tags( $new_instance[$this->image_field] ) );
-        $instance['headline'] = strip_tags($new_instance['headline']);
-        $instance['headline_font_size'] = strip_tags($new_instance['headline_font_size']);
-        $instance['headline_font_color'] = strip_tags($new_instance['headline_font_color']);
+//        $instance['headline'] = strip_tags($new_instance['headline']);
+//        $instance['headline_font_size'] = strip_tags($new_instance['headline_font_size']);
+//        $instance['headline_font_color'] = strip_tags($new_instance['headline_font_color']);
         $instance['content'] = strip_tags($new_instance['content']);
         $instance['link'] = strip_tags($new_instance['link']);
         $instance['learn_more_text'] = strip_tags($new_instance['learn_more_text']);
@@ -108,7 +106,7 @@ class Revfoods_RealFoodsForSchool extends WP_Widget {
             <label><?php _e( 'Background Image:' ); ?></label>
             <?php echo $image->get_widget_field(); ?>
         </div>
-        <p>
+<!--        <p>
             <label for="<?php echo $this->get_field_id('headline'); ?>"><?php _e('Headline:'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('headline'); ?>" name="<?php echo $this->get_field_name('headline'); ?>" type="text" value="<?php echo esc_attr($instance['headline']); ?>" />
         </p>
@@ -119,7 +117,7 @@ class Revfoods_RealFoodsForSchool extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('headline_font_color'); ?>"><?php _e('Font color of headline:'); ?></label> 
             <input class="widefat" id="<?php echo $this->get_field_id('headline_font_color'); ?>" name="<?php echo $this->get_field_name('headline_font_color'); ?>" type="text" value="<?php echo esc_attr($instance['headline_font_color']); ?>" />
-        </p>
+        </p>-->
         <p>
             <label for="<?php echo $this->get_field_id('content'); ?>"><?php _e('Content:'); ?></label> 
             <textarea rows="8" class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>"><?php echo format_to_edit($instance['content']); ?></textarea>
