@@ -466,13 +466,14 @@ if (!function_exists('revfoods_comment')) :
     /* END include siderbar */
     /* BEGIN include widgets */
     include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForSchool.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
     /* END include widgets */
 
 
     register_nav_menus(array(
         'Top-Menu-1' => 'Top menu 1',
         'Top-Menu-2' => 'Top menu 2',
-        'Top-Menu-3' => 'Top menu 3',
         'Top-Menu-Social' => 'Top menu social',
         'Bottom-Menu-1' => 'Bottom menu 1',
         'Bottom-Menu-2' => 'Bottom menu 2',
