@@ -366,10 +366,13 @@ span.topsocial{
     display: none;
 }
 .RealFoodsForAll{
-    height: 624px;
+    height: 650px;
     background: #fff;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
     background: #F6F6F6 url("images/bg_real_foods_for_all.jpg")  repeat-x;
+}
+.topdotted{
+    padding-top: 25px;
 }
 .topdotted_l,
 .topdotted_r
@@ -393,9 +396,7 @@ span.topsocial{
     /*background: #F6F6F6;*/
 }
 .RealFoodsInSchool{
-    height: 625px;
-    background: #fff;
-    padding-top: 25px;
+    height: 650px;
     background: #F6F6F6 url("images/bg_home_in_school.jpg")  repeat-x;
 }
 .widgetstitleschool{
@@ -452,8 +453,8 @@ span.topsocial{
 }
 .RealFoodsInStore{
     background: transparent url("images/bg_home_in_store.jpg")  no-repeat;
-    height: 625px;
-    padding-top: 25px;
+    height: 650px;
+    /*padding-top: 25px;*/
 }
 .RealFoodsInStore .dottedrealfoodsforall{
     /*background: #DB5AAD;*/
@@ -483,8 +484,8 @@ float: left;
 }
 .RealFoodsInPress{
     background: #fff;
-    height: 600px;
-    padding-top: 25px;
+    height: 625px;
+    /*padding-top: 25px;*/
 }
 .RealFoodsInPress .titledotted{
     /*background: #fff;*/

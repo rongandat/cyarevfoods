@@ -32,6 +32,7 @@ if (is_active_sidebar('sidebar-home')) :
     dynamic_sidebar('sidebar-home');
 endif;
 ?>
+<div class="clr"></div>
 <div class="RealFoodsInSchool">
     <div class="topdotted">
         <div class="topdotted_l fl"></div>
