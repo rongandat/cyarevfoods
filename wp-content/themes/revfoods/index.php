@@ -15,18 +15,6 @@
  */
 get_header();
 ?>
-<div class="homebn">
-    <div class="homevideo">
-        <iframe width="350" height="200" src="//www.youtube.com/embed/pa2IDTWvRls" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="homebn_right fr">
-        <h1 class="homebn_title">
-            Lorem ipsum doloret sit amet consultiteur
-        </h1>
-        <a href="javascript:void(0)" id="watch-video">watch video</a>
-    </div>
-</div>
-
 <?php
 if (is_active_sidebar('sidebar-home')) :
     dynamic_sidebar('sidebar-home');
