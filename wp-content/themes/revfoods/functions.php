@@ -223,7 +223,7 @@ if (!function_exists('revfoods_content_nav')) :
                 <div class="nav-previous alignleft"><?php next_posts_link(__('<span class="meta-nav">&larr;</span> Older posts', 'revfoods')); ?></div>
                 <div class="nav-next alignright"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&rarr;</span>', 'revfoods')); ?></div>
             </nav><!-- #<?php echo $html_id; ?> .navigation -->
-        <?php
+            <?php
         endif;
     }
 
@@ -250,12 +250,12 @@ if (!function_exists('revfoods_comment')) :
                 ?>
                 <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
                     <p><?php _e('Pingback:', 'revfoods'); ?> <?php comment_author_link(); ?> <?php edit_comment_link(__('(Edit)', 'revfoods'), '<span class="edit-link">', '</span>'); ?></p>
-                <?php
-                break;
-            default :
-                // Proceed with normal comments.
-                global $post;
-                ?>
+                    <?php
+                    break;
+                default :
+                    // Proceed with normal comments.
+                    global $post;
+                    ?>
                 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
                     <article id="comment-<?php comment_ID(); ?>" class="comment">
                         <header class="comment-meta comment-author vcard">
@@ -273,15 +273,15 @@ if (!function_exists('revfoods_comment')) :
 
                         <?php if ('0' == $comment->comment_approved) : ?>
                             <p class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.', 'revfoods'); ?></p>
-                            <?php endif; ?>
+                        <?php endif; ?>
 
                         <section class="comment-content comment">
-                <?php comment_text(); ?>
-                <?php edit_comment_link(__('Edit', 'revfoods'), '<p class="edit-link">', '</p>'); ?>
+                            <?php comment_text(); ?>
+                            <?php edit_comment_link(__('Edit', 'revfoods'), '<p class="edit-link">', '</p>'); ?>
                         </section><!-- .comment-content -->
 
                         <div class="reply">
-                    <?php comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'revfoods'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+                            <?php comment_reply_link(array_merge($args, array('reply_text' => __('Reply', 'revfoods'), 'after' => ' <span>&darr;</span>', 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
                         </div><!-- .reply -->
                     </article><!-- #comment-## -->
                     <?php
@@ -450,7 +450,7 @@ if (!function_exists('revfoods_comment')) :
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>',
         ));
-        
+
         register_sidebar(array(
             'name' => __('In Stores Sidebar', 'revfoods'),
             'id' => 'sidebar-instores',
@@ -465,7 +465,8 @@ if (!function_exists('revfoods_comment')) :
     add_action('widgets_init', 'revfoods_widgets_init');
     /* END include siderbar */
     /* BEGIN include widgets */
-    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
+    include ABSPATH . 'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
+    include ABSPATH . 'wp-content/themes/revfoods/widgets/homevideo.php';
     /* END include widgets */
 
 
@@ -479,5 +480,7 @@ if (!function_exists('revfoods_comment')) :
         'Bottom-Menu-3' => 'Bottom menu 3',
         'Bottom-Menu-Social' => 'Bottom menu Social'
     ));
+
+
     /* END ADD CYA
  ---------------------------------------------*/

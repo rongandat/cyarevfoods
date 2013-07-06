@@ -15,18 +15,6 @@
  */
 get_header();
 ?>
-<div class="homebn">
-    <div class="homevideo">
-        <iframe width="350" height="200" src="//www.youtube.com/embed/pa2IDTWvRls" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="homebn_right fr">
-        <h1 class="homebn_title">
-            Lorem ipsum doloret sit amet consultiteur
-        </h1>
-        <a href="javascript:void(0)" id="watch-video">watch video</a>
-    </div>
-</div>
-
 <?php
 if (is_active_sidebar('sidebar-home')) :
     dynamic_sidebar('sidebar-home');
@@ -41,8 +29,8 @@ endif;
     </div>
     <div class="clr"></div>
     <div class="widgetstitleschool lc">
-        <span class="title_inschool_1">Better Foods Better</span>
-        <span class="title_inschool_2">Student</span>
+        <span class="title_inschool_1"></span>
+        <span class="title_inschool_2"></span>
     </div>
     <p class="gtbook widgetheaderdes inschool">
         To us, the math is easy. Each week, we serve over one million freshly prepared, healthy meals to schools across the country. That's a million instances of more productive, more attentive, better motivated and better performing students. We like making math easy. And history. And art. And english. And science.
