@@ -32,40 +32,6 @@ if (is_active_sidebar('sidebar-home')) :
     dynamic_sidebar('sidebar-home');
 endif;
 ?>
-<div class="clr"></div>
-<div class="RealFoodsInSchool">
-    <div class="topdotted">
-        <div class="topdotted_l fl"></div>
-        <span class="titledotted dottedrealfoodsforall">Real Foods In School</span>
-        <div class="topdotted_r fr"></div>
-    </div>
-    <div class="clr"></div>
-    <div class="widgetstitleschool lc">
-        <span class="title_inschool_1">Better Foods Better</span>
-        <span class="title_inschool_2">Student</span>
-    </div>
-    <p class="gtbook widgetheaderdes inschool">
-        To us, the math is easy. Each week, we serve over one million freshly prepared, healthy meals to schools across the country. That's a million instances of more productive, more attentive, better motivated and better performing students. We like making math easy. And history. And art. And english. And science.
-    </p>
-    <a href="" class="lc widgetheaderlink fl">learn more about our school meals program</a><span class="learnmore fl"></span>
-</div>
-
-<div class="RealFoodsInStore">
-        <div class="topdotted">
-        <div class="topdotted_l fl"></div>
-        <span class="titledotted dottedrealfoodsforall">Real Foods In Store</span>
-        <div class="topdotted_r fr"></div>
-    </div>
-    <div class="clr"></div>
-        <span class="title_instore">healthy meal kits</span>
-        <div class="clr"></div>
-    <p class="gtbook widgetheaderdes instore fl">
-        Our story began in schools. Now, we're bringing our recipe for success to your home with our all natural Meal Kits, perfect for on-the-go nutrition.
-    </p>
-    <div class="clr"></div>
-    <a href="" class="lc widgetheaderlink instore fl">learn more about our retail products</a><span class="learnmore fl"></span>
-</div>
-
 <div class="RealFoodsInPress">
     <div class="topdotted">
         <div class="topdotted_l fl"></div>
