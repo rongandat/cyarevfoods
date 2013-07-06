@@ -103,7 +103,7 @@ table{border-collapse: collapse; border-spacing: 0;}
 }
 .wrapper{
     /*height: 1200px;*/
-    background: violet;
+    /*background: violet;*/
 }
 .gtblack{
     font-family: 'gothamblack';
@@ -119,6 +119,9 @@ table{border-collapse: collapse; border-spacing: 0;}
 }
 .ftr{
     font-family: 'futura';
+}
+.ftrb{
+    font-family: 'futurab';
 }
 .lc{
     text-transform: lowercase;
@@ -274,39 +277,39 @@ ul.top-menu-social li a{
 }
 ul.top-menu-social li.fb a{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -3px -169px;
+    background-position: -4px -76px;
 }
 ul.top-menu-social li.fb a:hover{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat ;
-    background-position: -4px -76px;
+    background-position: -3px -169px;
 }
 ul.top-menu-social li.fb a:active{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat ;
-    background-position: -4px -76px;
+    background-position: -3px -169px;
 }
 ul.top-menu-social li.tw a{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -30px -169px;
+    background-position: -31px -76px;
 }
 ul.top-menu-social li.tw a:hover{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -31px -76px;
+    background-position: -30px -169px;
 }
 ul.top-menu-social li.tw a:visited{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -31px -76px;
+    background-position: -30px -169px;
 }
 ul.top-menu-social li.jr a{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -59px -169px;
+    background-position: -59px -76px;
 }
 ul.top-menu-social li.jr a:hover{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -59px -76px;
+    background-position: -59px -169px;
 }
 ul.top-menu-social li.jr a:visited{
     background: rgba(0, 0, 0, 0) url('images/panelicon.png') no-repeat;
-    background-position: -58px -76px;
+    background-position: -59px -169px;
 }
 span.topsocial{
     display: inline-block;
@@ -320,29 +323,92 @@ span.topsocial{
 -------------------------------------------------------------- */
 /* BEGIN home
 -------------------------------------------------------------- */
+.homebn{
+    position: relative;
+    background: transparent url("images/bg_homebn.png") no-repeat;
+    height: 520px;
+    width: 1024px;
+}
+.homebn_right{
+    padding: 50px 100px 40px 60px;
+    width: 296px;
+    height: 160px;
+    background: transparent url("images/bg_homebn_right.png");
+    margin-top: 110px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.homebn_right.fr {
+    font-size: 33px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    font-family: 'futurab';
+}
+#watch-video {
+    background: url("images/arrow_right_baner.png") no-repeat scroll right 2px rgba(0, 0, 0, 0);
+    color: #F8C439;
+    font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 25px 0 0;
+    font-weight: normal;
+    font-family: 'futura';
+}
+.homevideo{
+    position: absolute;
+    width: 350px;
+    height: 198px;
+    background: #F00;
+    right: 35px;
+    top: 125px;
+    display: none;
+}
 .RealFoodsForAll{
-    height: 624px;
+    height: 650px;
     background: #fff;
-    padding-top: 25px;
+    /*padding-top: 25px;*/
     background: #F6F6F6 url("images/bg_real_foods_for_all.jpg")  repeat-x;
 }
 .topdotted{
+    padding-top: 25px;
+}
+.topdotted_l,
+.topdotted_r
+{
     height: 16px;
     background:transparent url("images/bg_dotted.png")  repeat-x;
-    text-align: center;
+    width: 40%;
 }
 .titledotted{
     padding: 0px 5px;
     text-transform: lowercase;
     color: #333;
     font-size: 17px;
-
+    font-family: 'futura';
+    margin: 0 auto;
+    float: left;
+    width: 190px;
+    text-align: center;
 }
 .dottedrealfoodsforall{
-    background: #F6F6F6;
+    /*background: #F6F6F6;*/
+}
+.RealFoodsInSchool{
+    height: 650px;
+    background: #F6F6F6 url("images/bg_home_in_school.jpg")  repeat-x;
+}
+.widgetstitleschool{
+    margin: 30px 0px 30px 70px;
+    width: 288px;
+    height: 288px;
+    background: #81BE41;
+    color: #fff;
+    border-radius: 144px;
 }
 .widgetheadertitle{
-    font-family: arial;
+    font-family: 'futurab';
     font-size: 74px;
     font-weight: bold;
     color: #F8C53A;
@@ -358,14 +424,97 @@ span.topsocial{
     height: 100px;
     margin: 0px 0px 0px 70px;
 }
+.widgetheaderdes.inschool{
+    width: 345px;
+    padding-bottom: 20px;
+}
 .widgetheaderlink{
     display: block;
     margin: 10px 0px 0px 70px;
     color: #000;
     font-size: 17px;
     line-height: 18px;
+    font-family: 'futurab';
 }
-
+.title_inschool_1{
+    font-family: 'futurab';
+    text-transform: uppercase;
+    font-size: 50px;
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 45px 40px 0px 65px;
+}
+.title_inschool_2 {
+    text-transform: uppercase;
+    font-family: 'futurab';
+    font-size: 40px;
+    padding: 0px 0px 0px 65px;
+}
+.RealFoodsInStore{
+    background: transparent url("images/bg_home_in_store.jpg")  no-repeat;
+    height: 650px;
+    /*padding-top: 25px;*/
+}
+.RealFoodsInStore .dottedrealfoodsforall{
+    /*background: #DB5AAD;*/
+}
+.title_instore{
+    font-family: 'futurab';
+    text-transform: lowercase;
+    color: #FFF;
+    width: 400px;
+    display: inline-block;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 60px 0px 0px 507px;
+float: left;
+}
+.gtbook.widgetheaderdes.instore{
+    width: 470px;
+    margin-left: 507px;
+    color: #fff;
+    height: auto;
+}
+.lc.widgetheaderlink.instore{
+    margin-left: 507px;
+}
+.RealFoodsInStore .learnmore{
+    /*margin-right: 151px;*/
+}
+.RealFoodsInPress{
+    background: #fff;
+    height: 625px;
+    /*padding-top: 25px;*/
+}
+.RealFoodsInPress .titledotted{
+    /*background: #fff;*/
+}
+.presstitle{
+    text-align: center;
+    padding: 100px 0px 50px 0px;
+    color: #45ACC4;
+    font-size: 48px;
+}
+.slditem{
+    width: 260px;
+    height: 200px;
+    padding: 0px 10px;
+    /*background: blue;*/
+}
+.sldlogo{
+    height: 80px;
+    background-position: center center;
+}
+.slddes{
+    white-space: initial;
+    height: 50px;
+    font-family: 'gothambook';
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    line-height: 17px;
+}
 /* END home
 -------------------------------------------------------------- */
 /* BEGIN footer
@@ -512,16 +661,21 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 
 #power {
     width: 1024px;
-    margin: 0px auto;
+    margin: 5px auto;
     text-align: center;
+    font-family: 'gothammedium';
+    font-size: 11px;
+    color: #666666;
 }
 #power .textA {
     font-size: 23px;
     font-weight: bold;
+    color: #4D4D4D;
 }
 #power a,.text2,.text3{
     text-decoration: none;
-    color: #a2a4a6;
+    /*color: #a2a4a6;*/
+    color: #666666;
 }
 #power .text1,.text2,.text3{
     background: url("images/cham.png") 0px 9px no-repeat;
