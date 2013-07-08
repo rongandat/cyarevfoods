@@ -54,6 +54,21 @@ class Revfoods_Image_Text extends WP_Widget {
         if ($instance['show_on'] == 'careers') {
             include ABSPATH . 'wp-content/themes/revfoods/widgets/html/careers.php';
         }
+        if ($instance['show_on'] == 'meals_served') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/meals_served.php';
+        }
+        if ($instance['show_on'] == 'meal_program') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/meal_program.php';
+        }
+        if ($instance['show_on'] == 'our_kind_of_partners') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/our_kind_of_partners.php';
+        }
+        if ($instance['show_on'] == 'in_school_products') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/in_school_products.php';
+        }
+        if ($instance['show_on'] == 'testimonials') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/testimonials.php';
+        }
     }
 
     public function update($new_instance, $old_instance) {
@@ -123,6 +138,11 @@ class Revfoods_Image_Text extends WP_Widget {
                 <option value="foot_philosophy" <?php if ($instance['show_on'] == 'foot_philosophy') echo "selected='true'"; ?>><?php _e('Foot philosophy on About page'); ?></option>
                 <option value="nutritional_education" <?php if ($instance['show_on'] == 'nutritional_education') echo "selected='true'"; ?>><?php _e('Nutritional education on About page'); ?></option>
                 <option value="careers" <?php if ($instance['show_on'] == 'careers') echo "selected='true'"; ?>><?php _e('Careers on About page'); ?></option>
+                <option value="meals_served" <?php if ($instance['show_on'] == 'meals_served') echo "selected='true'"; ?>><?php _e('Meals served on In Schools page'); ?></option>
+                <option value="meal_program" <?php if ($instance['show_on'] == 'meal_program') echo "selected='true'"; ?>><?php _e('Meal program on In Schools page'); ?></option>
+                <option value="our_kind_of_partners" <?php if ($instance['show_on'] == 'our_kind_of_partners') echo "selected='true'"; ?>><?php _e('Our kind of partners on In Schools page'); ?></option>
+                <option value="in_school_products" <?php if ($instance['show_on'] == 'in_school_products') echo "selected='true'"; ?>><?php _e('In School products on In Schools page'); ?></option>
+                <option value="testimonials" <?php if ($instance['show_on'] == 'testimonials') echo "selected='true'"; ?>><?php _e('Testimonials on In Schools page'); ?></option>
             </select>
         </p>
         <div id="div_background_image">

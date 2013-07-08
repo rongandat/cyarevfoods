@@ -611,7 +611,7 @@ ul.sub_menu li a {
     color: #000000;
     font-size: 15px;
     padding-right: 20px;
-    font-family: 'futura';
+    font-family: 'futurab';
 }
 #nutritional_education .about_topdotted {
     background-position: 0 25px;
@@ -681,11 +681,126 @@ ul.sub_menu li a {
 #careers .content_text a.careers_href {
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
     color: #000000;
-    font-family: 'futura';
+    font-family: 'futurab';
     font-size: 15px;
     padding-right: 20px;
 }
 /* END about page
+-------------------------------------------------------------- */
+
+/* BEGIN inschools page
+-------------------------------------------------------------- */
+#meals_served .content {
+    padding: 448px 195px 0;
+    text-align: center;
+    width: 655px;
+    font-family: gothambook;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+}
+#meals_served .content span.kid {
+    font-family: gothamblack;
+}
+#meals_served .real_foot {
+    margin: 180px 25px 0 0;
+    float: right;
+    width: 200px;
+    height: 196px;
+    background: url(images/real_foot_for_all.png) no-repeat center left;
+}
+#meals_served .real_foot h1 span.small {
+    font-family: gotham;
+    font-size: 13px;
+    vertical-align: text-top;
+    line-height: 22px;
+}
+#meal_program .about_topdotted {
+    padding: 30px 0 85px;
+    text-align: center;
+}
+#meal_program .dottedour_story {
+    background: none repeat scroll 0 0 #fff;
+}
+#meal_program .main_content {
+    width: 457px;
+    padding-left: 70px;
+    float: left;
+}
+#meal_program p.description {
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 15px 0 10px;
+}
+#meal_program a {
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futurab';
+}
+#our_kind_of_partners .main_content {
+    width: 320px;
+    float: right;
+    padding: 115px 40px 0 0;
+}
+#our_kind_of_partners .main_content p {
+    margin: 10px 0;
+    color: #333333;
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+}
+#our_kind_of_partners a {
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futurab';
+}
+#in_school_products .about_topdotted {
+    padding: 30px 0 85px;
+    text-align: center;
+}
+#in_school_products .dottedour_story {
+    background: none repeat scroll 0 0 #fff;
+}
+#in_school_products .main_content {
+    width: 485px;
+    padding: 75px 0 0 85px;
+    float: left;
+    width: 440px;
+}
+#in_school_products p.description {
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 15px 0 10px;
+}
+#in_school_products a {
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futurab';
+}
+#in_school_products .image {
+    float: left;
+    margin-left: 45px;
+}
+#testimonials .image {
+    padding: 60px 40px 0 90px;
+    float: left;
+}
+#testimonials .main_content {
+    float: left;
+    padding: 190px 0 0 0;
+    width: 290px;
+}
+/* END inschools page
 -------------------------------------------------------------- */
 
 /* BEGIN footer
