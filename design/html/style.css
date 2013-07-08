@@ -956,14 +956,15 @@ span.topsocial{
 }
 
 #twitter_share{
-    width: 650px;
+    height: 650px;
     background: #fff;
-    
+
 }
 
 #twitter_share .main_content{
     padding: 155px 30px 0 95px;
     width: 365px;
+    float: left;
 }
 
 #twitter_share h1{
@@ -995,6 +996,7 @@ span.topsocial{
 
 #twitter_share .image{
     float: left;
+    padding-top: 95px;
 }
 /* End REV JOINREVOLUTION
 -------------------------------------------------------------- */
@@ -1248,8 +1250,8 @@ span.topsocial{
     width: 200px;
     height: 196px;
     background: url(images/real_foot_for_all.png) no-repeat center left;
-    
-    
+
+
 }
 
 #feature_schools .real_foot h1 {
