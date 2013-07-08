@@ -460,13 +460,13 @@ span.topsocial{
 
 
 #our_story .main_image{
-    padding: 0 75px 103px 100px;
+    padding: 0 15px 0 100px;
     float: left;
     position: relative
 }
 #our_story .main_content{
     float: left;
-    padding: 70px 110px 70px 0; 
+    padding: 70px 0; 
     width: 375px;
 }
 #our_story .des_image{
@@ -1211,6 +1211,173 @@ span.topsocial{
     padding-right: 20px;
     font-family: 'futura';
 }
+
+
+#inschool_product{
+    height: 655px;
+    background-color: #f6f6f6;
+}
+
+#inschool_product .about_topdotted {
+    padding: 30px 0 85px;
+    text-align: center;
+}
+
+#inschool_product .dottedour_story {
+    background: none repeat scroll 0 0 #fff;
+}
+
+#inschool_product .main_content{
+    width: 485px;
+    padding: 75px 0 0 85px;
+    float: left;
+    width: 440px;
+}
+
+#inschool_product h1{
+    font-family: futurabold;
+    color: #8eb624;
+    font-size: 63px;
+    text-align: left;
+}
+#inschool_product p.description{
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 15px 0 10px
+}
+
+#inschool_product a{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futura';
+}
+
+#inschool_product .image{
+    float: left;
+    margin-left: 45px;
+}
+
+
+#where_we_server{
+    height: 650px;
+    position: relative;
+}
+
+
+#where_we_server .about_topdotted {
+    padding: 30px 0 115px;
+    text-align: center;
+}
+#where_we_server .info{
+    width: 575px;
+    margin: 0 auto;
+}
+#where_we_server .info h1{
+    font-family: futurabold;
+    color: #45acc4;
+    font-size: 46px;
+    text-align: center;
+}
+#where_we_server .info p{
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 20px 0 45px;
+    text-align: center;
+}
+
+#where_we_server .main_content {
+    margin: 0 135px;
+}
+
+#where_we_server .content{
+    width: 225px;
+    float: left;
+    margin-left: 39px;
+    text-align: center;
+}
+
+#where_we_server .content h3{
+    font-family: futurabold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+#where_we_server .content p.person{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;    
+    text-align: left;
+}
+
+#where_we_server .content:first-child{
+    margin-left: 0;
+}
+
+
+#where_we_server .preview {
+    background: url("images/arror_leadership.png") no-repeat scroll left top transparent;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    top: 355px;
+    width: 40px;
+}
+
+
+#where_we_server .next {
+    background: url("images/arror_leadership.png") no-repeat scroll right top transparent;
+    height: 40px;
+    position: absolute;
+    right: 35px;
+    top: 355px;
+    width: 40px;
+}
+
+.c_f38834{
+    color: #f38834;
+}
+.c_ff4819{
+    color: #ff4819;
+}
+
+#revolution_foot{
+    height: 650px;
+    background: #f6f6f6;
+}
+
+#revolution_foot .image{
+    padding: 60px 40px 0 90px;
+    float: left;
+}
+
+#revolution_foot .main_content{
+    float: left;
+    padding: 190px 0 0 0;
+    width: 290px;
+}
+
+#revolution_foot .main_content p.content{
+    font-family: gothamblack;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#revolution_foot .main_content p.person{
+    font-family: gothambook;
+    font-size: 17px;
+    line-height: 18px;
+    color: #45acc4;    
+    text-align: left;
+}
+
 /* END REV SCHOOL
 -------------------------------------------------------------- */
 
