@@ -869,6 +869,17 @@ span.topsocial{
     font-family: 'futura';
 }
 
+#join_revolution .css-label {
+    background-image: url("images/checkbox_new.png");
+    color: #A2A4A6;
+}
+#join_revolution input.css-checkbox[type="checkbox"] + label.css-label{
+    background-position: -5px -31px;
+}
+
+#join_revolution input.css-checkbox[type="checkbox"]:checked + label.css-label {
+    background-position: -5px -8px;
+}
 
 #join_revolution ::-webkit-input-placeholder {
     font-family: 'gothambook';
