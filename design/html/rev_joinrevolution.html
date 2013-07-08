@@ -1,0 +1,177 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Revolution Fooods | Just another WordPress site</title>
+        <link rel='stylesheet' id='revfoods-style-css'  href='style.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='revfoods-style-css'  href='stylesheets/form_style.css' type='text/css' media='all' />
+        <script type='text/javascript' src='js/jquery/jquery.js?ver=1.8.3'></script>
+    </head>
+    <body>
+
+        <div id="page" class="hfeed site">
+            <header role="banner" class="site-header" id="masthead">
+                <div style="top:0px;" class="site-header-1 pfixed">
+                    <ul class="top-menu-1" id="menu-topmenu-1"><li class="circle menu-item menu-item-type-post_type menu-item-object-page menu-item-31" id="menu-item-31"><a href="http://revfoods.lc/?page_id=18">Where to buy</a><span></span></li>
+                        <li class="circle menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="http://revfoods.lc/?page_id=28">Contact us</a><span></span></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="http://revfoods.lc/?page_id=26">Login</a><span></span></li>
+                    </ul>           
+                </div>
+                <div style="" class="site-header-2 pfixed">
+                    <a href="http://revfoods.lc" class="logohome fl">
+                        <img class="logo" src="http://wpvalet.cyahost.com/revfoods/wp-content/themes/revfoods/images/logo.png">
+                    </a>
+                    <ul class="top-menu-2 fl" id="menu-topmenu-2"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32" id="menu-item-32"><a href="http://revfoods.lc/">Home</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33" id="menu-item-33"><a href="http://revfoods.lc/?page_id=2">About</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34" id="menu-item-34"><a href="http://revfoods.lc/?page_id=7">In Schools</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35" id="menu-item-35"><a href="http://revfoods.lc/?page_id=8">In Stores</a></li>
+                    </ul>                <ul class="top-menu-social fl" id="menu-top-social"><li class="fb menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51"><a href="http://facebook.com/revolutionfoods"></a></li>
+                        <li class="tw menu-item menu-item-type-custom menu-item-object-custom menu-item-52" id="menu-item-52"><a href="http://twitter.com/revolutionfoods"></a></li>
+                        <li class="jr menu-item menu-item-type-post_type menu-item-object-page menu-item-54" id="menu-item-54"><a href="http://revfoods.lc/?page_id=53"></a></li>
+                    </ul>                <span class="topsocial"></span>
+                </div>
+                <div style="" class="site-header-3 pfixed">
+                    <span class="question">QUESTION</span>
+                    <ul class="top-menu-3" id="menu-topmenu-3">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36" id="menu-item-36"><a rel="feature" href="#">new products</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a rel="meal_kits" href="#">meal kits</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a rel="where_to_buy" href="#">where to buy</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37" id="menu-item-37"><a rel="testimonials" href="#">testimonials</a></li>
+                    </ul>           
+                </div>
+                <script>
+                    jQuery(document).ready(function(){
+                        jQuery('.menu-item').click(function(){
+                           
+                            var id =jQuery(this).children('a').attr('rel');
+                            jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 115)}, 1000);
+                            
+                        })
+                    
+                    })
+                </script>
+
+            </header>
+
+            <div id="main" class="wrapper">
+
+
+                <!-- BOF Content rev_joinrevolution  -->
+
+                <div id="join_revolution">
+                    <div class="main_content">
+                        <div class="content">
+                            <h1>join the
+                                revolution</h1>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet consultiteur. Erat sit amet lorem dolor. 
+                                Lorem ipsum dolor sit amet con. Lorem ipsum dolor sit amet consultiteur. 
+                                Erat sit amet lorem dolor. Lorem ipsum dolor sit amet con.
+                            </p>
+                        </div>
+                        <div class="form">
+                            <input type="text" value="" placeholder="enter your email address" class="st-forminput" name="email_address">
+                            <div class="send_info">
+                                <span class="send_me">send me information about...</span>
+                                <input id="checkedbox1" class="css-checkbox" type="checkbox" name="inschools">
+                                <label class="css-label" for="checkedbox1">school lunch program</label>
+                                <input id="checkedbox2" class="css-checkbox" type="checkbox" name="instores">
+                                <label for="checkedbox2" class="css-label">healthy meal kits</label>
+                            </div>
+                        </div>
+                        <a href="#">sign up</a>
+                    </div>
+                </div>
+                
+                <div id="facebook_share">
+                    <div class="about_topdotted"><span class="titledotted dottedour_story">follow us</span></div>
+                    <div class="image">
+                        <img src="images/facebook_share.png"/>
+                    </div>
+                    <div class="main_content">
+                        <h1>
+                            facebook
+                        </h1>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. 
+                            Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur.
+                        </div>
+                        <a href="#">join the conversation</a>
+                    </div>
+                </div>
+                
+                <div id="twitter_share">
+                    <div class="main_content">
+                        <h1>twitter</h1>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. 
+                            Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur.
+                        </div>
+                        <a href="#">follow us</a>
+                    </div>
+                    <div class="image">
+                        <img src="images/twiter_share.png"/>
+                    </div>
+                </div>
+
+                <!-- EOF Content rev_joinrevolution  -->
+
+                <div id="footer">
+                    <div class="left">
+                        <div class="column">
+                            <h3>quick links</h3>
+                            <ul>
+                                <li><a href="">about us</a></li>
+                                <li><a href="">in schools</a></li>
+                                <li><a href="">in stores</a></li>
+                                <li><a href="">careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>help</h3>
+                            <ul>
+                                <li><a href="">faq + support</a></li>
+                                <li><a href="">where to buy</a></li>
+                                <li><a href="">login</a></li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3>contact us</h3>
+                            <ul>
+                                <li><a href="">general inquires</a></li>
+                                <li><a href="">school inquires</a></li>
+                                <li><a href="">retail products</a><span class="message"></span></li>
+                                <li><a href="">press inquires</a><span class="message"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="icon"></div>
+                    </div>
+                    <div class="right">
+                        <div class="column1">
+                            <h3>special offers &amp; updates: </h3>
+                            <input type="text" value="Email*" class="emailIp" name="email">
+                            <input type="checkbox" checked="checked" class="css-checkbox" name="inschools" id="checkedbox1"><label class="css-label" for="checkedbox1">in school</label>
+                            <input type="checkbox" class="css-checkbox" name="instores" id="checkedbox2"><label class="css-label" for="checkedbox2">in store</label>
+                            <a onclick="JavaScription();" class="sumbit"></a>
+
+                        </div>
+                        <div class="column2">
+                            <h3>follow us: </h3>
+                            <a target="_blank" href="http://www.facebook.com/RevolutionFoods"><span class="facebook"></span></a>
+                            <a target="_blank" href="https://twitter.com/RevolutionFoods"><span class="twet"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="power">
+                    <span class="textA">real food for all <sup>TM</sup></span> <a class="text1" target="_blank" href="">legal</a> <span class="text2">copyright &copy; 2013 revolution foods </span><span class="text3">site by <a class="text2v" target="_blank" href="">veneer</a></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+/* 
+    Document   : footer
+    Created on : Jul 3, 2013, 2:32:14 PM
+    Author     : admin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+#footer {
+    background: url("images/footer_bg.png") #4d4d4d repeat-x;
+    width: 1024px;
+    height: 327px;
+    font-size: 14px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#footer .left {
+    float: left;
+    width: 355px;
+    margin-top: 67px;
+    margin-left: 80px;
+}
+#footer .column{
+    float: left;
+    width: 100px;
+    padding-left: 10px;
+}
+#footer .column h3{
+    color: #fff;
+    margin: 0px;
+}
+#footer .column ul{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+
+}
+#footer .column ul li {
+    padding: 3px 0 4px 0px;
+}
+#footer .column a {
+    text-decoration: none;
+    color: #a2a4a6;
+    font-size: 12px;
+    line-height: 19px;
+}
+#footer .column span.message{
+    background: url("../images/message.png") no-repeat 10px 5px;
+    padding: 0px 15px;
+}
+
+#footer .column a:hover {
+    text-decoration: none;
+    color: #dd64b2;
+}
+#footer .center{
+    float: left;
+    width: 135px;
+    margin-top: 50px;
+}
+#footer .center .icon {
+    background: url("../images/iconlarg.png") no-repeat;
+    width: 135px;
+    height: 135px;
+}
+#footer .right{
+    float: left;
+    margin-top: 67px;
+    margin-right:115px;
+    width: 330px;
+}
+#footer .right .column1{
+    float: left;
+    width: 205px;
+    margin: 0px 30px;
+}
+#footer .right h3{
+    color: #52a444;
+    margin: 0px 0px 5px;
+}
+#footer .right .column2{
+    float: right;
+    width: 65px;
+}
+#footer .right .facebook{
+    float: left;
+    background: url("../images/facebook.png") no-repeat;
+    height: 28px;
+    width: 28px;
+}
+#footer .right .twet{
+    float: left;
+    background: url("../images/twiet.png") no-repeat;
+    height: 28px;
+    width: 28px;
+    margin-left:5px;
+}
+
+#footer input.emailIp{
+    background: url("../images/bg_email.png") 0px -1px repeat-x;
+    height: 22px;
+    padding: 0px 9px;
+    width: 183px;
+}
+input[type=checkbox].css-checkbox {
+    display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 23x;
+    background-repeat: no-repeat;
+    background-position: -3px -26px;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: -3px -6px;
+}
+
+.css-label{
+    background-image:url("../images/checkbox2.png");
+    color: #a2a4a6;
+}
+#footer .right .column1 a.sumbit{
+    background: url("../images/submit.png") no-repeat;
+    width: 60px;
+    height: 16px;
+    float: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#power {
+    width: 1024px;
+    margin: 0px auto;
+    text-align: center;
+}
+#power .textA {
+    font-size: 23px;
+    font-weight: bold;
+}
+#power a,.text2,.text3{
+    text-decoration: none;
+    color: #a2a4a6;
+}
+#power .text1,.text2,.text3{
+    background: url("../images/cham.png") 0px 9px no-repeat;
+    width: 4px;
+    height: 4px;
+    padding: 0px 15px;
+}
+#power .text1:hover,#power .text2v:hover{
+    color: #dd64b2;
+}
+#power sup{
+    font-size: 9px;
+}
