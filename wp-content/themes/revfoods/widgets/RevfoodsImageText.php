@@ -66,8 +66,14 @@ class Revfoods_Image_Text extends WP_Widget {
         if ($instance['show_on'] == 'in_school_products') {
             include ABSPATH . 'wp-content/themes/revfoods/widgets/html/in_school_products.php';
         }
-        if ($instance['show_on'] == 'testimonials') {
-            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/testimonials.php';
+        if ($instance['show_on'] == 'the_buzz') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/the_buzz.php';
+        }
+        if ($instance['show_on'] == 'new_products') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/new_products.php';
+        }
+        if ($instance['show_on'] == 'meal_kits') {
+            include ABSPATH . 'wp-content/themes/revfoods/widgets/html/meal_kits.php';
         }
     }
 
@@ -142,7 +148,9 @@ class Revfoods_Image_Text extends WP_Widget {
                 <option value="meal_program" <?php if ($instance['show_on'] == 'meal_program') echo "selected='true'"; ?>><?php _e('Meal program on In Schools page'); ?></option>
                 <option value="our_kind_of_partners" <?php if ($instance['show_on'] == 'our_kind_of_partners') echo "selected='true'"; ?>><?php _e('Our kind of partners on In Schools page'); ?></option>
                 <option value="in_school_products" <?php if ($instance['show_on'] == 'in_school_products') echo "selected='true'"; ?>><?php _e('In School products on In Schools page'); ?></option>
-                <option value="testimonials" <?php if ($instance['show_on'] == 'testimonials') echo "selected='true'"; ?>><?php _e('Testimonials on In Schools page'); ?></option>
+                <option value="the_buzz" <?php if ($instance['show_on'] == 'the_buzz') echo "selected='true'"; ?>><?php _e('The buzz on In Schools page'); ?></option>
+                <option value="new_products" <?php if ($instance['show_on'] == 'new_products') echo "selected='true'"; ?>><?php _e('New products on In Stores page'); ?></option>
+                <option value="meal_kits" <?php if ($instance['show_on'] == 'meal_kits') echo "selected='true'"; ?>><?php _e('Meal kits on In Stores page'); ?></option>
             </select>
         </p>
         <div id="div_background_image">

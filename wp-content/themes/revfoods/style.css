@@ -791,16 +791,44 @@ ul.sub_menu li a {
     float: left;
     margin-left: 45px;
 }
-#testimonials .image {
+#the_buzz .image {
     padding: 60px 40px 0 90px;
     float: left;
 }
-#testimonials .main_content {
+#the_buzz .main_content {
     float: left;
     padding: 190px 0 0 0;
     width: 290px;
 }
 /* END inschools page
+-------------------------------------------------------------- */
+
+/* BEGIN instores page
+-------------------------------------------------------------- */
+#meal_kits .main_content {
+    width: 340px;
+    float: right;
+    margin-right: 140px;
+}
+#meal_kits .main_content p {
+    color: #333;
+    font-family: 'gothambook';
+    font-size: 13px;
+    margin: 15px 0;
+}
+#meal_kits .main_content ul li {
+    background: url("images/check_green.png") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    margin: 10px 0;
+    padding: 8px 0 0 40px;
+    color: #82be14;
+    font-family: 'gotham';
+    font-size: 13px;
+}
+#meal_kits .main_content p.info {
+    margin: 15px 45px;
+}
+/* END instores page
 -------------------------------------------------------------- */
 
 /* BEGIN footer
