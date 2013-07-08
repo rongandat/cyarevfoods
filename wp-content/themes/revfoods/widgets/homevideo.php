@@ -20,6 +20,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         $title = esc_attr(isset($instance['title']) ? $instance['title'] : '' );
         $codeembed = esc_attr(isset($instance['codeembed']) ? $instance['codeembed'] : '' );
         $textshowvideo = esc_attr(isset($instance['textshowvideo']) ? $instance['textshowvideo'] : '' );
+        $linkshare = esc_attr(isset($instance['linkshare']) ? $instance['linkshare'] : '' );
 
         $image = new WidgetImageField($this, $image_id);
         ?>
@@ -42,6 +43,11 @@ class Revfoods_HomeVideo extends WP_Widget {
                 <input class="widefat" id="<?php echo $this->get_field_id('textshowvideo'); ?>" name="<?php echo $this->get_field_name('textshowvideo'); ?>" type="text" value="<?php echo $textshowvideo; ?>" />
             </label>
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('linkshare'); ?>"><?php _e('Link Share:'); ?>
+                <input class="widefat" id="<?php echo $this->get_field_id('linkshare'); ?>" name="<?php echo $this->get_field_name('linkshare'); ?>" type="text" value="<?php echo $linkshare; ?>" />
+            </label>
+        </p>
         <?php
     }
 
@@ -52,6 +58,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         $codeembed = $instance['codeembed'];
         $image_id = $instance[$this->image_field];
         $textshowvideo = $instance['textshowvideo'];
+        $linkshare = $instance['linkshare'];
 
         $image = new WidgetImageField($this, $image_id);
 
@@ -79,13 +86,15 @@ class Revfoods_HomeVideo extends WP_Widget {
                 <a href="javascript:void(0)" id="watch-video"><?php echo $textshowvideo;?></a>
             </div>
             <div class="clr"></div>
+            <?php if(!empty($linkshare)):?>
             <div class="homesocial">
-                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fhn.24h.com.vn%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=403218749733700" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://vnexpress.net/">Tweet</a>
+                <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $linkshare;?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=403218749733700" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare;?>">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                <a href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fvnexpress.net%2F&media=dantri&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+                <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare;?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                 <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
             </div>
+            <?php endif;?>
         </div>
         <?php
     }
@@ -97,6 +106,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         $instance['codeembed'] = $new_instance['codeembed'];
         $instance[$this->image_field] = intval(strip_tags($new_instance[$this->image_field]));
         $instance['textshowvideo'] = strip_tags($new_instance['textshowvideo']);
+        $instance['linkshare'] = strip_tags($new_instance['linkshare']);
 
         return $instance;
     }

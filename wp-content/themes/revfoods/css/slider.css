@@ -34,10 +34,10 @@
     background: url('../images/panelicon.png') no-repeat;
     display:inline-block; z-index:5; cursor:pointer;
 }
-#mcts1 .navPrev {background-position:0 -30px;top:15px;left:-60px;}
+#mcts1 .navPrev {background-position:0 -31px;top:15px;left:-60px;}
 #mcts1 .navPrevDisabled, #mcts1 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
 
-#mcts1 .navNext {background-position:-44px -30px;top:15px;right:-60px;} 
+#mcts1 .navNext {background-position:-44px -31px;top:15px;right:-60px;} 
 /*#mcts1 .navNext:hover {background-position:-16px -44px;}*/ 
 #mcts1 .navNextDisabled, #mcts1 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
 
