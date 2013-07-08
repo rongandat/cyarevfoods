@@ -465,10 +465,11 @@ if (!function_exists('revfoods_comment')) :
     add_action('widgets_init', 'revfoods_widgets_init');
     /* END include siderbar */
     /* BEGIN include widgets */
-    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
-    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForSchool.php';
-    include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
+    //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForAll.php';
+    //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForSchool.php';
+    //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
     include ABSPATH . 'wp-content/themes/revfoods/widgets/homevideo.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/RevfoodsImageText.php';
     /* END include widgets */
 
 
