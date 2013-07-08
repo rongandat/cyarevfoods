@@ -831,7 +831,7 @@ span.topsocial{
 }
 
 #meal_kits .main_content ul{
-    
+
 }
 #meal_kits .main_content ul li{
     background: url("images/check_green.png") no-repeat scroll 0 0 transparent;
@@ -897,7 +897,7 @@ span.topsocial{
 #where_to_buy{
     background: #f6f6f6;
     height: 648px;
-    
+
 }
 
 
@@ -1024,6 +1024,196 @@ span.topsocial{
 
 /* END REV INSTORES
 -------------------------------------------------------------- */
+
+
+
+
+/* BEGIN REV SCHOOL
+-------------------------------------------------------------- */
+
+#feature_schools{
+    height: 520px;
+    background: url(images/feature_inschools.jpg) no-repeat center top;
+    background-color: #f6f6f6;
+}
+
+#feature_schools .real_foot{
+    margin: 180px 25px 0 0;
+    float: right;
+    width: 200px;
+    height: 196px;
+    background: url(images/real_foot_for_all.png) no-repeat center left;
+}
+
+#feature_schools .content{
+    padding: 448px 195px 0; 
+    text-align: center;
+    width: 655px;
+    font-family: gothambook;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+}
+
+#feature_schools .content span.kid{
+    font-family: gothamblack;
+
+}
+
+#meal_program{
+    height: 650px;
+    background: url(images/meal_program.png) no-repeat right bottom;
+    background-color: #fff;
+}
+
+#meal_program .about_topdotted {
+    padding: 30px 0 85px;
+    text-align: center;
+}
+
+#meal_program .dottedour_story {
+    background: none repeat scroll 0 0 #fff;
+}
+
+#meal_program .main_content{
+    width: 485px;
+    padding-left: 70px;
+    float: left;
+}
+
+#meal_program h1{
+    font-family: futurabold;
+    color: #ff9331;
+    font-size: 82px;
+    text-align: left;
+}
+#meal_program p.description{
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 15px 0 10px
+}
+
+#meal_program a{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futura';
+}
+
+
+#our_difference{
+    background: #75c1d3;
+    height: 650px;
+    position: relative;
+}
+
+#our_difference .about_topdotted {
+    padding: 30px 0 140px;
+    text-align: center;
+}
+
+#our_difference .dottedour_story {
+    background: none repeat scroll 0 0 #75c1d3;
+}
+
+
+#our_difference .main_content{
+    padding: 0 120px 0 70px
+}
+
+#our_difference .main_content h1{
+    font-family: futurabold;
+    font-size: 47px;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 55px;
+}
+
+#our_difference .main_content .inner-content{
+    float: left;
+    margin-left: 45px;
+    width: 233px;
+
+}
+
+#our_difference .main_content h3{
+    font-family: Futura;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#our_difference .main_content div.meta-des{
+    font-weight: 13px;
+    color: #fff;
+    font-family: gothamblack;
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+#our_difference .main_content div.description{
+    text-align: justify;
+    color: #fff;
+}
+
+#our_difference .preview{
+    background: url(images/board_directors_arrow.png) no-repeat left top;
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
+#our_difference .next{
+    background: url(images/board_directors_arrow.png) no-repeat right top;
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 320px;
+    right: 35px;
+}
+
+#our_kind{
+    height: 645px;
+    background: url(images/our_kind.png) no-repeat center top;
+
+}
+
+#our_kind .main_content{
+    width: 320px;
+    float: right;
+    padding: 115px 40px 0 0;
+}
+
+#our_kind h1{
+    font-family: futurabold;
+    font-size: 53px;
+    color: #902b8c;
+    text-align: left;
+}
+
+#our_kind .main_content p{
+    margin: 10px 0;
+    color: #333333;
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px
+}
+
+#our_kind a{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futura';
+}
+/* END REV SCHOOL
+-------------------------------------------------------------- */
+
 
 
 
