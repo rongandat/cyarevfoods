@@ -12,6 +12,11 @@
     font-family: 'gothammedium';
     src: url('../fonts/gotham/Gotham-Medium.otf');
 }
+
+@font-face {
+    font-family: 'futurabold';
+    src: url('../fonts/futura/Futura Bold BT.ttf');
+}
 @font-face {
     font-family: 'gothamx';
     src: url('../fonts/gotham/GothamXNarrow-Book.otf');
