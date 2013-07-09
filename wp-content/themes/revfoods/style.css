@@ -595,6 +595,9 @@ ul.sub_menu li a {
 #foot_philosophy .titledotted {
     background: #f6f6f6;
 }
+#foot_philosophy .dottedour_story {
+    background: #f6f6f6;
+}
 #foot_philosophy .main_content {
     margin: 0 0 0 95px;
     float: left;

@@ -1024,6 +1024,22 @@ span.topsocial{
     height: 522px;
 }
 
+#feature h1{
+    background: url('images/rev_food.png') no-repeat top left;
+    width: 329px;
+    height: 329px;
+    color: #fff;
+    
+    font-family: futurabold;
+    margin:75px 60px 0 0;
+    float: right;
+}
+
+#feature h1 span{
+    float: right;
+    padding: 110px 18px;
+    font-size: 40px;
+}
 #meal_kits{
     background: url('images/meal_kits.png') no-repeat bottom left;
     height: 650px;
