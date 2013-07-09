@@ -490,8 +490,9 @@ span.topsocial{
     padding: 10px 0;
     font-family: 'gothambook';
 }
-.dottedour_story{
+.about_topdotted .dottedour_story{
     background: none repeat scroll 0 0 #fff;
+    padding: 0 10px;
 }
 
 
@@ -1307,6 +1308,7 @@ span.topsocial{
 
 #meal_program .dottedour_story {
     background: none repeat scroll 0 0 #fff;
+    
 }
 
 #meal_program .main_content{

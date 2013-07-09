@@ -590,6 +590,7 @@ ul.sub_menu li a {
 }
 .dottedour_story {
     background: none repeat scroll 0 0 #fff;
+    padding: 0 10px;
 }
 #foot_philosophy .titledotted {
     background: #f6f6f6;
@@ -721,6 +722,7 @@ ul.sub_menu li a {
 }
 #meal_program .dottedour_story {
     background: none repeat scroll 0 0 #fff;
+    
 }
 #meal_program .main_content {
     width: 457px;
@@ -1014,3 +1016,126 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
  -  add class (message) for menu bottom 3.
 END note
 -----------------------------------------------------------------*/
+
+
+@media (max-width: 1000px) {
+    .site-header, .wrapper, site-footer {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+
+    #our_story .main_image{
+        padding: 0 75px 103px 60px;
+    }
+
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 340px;
+    }
+
+
+    #foot_philosophy {
+        background: url("images/foot_philosophy.png") no-repeat scroll center top transparent;
+        height: 583px;
+    }
+
+    #foot_philosophy .main_content {
+        float: left;
+        margin: 0 0 0 45px;
+        width: 367px;
+
+    }
+
+    #nutrition_education .main_image {
+        float: left;
+        padding: 0 30px 0 35px;
+    }
+
+
+    #nutrition_education .main_content{
+        padding-top: 105px;
+        display: block;
+        float: left;
+        width: 200px;
+    }
+
+
+    #careers {
+        background: url("images/job_imge.png") no-repeat scroll center top transparent;
+        height: 655px;
+    }
+
+    #careers .left-topdotted {
+        background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+        float: left;
+        height: 10px;
+        text-align: center;
+        width: 44%;
+    }
+
+
+    #careers .titledotted {
+        background: none repeat scroll 0 0 transparent;
+        width: 10%;
+    }
+
+    #careers .right-topdotted {
+        background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
+        float: left;
+        height: 10px;
+        text-align: center;
+        width: 44%;
+    }
+
+
+    #leadership .inner-content {
+        width: 47%;
+    }
+
+    #board_directors .main_content .inner-content {
+        float: left;
+        margin-left: 3%;
+        width: 30%;
+    }
+
+
+    #nutrition_education .main_image {
+        float: left;
+        padding: 0 30px 0 35px;
+        width: 55%;
+    }
+
+    #nutrition_education .main_image img{
+        width: 100%
+    }
+}
+
+@media (max-width: 850px){
+    #our_story .main_image {
+        padding: 0 75px 103px 20px;
+        width: 50%
+    }
+
+    #our_story .main_image img{
+        width: 100%
+    }
+
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 35%;
+    }
+
+}
+
+@media (max-width: 650px){
+    #our_story .main_content {
+        float: left;
+        padding: 70px 0;
+        width: 30%;
+    }
+}
