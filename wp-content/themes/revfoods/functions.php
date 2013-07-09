@@ -460,6 +460,15 @@ if (!function_exists('revfoods_comment')) :
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>',
         ));
+        register_sidebar(array(
+            'name' => __('Join the revolution sidebar', 'revfoods'),
+            'id' => 'sidebar-join-the-revolution',
+            'description' => __('Join the revolution Page', 'revfoods'),
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ));
     }
 
     add_action('widgets_init', 'revfoods_widgets_init');
@@ -470,6 +479,8 @@ if (!function_exists('revfoods_comment')) :
     //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
     include ABSPATH . 'wp-content/themes/revfoods/widgets/homevideo.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/RevfoodsImageText.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/facebookFeeds.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/twitterFeeds.php';
     /* END include widgets */
 
 
