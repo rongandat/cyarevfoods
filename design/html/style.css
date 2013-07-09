@@ -585,14 +585,14 @@ span.topsocial{
 #careers .left-topdotted{
     background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
     text-align: center;
-    width: 46%;
+    width: 44%;
     height: 10px;
     float: left
 }
 #careers .right-topdotted{
     background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
     text-align: center;
-    width: 46%;
+    width: 44%;
     height: 10px;
     float: left
 }
@@ -1840,7 +1840,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         float: left;
         height: 10px;
         text-align: center;
-        width: 44%;
+        width: 42%;
     }
 
 
@@ -1854,7 +1854,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         float: left;
         height: 10px;
         text-align: center;
-        width: 44%;
+        width: 42%;
     }
 
 

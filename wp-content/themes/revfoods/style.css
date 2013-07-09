@@ -644,7 +644,7 @@ ul.sub_menu li a {
 #careers .left-topdotted {
     background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
     text-align: center;
-    width: 46%;
+    width: 44%;
     height: 10px;
     float: left;
 }
@@ -658,7 +658,7 @@ ul.sub_menu li a {
 #careers .right-topdotted {
     background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
     text-align: center;
-    width: 46%;
+    width: 44%;
     height: 10px;
     float: left;
 }
@@ -1018,6 +1018,7 @@ END note
 -----------------------------------------------------------------*/
 
 
+
 @media (max-width: 1000px) {
     .site-header, .wrapper, site-footer {
         margin: 0 auto;
@@ -1074,7 +1075,7 @@ END note
         float: left;
         height: 10px;
         text-align: center;
-        width: 44%;
+        width: 42%;
     }
 
 
@@ -1088,7 +1089,7 @@ END note
         float: left;
         height: 10px;
         text-align: center;
-        width: 44%;
+        width: 42%;
     }
 
 
