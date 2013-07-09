@@ -9,17 +9,20 @@ class TwitterFeedWidget extends WP_Widget {
             array(
                 'name' => 'content',
                 'label' => __('Content', 'fbf'),
-                'type' => 'textarea'
+                'type' => 'textarea',
+                'default'=>'Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur.'
             ),
             array(
                 'name' => 'link',
                 'label' => __('Link', 'fbf'),
-                'type' => 'text'
+                'type' => 'text',
+                'default'=>'http://twitter.com/revolutionfoods'
             ),
             array(
                 'name' => 'link_text',
                 'label' => __('Link Text', 'fbf'),
-                'type' => 'text'
+                'type' => 'text',
+                'default'=>'follow us on twitter'
             ),
             array(
                 'label' => __('Twitter Authentication options', 'rstw'),
@@ -144,10 +147,6 @@ class TwitterFeedWidget extends WP_Widget {
 
     /** @see WP_Widget::form */
     function form($instance) {
-        $default['title'] = __('Twitter');
-        $default['content'] = 'Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur. Lorem ipsum dolor sit amet consultiteur.';
-        $default['link'] = 'http://twitter.com/revolutionfoods';
-        $default['link_text'] = 'follow us on twitter';
         if (empty($instance)) {
             foreach ($this->options as $val) {
                 if ($val['type'] == 'separator') {
