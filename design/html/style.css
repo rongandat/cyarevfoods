@@ -498,7 +498,7 @@ span.topsocial{
 
 
 #foot_philosophy{
-    background: url('images/foot_philosophy.png') no-repeat top left;
+    background: url('images/foot_philosophy.png') no-repeat center top transparent;
     height: 583px;
 }
 
@@ -1029,7 +1029,7 @@ span.topsocial{
     width: 329px;
     height: 329px;
     color: #fff;
-    
+
     font-family: futurabold;
     margin:75px 60px 0 0;
     float: right;
@@ -1324,7 +1324,7 @@ span.topsocial{
 
 #meal_program .dottedour_story {
     background: none repeat scroll 0 0 #fff;
-    
+
 }
 
 #meal_program .main_content{
@@ -1476,7 +1476,7 @@ span.topsocial{
 }
 
 #inschool_product .dottedour_story {
-    background: none repeat scroll 0 0 #fff;
+    background: none repeat scroll 0 0 #f6f6f6;
 }
 
 #inschool_product .main_content{
@@ -1813,6 +1813,12 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         padding: 0 75px 103px 60px;
     }
 
+
+    #our_difference .main_content .inner-content {
+        margin-left: 8%;
+        width: 25%;
+    }
+
     #our_story .main_content {
         float: left;
         padding: 70px 0;
@@ -1821,7 +1827,6 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 
 
     #foot_philosophy {
-        background: url("images/foot_philosophy.png") no-repeat scroll center top transparent;
         height: 583px;
     }
 
