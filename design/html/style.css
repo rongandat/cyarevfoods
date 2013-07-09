@@ -1809,22 +1809,68 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         width: 100%;
     }
 
-    #our_story .main_image{
+    #inschool_product .main_image{
         padding: 0 75px 103px 60px;
     }
 
 
-    #our_difference .main_content .inner-content {
+    #inschool_product .main_content .inner-content {
         margin-left: 8%;
         width: 25%;
     }
 
-    #our_story .main_content {
+    #inschool_product .main_content {
         float: left;
-        padding: 70px 0;
+        padding: 75px 0 0 20px;
         width: 340px;
     }
 
+    #inschool_product .image {
+        float: left;
+        margin-left: 25px;
+    }
+
+
+    #where_we_server .content {
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    #our_difference .main_content .inner-content {
+        margin-left: 5%;
+        width: 28%;
+    }
+
+
+    #revolution_foot .image {
+        float: left;
+        padding: 60px 40px 0;
+        width: 50%;
+    }
+
+    #revolution_foot .image img{
+        width: 100%
+    }
+
+    #revolution_foot .main_content{
+        width: 37%
+    }
+
+
+    #where_to_buy .contents .content {
+        float: left;
+        margin-left: 5%;
+        text-align: center;
+        width: 30%;
+    }
+
+
+    #testimonials .content {
+        float: left;
+        margin-left: 5%;
+        text-align: center;
+        width: 30%;
+    }
 
     #foot_philosophy {
         height: 583px;
@@ -1876,6 +1922,23 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
         height: 10px;
         text-align: center;
         width: 42%;
+    }
+
+    #in_school_products .main_content {
+        float: left;
+        padding: 45px 0 0 40px;
+        width: 400px;
+    }
+
+
+    #in_school_products .image {
+        float: left;
+        margin-left: 45px;
+        width: 36%;
+    }
+
+    #in_school_products .image img{
+        width: 100%
     }
 
 

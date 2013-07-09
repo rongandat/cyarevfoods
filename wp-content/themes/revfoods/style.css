@@ -585,7 +585,7 @@ ul.sub_menu li a {
 #our_story p {
     color: #333;
     font-size: 13px;
-    line-height: 15px;
+    line-height: 18px;
     padding: 10px 0;
     font-family: 'gothambook';
 }
@@ -609,7 +609,7 @@ ul.sub_menu li a {
     color: #333;
     font-size: 13px;
     font-family: 'gothambook';
-    line-height: 15px;
+    line-height: 18px;
 }
 #foot_philosophy .main_content a.foot_philosophy_href {
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
@@ -639,7 +639,7 @@ ul.sub_menu li a {
     font-size: 13px;
     width: 320px;
     float: left;
-    line-height: 15px;
+    line-height: 18px;
 }
 #careers .about_topdotted {
     padding: 27px 0 115px;
@@ -1032,19 +1032,70 @@ END note
         width: 100%;
     }
 
-    #our_story .main_image{
+    #inschool_product .main_image{
         padding: 0 75px 103px 60px;
     }
 
-    #our_story .main_content {
+
+    #inschool_product .main_content .inner-content {
+        margin-left: 8%;
+        width: 25%;
+    }
+
+    #inschool_product .main_content {
         float: left;
-        padding: 70px 0;
+        padding: 75px 0 0 20px;
         width: 340px;
     }
 
+    #inschool_product .image {
+        float: left;
+        margin-left: 25px;
+    }
+
+
+    #where_we_server .content {
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    #our_difference .main_content .inner-content {
+        margin-left: 5%;
+        width: 28%;
+    }
+
+
+    #revolution_foot .image {
+        float: left;
+        padding: 60px 40px 0;
+        width: 50%;
+    }
+
+    #revolution_foot .image img{
+        width: 100%
+    }
+
+    #revolution_foot .main_content{
+        width: 37%
+    }
+
+
+    #where_to_buy .contents .content {
+        float: left;
+        margin-left: 5%;
+        text-align: center;
+        width: 30%;
+    }
+
+
+    #testimonials .content {
+        float: left;
+        margin-left: 5%;
+        text-align: center;
+        width: 30%;
+    }
 
     #foot_philosophy {
-        background: url("images/foot_philosophy.png") no-repeat scroll center top transparent;
         height: 583px;
     }
 
@@ -1094,6 +1145,23 @@ END note
         height: 10px;
         text-align: center;
         width: 42%;
+    }
+
+    #in_school_products .main_content {
+        float: left;
+        padding: 45px 0 0 40px;
+        width: 400px;
+    }
+
+
+    #in_school_products .image {
+        float: left;
+        margin-left: 45px;
+        width: 36%;
+    }
+
+    #in_school_products .image img{
+        width: 100%
     }
 
 
