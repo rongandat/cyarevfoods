@@ -26,6 +26,7 @@ class Rev_Foods_SlideShow extends WP_Widget {
         $instance['bgcolor'] = strip_tags($new_instance['bgcolor']);
         $instance['cate'] = strip_tags($new_instance['cate']);
         $instance['titlesub'] = strip_tags($new_instance['titlesub']);
+        $instance['iconnav'] = strip_tags($new_instance['iconnav']);
         return $instance;
     }
 
@@ -104,6 +105,13 @@ class Rev_Foods_SlideShow extends WP_Widget {
                 <option value="3" <?php if ($numbercols == 3) echo 'selected'; ?>>3</option>
             </select>
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('iconnav'); ?>"><?php _e('icon next/Previous type:'); ?></label> 
+            <select id="<?php echo $this->get_field_id('iconnav'); ?>" name="<?php echo $this->get_field_name('iconnav'); ?>">
+                <option value="1" <?php if ($instance['iconnav'] == 1) echo 'selected'; ?>>1</option>
+                <option value="2" <?php if ($instance['iconnav'] == 2) echo 'selected'; ?>>2</option>
+            </select>
+        </p>
         <p><label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:'); ?></label></p>
         <p><textarea placeholder="descripton of widgets" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" ><?php echo esc_attr($description); ?></textarea></p>
         <p>
@@ -171,9 +179,9 @@ function get_Rev_Foods_SlideShow($instance) {
 
         if ($islogo) {
             ?>
-                                                                                            <!--        <pre>
+                                                                                                <!--        <pre>
             <?php print_r($items); ?>
-                                                                                            </pre>-->
+                                                                                                </pre>-->
             <div class="RealFoodsInPress" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
                 <div class="topdotted">
                     <div class="topdotted_l fl"></div>
@@ -181,14 +189,8 @@ function get_Rev_Foods_SlideShow($instance) {
                     <div class="topdotted_r fr"></div>
                 </div>
                 <div class="clr"></div>
-                <style type="text/css">
-                    p.presstitle.ftrb{
-                        font-size: <?php echo $instance['titlefontsize']; ?>;
-                        color: <?php echo $instance['titlecolor']; ?>;
-                    }
-                </style>
-                <p class="presstitle ftrb"><?php echo $instance['title']; ?></p>
-                <div id="mcts1" class="mctsall">
+                <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3 i<?php echo $item->ID ?>">
                             <style type="text/css">
@@ -227,7 +229,7 @@ function get_Rev_Foods_SlideShow($instance) {
                     }
                 </style>
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts1" class="mctsall">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem2">
                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -249,7 +251,7 @@ function get_Rev_Foods_SlideShow($instance) {
             ?>
             <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts2" class="mctsall mctnav2">
+                <div id="mcts2" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3">
                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -268,7 +270,6 @@ function get_Rev_Foods_SlideShow($instance) {
             <div class="clr"></div>
             <?php
         } elseif ($cols == 3 && $des) {
-            $s = 'Programs we serve: District Schools, Charter Schools, Private Schools, Parochial Schools, After School Programs, Summer School Programs, Child Development Programs Lorem iosum dolor sit amet consultiteur. Lorem iosum dolor sit amet consultiteur.';
             ?>
             <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
                 <div class = "topdotted">
@@ -277,19 +278,13 @@ function get_Rev_Foods_SlideShow($instance) {
                     <div class="topdotted_r fr"></div>
                 </div>
                 <div class="clr"></div>
-                <style type="text/css">
-                    p.presstitle.ftrb{
-                        font-size: <?php echo $instance['titlefontsize']; ?>;
-                        color: <?php echo $instance['titlecolor']; ?>;
-                    }
-                </style>
                 <div class="info">
-                    <p class="presstitle ftrb" style="padding-bottom: 0;"><?php echo $instance['title']; ?></p>
+                    <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                     <p class="deswhere">
                         <?php echo $instance['description']; ?>
                     </p>
                 </div>
-                <div id="mcts1" class="mctsall">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3">
                             <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -304,13 +299,37 @@ function get_Rev_Foods_SlideShow($instance) {
             <?php
         } else {
             ?>
+            <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
+                <div class = "topdotted">
+                    <div class = "topdotted_l fl"></div>
+                    <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
+                    <div class="topdotted_r fr"></div>
+                </div>
+                <div class="clr"></div>
+                <div class="info">
+                    <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
+                    <p class="deswhere">
+                        <?php //echo $instance['description']; ?>
+                    </p>
+                </div>
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
+                    <?php foreach ($items as $item) { ?>
+                        <div class="slditem3">
+                            <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                <?php echo $item->post_title; ?>
+                            </h3>
+
+                            <p class="slddes person"><?php echo $item->post_content; ?></p>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
             <?php
         }
         ?>
         <?php if ($instance['add_submenu'] == 'on') { ?>
             <script>
-                jQuery(document).ready( function(){
-                                            
+                jQuery(document).ready( function(){                            
                     /*--------------------------------------------------------------------*/                       
                     var submenu="<?php echo $instance['titlesub']; ?>";
                     var rel="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>";
