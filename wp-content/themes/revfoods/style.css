@@ -181,7 +181,7 @@ site-footer
 }
 .site-header-3{
     top: 123px;
-    height: 43px;
+    /*height: 43px;*/
     background:#E2E1E1 url('images/bg_header_3.jpg') repeat-x;
     text-align: center;
 }
@@ -520,10 +520,11 @@ span.topsocial{
 }
 ul.sub_menu{
     display: inline-block;
-    margin: 15px 0px 0px 0px;
+    
 }
 ul.sub_menu li{
     display: inline-block;
+    padding: 15px 0px;
 }
 ul.sub_menu li a {
     font-family: 'gothammedium';
