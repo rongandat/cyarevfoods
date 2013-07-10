@@ -69,33 +69,19 @@ function fbf_facebook_messages($options) {
         $blocks = array_slice($items, 0, $options['num']);
         foreach ($blocks as $block) {
             $returnMarkup .='<li>';
+
+            # Shows avatar of Facebook page	
+            $returnMarkup .= '<div class="content_header">';
+            if ($options['show_avatar'] != '') {
+                $returnMarkup .="<div class=\"facebook_page-avatar\"><img src=\"http://graph.facebook.com/" . $options['pageID'] . "/picture?type=" . $avatar_size . "\"  alt=" . $block->author . " /></div>";
+            }
+
             if ($options['feed_title'] == "true") {
                 $feedtitle = "<h4><a href=" . $block->get_permalink() . " class='facebook_page-link' " . $link_target . ">" . substr($block->get_title(), 0, 200) . "</a></h4>"; // Title of the update
             } elseif ($options['feed_title'] == "") {
                 $feedtitle = null;
             }
-
             $returnMarkup .= html_entity_decode($feedtitle, ENT_COMPAT, 'UTF-8');
-            # Like button
-
-            $like_button = '<iframe src="http://www.facebook.com/plugins/like.php?href=' . $block->get_permalink() . '&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:30px;" allowTransparency="true"></iframe>';
-
-            # Shows fb like button on top, below the feed title	
-            if ($options['like_button'] != '' && $options['like_button'] != false) {
-                if ($options['like_button_position'] == "top") {
-                    $returnMarkup .= $like_button;
-                }
-            }
-            # Shows avatar of Facebook page	
-            if ($options['show_avatar'] != '') {
-                $returnMarkup .="<div class=\"facebook_page-avatar\"><img src=\"http://graph.facebook.com/" . $options['pageID'] . "/picture?type=" . $avatar_size . "\"  alt=" . $block->author . " /></div>";
-            }
-
-            if ($options['show_description'] != '') {
-                $desc_feed = str_replace('href="http://www.facebook.com', 'href="', $block->get_description()); // Emptying all links
-                $desc = html_entity_decode(str_replace('href="', 'href="http://www.facebook.com', $desc_feed), ENT_COMPAT, 'UTF-8'); // adding facebook link - to avoid facebook redirector l.php's broken link error
-                $returnMarkup .= "<div class=\"fbf_desc\">" . $desc . "</div>"; // Full content
-            }
 
             if ($options['update'] != '') {
                 $time = strtotime($block->get_date("j F Y, H:i:s"));
@@ -109,6 +95,29 @@ function fbf_facebook_messages($options) {
                     $returnMarkup .= $like_button;
                 }
             }
+            $returnMarkup .= '</div>';
+
+
+            # Like button
+
+            $like_button = '<iframe src="http://www.facebook.com/plugins/like.php?href=' . $block->get_permalink() . '&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:30px;" allowTransparency="true"></iframe>';
+
+
+
+            if ($options['show_description'] != '') {
+                $desc_feed = str_replace('href="http://www.facebook.com', 'href="', $block->get_description()); // Emptying all links
+                $desc = html_entity_decode(str_replace('href="', 'href="http://www.facebook.com', $desc_feed), ENT_COMPAT, 'UTF-8'); // adding facebook link - to avoid facebook redirector l.php's broken link error
+                $returnMarkup .= "<div class=\"fbf_desc\">" . $desc . "</div>"; // Full content
+            }
+
+            # Shows fb like button on top, below the feed title	
+            if ($options['like_button'] != '' && $options['like_button'] != false) {
+                if ($options['like_button_position'] == "top") {
+                    $returnMarkup .= '<div class="like_btn">' . $like_button . '</div>';
+                }
+            }
+
+
             $returnMarkup .='</li>';
         } // For Loop Ends here
 
@@ -251,8 +260,54 @@ class FacebookPageFeedWidget extends WP_Widget {
             .facebook_page-avatar img { 
                 border:none;
                 float:left;
-                padding:5px;
+                padding:0;
             }
+
+            .facebook_feed{
+                width: 415px;
+                border: 1px solid #c3cee1;
+                float: left;
+                margin: 0 40px 0 125px;
+            }
+
+            .facebook_feed .content_header{
+                padding: 15px;
+                border-bottom: 1px solid #e5e5e5;
+                margin-bottom: 20px;
+            }
+            .facebook_feed .content_header .facebook_page-avatar img{
+                margin-right: 10px;
+            }
+            .facebook_feed .content_header h4 a{
+                color: #305ca2;
+                font-family: futura;
+
+            }
+
+            .facebook_feed .content_header .facebook_page-timestamp{
+                color: #666666;  
+                display: block;  
+                font-family: gothambold; 
+                font-size: 12px;   
+                padding-top: 7px;
+            }
+
+            .fbf_desc{
+                padding: 0 15px;
+                font-family: gothambold; 
+                font-size: 13px;   
+                line-height: 18px;
+                color: #000;
+            }
+
+
+            .like_btn {
+                background-color: #EDEFF4;
+                margin: 2px;
+                padding: 5px 5px 0;
+            }
+
+            
         </style>
         <?php
         $title = $instance['title'];
@@ -260,7 +315,8 @@ class FacebookPageFeedWidget extends WP_Widget {
         ?>
         <div id="facebook_share">
             <div class="about_topdotted"><span class="titledotted1 dottedour_story">follow us</span></div>
-            <div class="image">
+            <div class="facebook_feed">
+                <div class="arrow"></div>
                 <?php echo fbf_facebook_messages($instance); ?>
             </div>
             <div class="main_content">

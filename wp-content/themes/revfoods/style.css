@@ -726,7 +726,7 @@ ul.sub_menu li a {
 }
 #meal_program .dottedour_story {
     background: none repeat scroll 0 0 #fff;
-    
+
 }
 #meal_program .main_content {
     width: 457px;
@@ -834,6 +834,35 @@ ul.sub_menu li a {
 #meal_kits .main_content p.info {
     margin: 15px 45px;
 }
+
+.facebook_feed{
+    position: relative;
+}
+
+.facebook_feed .arrow{
+
+    background: url("images/arrow_right.png") no-repeat scroll 0 0 transparent;
+    height: 10px;
+    position: absolute;
+    right: -10px;
+    top: 17px;
+    width: 10px;
+}
+
+.really_simple_twitter_widget li{
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 15px;
+}
+.really_simple_twitter_widget li:last-child{
+    border-bottom: 1px solid #e8e8e8;
+    width: 470px;
+}
+.really_simple_twitter_widget li .twitter-timestamp{
+    float: right;
+    color: #9d9da2;
+    font-family: futura
+}
+
 /* END instores page
 -------------------------------------------------------------- */
 
