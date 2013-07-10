@@ -62,13 +62,7 @@
     #join_revolution input.css-checkbox[type="checkbox"]:checked + label.css-label {
         background-position: -5px -8px;
     }    
-    #join_revolution a {
-        background: url("images/arrow_pink.png") no-repeat scroll right 3px transparent;
-        color: #db5aad;
-        font-size: 15px;
-        padding-right: 20px;
-        font-family: 'futura';
-    }
+    
 
     #facebook_share {
         height: 650px;
