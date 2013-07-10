@@ -1255,6 +1255,7 @@ END note
     width: 800px;
     margin: 0 auto;
     font-family: "Myriad Pro";
+    padding: 25px 0;
 }
 #inquiryform h1 {
     color: #44acc4;
@@ -1309,7 +1310,7 @@ span.error{
 }
 
 .formsl select{
-    width: 310px;
+    width: 360px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

@@ -68,7 +68,7 @@ function revfoods_get_form() {
         $s .='<div class="clear"></div></div>';
         $s .='<div class="st-form-line">';
         $s .='<span class="st-labeltext">'.__('Anticpated meal service start date','revfoods').'</span>	';
-        $s .='<input name="sort_order" type="text" class="st-forminput" id="sort_order" style="width:105px" value=""><span class="lich"></span>';
+        $s .='<input name="sort_order" type="text" class="st-forminput" id="datepicker" style="width:105px" value=""><span class="lich"></span>';
         $s .='<div class="clear"></div></div>';
         $s .='<div class="st-form-line">';
         $s .='<span class="st-labeltext">'.__('Current or previous food provider','revfoods').'</span>	';
@@ -84,8 +84,10 @@ function revfoods_get_form() {
         $s .='<div class="clear"></div></div>';
         
         $s .= <<<EOF
-              <script type="text/javascript">            
+              <script type="text/javascript">        
+             jQuery( "#datepicker" ).datepicker();
             jQuery(document).ready(function() {
+                jQuery('.lich').click(function(){
                 
             });           
         </script>

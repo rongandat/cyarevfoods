@@ -25,6 +25,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/fonts.css">
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slider.css">
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/js/jquery-ui/css/ui-lightness/jquery-ui-1.10.3.custom.min.css">
 
 <?php wp_enqueue_script('jquery');?>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
@@ -34,6 +35,7 @@
 <?php wp_head(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-slider.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?>>
