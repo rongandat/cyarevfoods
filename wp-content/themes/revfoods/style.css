@@ -811,6 +811,14 @@ ul.sub_menu li a {
 
 /* BEGIN instores page
 -------------------------------------------------------------- */
+#new_products h1 {
+    background: url('images/rev_food.png') no-repeat top left;
+    width: 329px;
+    height: 329px;
+    font-family: futurabold;
+    margin: 75px 60px 0 0;
+    float: right;
+}
 #meal_kits .main_content {
     width: 340px;
     float: right;
