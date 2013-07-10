@@ -130,6 +130,9 @@ table{border-collapse: collapse; border-spacing: 0;}
 .uc{
     text-transform: lowercase;
 }
+.jus{
+    text-align: justify;
+}
 .learnmore{
     width: 18px;
     height: 18px;
@@ -491,7 +494,13 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 260px;
+    width: 245px;
+    height: 200px;
+    padding: 0px 10px;
+    /*background: blue;*/
+}
+.slditem2{
+    width: 380px;
     height: 200px;
     padding: 0px 10px;
     /*background: blue;*/
@@ -690,11 +699,60 @@ ul.sub_menu li a {
     font-size: 15px;
     padding-right: 20px;
 }
+.slddes.jus{
+    text-align: justify;
+}
+#leadership {
+    height: 650px;
+    background: #fff;
+    position: relative;
+}
+#leadership .slditem2 h3{
+    font-size: 20px;
+    font-family: Futura;
+    font-weight: bold;
+    text-align: center;
+}
+#leadership .slditem3 h3{
+    font-size: 20px;
+    font-family: Futura;
+    font-weight: bold;
+    text-align: center;
+    white-space: initial;
+    /*padding: 10px 0px;*/
+}
+
+#leadership .slditem2 .meta-des{
+    text-align: center;
+    font-family: gothamblack;
+    font-size: 13px;
+    margin: 8px 0;
+    white-space: initial;
+}
+#leadership .slditem3 .meta-des{
+    text-align: center;
+    font-family: gothamblack;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+#leadership .slditem2 .description{
+    text-align: center;
+    font-family: 'gothambook';
+    font-size: 13px;
+    color: #333;
+    text-align: justify;
+    line-height: 15px;
+}
+
 /* END about page
 -------------------------------------------------------------- */
 
 /* BEGIN inschools page
 -------------------------------------------------------------- */
+#the_buzz .main_content p.content{
+    line-height: 28px;
+}
 #meals_served .content {
     padding: 448px 195px 0;
     text-align: center;
@@ -805,6 +863,37 @@ ul.sub_menu li a {
     float: left;
     padding: 190px 0 0 0;
     width: 290px;
+}
+.where_we_server{
+    height: 650px;
+    position: relative;
+}
+p.deswhere{
+    color: #333;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: gothambook;
+    margin: 20px 0 45px;
+    text-align: center;
+}
+.where_we_server .info {
+    width: 575px;
+    margin: 0 auto;
+}
+p.person{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+    text-align: left;
+}
+h3.inschool{
+    font-family: futurabold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: initial;
+    padding: 0 10px;
 }
 /* END inschools page
 -------------------------------------------------------------- */

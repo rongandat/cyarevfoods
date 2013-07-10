@@ -1,4 +1,4 @@
-#mcts1 
+.mctsall 
 {
     width:820px;
     height:200px;
@@ -7,41 +7,44 @@
     position:relative;
     font-size:0px;
 }
-#mcts1>* {display:none;}
+.mctsall>* {display:none;}
   
 /*-------- div.item is each thumbnail's wrapper created by the javascript ------*/
-#mcts1 div.item 
+.mctsall div.item 
 {
     padding:2px;
     margin-right:6px; /* this specifies the distance between each thumbnail */
-    background-color:White;
+    /*background-color:White;*/
     /*border:1px solid #ddd;*/
     text-align:center;
     position:relative;
 }
 
 
-#mcts1 img 
+.mctsall img 
 {
     border:none;
 }
 
 
 /*---------built-in navigation buttons-------*/
-#mcts1 .navPrev, #mcts1 .navNext, #mcts1 .navPlay, #mcts1 .navPause 
+.mctsall .navPrev, .mctsall .navNext, .mctsall .navPlay, .mctsall .navPause 
 {
     width:45px; height:45px; position:absolute;  
     background: url('../images/panelicon.png') no-repeat;
     display:inline-block; z-index:5; cursor:pointer;
 }
-#mcts1 .navPrev {background-position:0 -31px;top:15px;left:-60px;}
-#mcts1 .navPrevDisabled, #mcts1 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+.mctsall .navPrev {background-position:0 -31px;top:15px;left:-60px;}
+.mctsall.mctnav2 .navPrev {background-position:-115px -2px;top:30px;left:-60px;}
 
-#mcts1 .navNext {background-position:-44px -31px;top:15px;right:-60px;} 
-/*#mcts1 .navNext:hover {background-position:-16px -44px;}*/ 
-#mcts1 .navNextDisabled, #mcts1 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+.mctsall .navPrevDisabled, .mctsall .navPrevDisabled:hover {background-position:0 0;cursor:default;}
 
-#mcts1 .navPause, #mcts1 .navPlay {left:360px;top:130px;}
+.mctsall .navNext {background-position:-44px -31px;top:15px;right:-60px;}
+.mctsall.mctnav2 .navNext {background-position:-115px -46px;top:30px;right:-60px;}
+/*.mctsall .navNext:hover {background-position:-16px -44px;}*/ 
+.mctsall .navNextDisabled, .mctsall .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+.mctsall .navPause, .mctsall .navPlay {left:360px;top:130px;}
 
 .navPrev, .navPlay, .navPause, .navNext 
 {
@@ -55,13 +58,13 @@
        
 /*---------built-in navigation bullets--------*/
 /* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
-#mcts1 .navBullets
+.mctsall .navBullets
 {
     display:block;
 }
 
 /* --------- Others ------- */
-#mcts1
+.mctsall
 {
 	transform: translate3d(0,0,0);
     -ms-transform:translate3d(0,0,0);
@@ -69,6 +72,76 @@
     -o-transform:translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
 }
-#mcts1 .navPlay{
+.mctsall .navPlay{
     display: none;
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+/*#mcts2 
+{
+    width:820px;
+    height:200px;
+    margin: 0 auto;
+    white-space:nowrap;
+    position:relative;
+    font-size:0px;
+}
+#mcts2>* {display:none;}
+  
+-------- div.item is each thumbnail's wrapper created by the javascript ------
+#mcts2 div.item 
+{
+    padding:2px;
+    margin-right:6px;  this specifies the distance between each thumbnail 
+    background-color:transparent;
+    color: #fff;
+    border:1px solid #ddd;
+    text-align:center;
+    position:relative;
+}
+
+#mcts2 p.slddes.jus{
+    color: #fff;
+}
+#mcts2 img 
+{
+    border:none;
+}
+
+
+---------built-in navigation buttons-------
+#mcts2 .navPrev, #mcts2 .navNext, #mcts2 .navPlay, #mcts2 .navPause 
+{
+    width:45px; height:45px; position:absolute;  
+    background: url('../images/panelicon.png') no-repeat;
+    display:inline-block; z-index:5; cursor:pointer;
+}
+#mcts2 .navPrev {background-position:-115px -2px;top:30px;left:-60px;}
+#mcts2 .navPrevDisabled, #mcts2 .navPrevDisabled:hover {background-position:0 0;cursor:default;}
+
+#mcts2 .navNext {background-position:-115px -46px;top:30px;right:-60px;} 
+#mcts2 .navNext:hover {background-position:-16px -44px;} 
+#mcts2 .navNextDisabled, #mcts2 .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
+
+#mcts2 .navPause, #mcts2 .navPlay {left:360px;top:130px;}
+
+       
+---------built-in navigation bullets--------
+ Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.
+#mcts2 .navBullets
+{
+    display:block;
+}
+
+ --------- Others ------- 
+#mcts2
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+#mcts2 .navPlay{
+    display: none;
+}*/
