@@ -88,7 +88,7 @@ function revfoods_get_form() {
              jQuery( "#datepicker" ).datepicker();
             jQuery(document).ready(function() {
                 jQuery('.lich').click(function(){
-                
+                })
             });           
         </script>
 EOF;
