@@ -69,7 +69,7 @@ jQuery(document).ready(function(){
         jQuery(this).attr( 'href', href + '&width=' + ( W - 80 ) + '&height=' + ( H - 85 ) );
         iti_widget_image_context = jQuery(this).parent().find('.iti-image-widget-image');
         jQuery('#TB_title').remove();       // TODO: why is this necessary?
-        tb_show(jQuery(this).attr('title'), event.target.href, false);
+        tb_show(jQuery(this).attr('title'), e.target.href, false);
         iti_widget_image_thickbox_updater = setInterval( iti_widget_image_update_thickbox, 500 );
     });
 });
