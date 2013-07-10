@@ -181,7 +181,7 @@ site-footer
 }
 .site-header-3{
     top: 123px;
-    height: 43px;
+    /*height: 43px;*/
     background:#E2E1E1 url('images/bg_header_3.jpg') repeat-x;
     text-align: center;
 }
@@ -520,10 +520,11 @@ span.topsocial{
 }
 ul.sub_menu{
     display: inline-block;
-    margin: 15px 0px 0px 0px;
+    
 }
 ul.sub_menu li{
     display: inline-block;
+    padding: 15px 0px;
 }
 ul.sub_menu li a {
     font-family: 'gothammedium';
@@ -1343,13 +1344,14 @@ END note
 #inquiryform {
     width: 800px;
     margin: 0 auto;
-    font-family: "Myriad Pro";
+    font-family: "gothambook";
     padding: 25px 0;
 }
 #inquiryform h1 {
     color: #44acc4;
     font-size: 35px;
     margin: 0px;
+    font-family: "futurab";
 }
 #inquiryform p{
     margin: 10px 0px 60px;
@@ -1456,14 +1458,17 @@ a.subbt{
     width: 295px;
 }
 
-.entry-content p select{
-    margin-top: 5px;
-    -moz-appearance: none;
-    background: url("images/selecarrow.png") no-repeat scroll 283px -2px transparent;
-    border-radius: 5px 5px 5px 5px;
-    padding: 3px 30px 2px 2px;
+.entry-content form p select{
     width: 360px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 3px 30px 2px 2px;
+    background: transparent url("images/selecarrow.png") no-repeat 283px -2px;
+    border-radius: 5px;
+    margin-top: 5px;
 } 
+
 .entry-content p textarea{
     margin-top: 5px;
 }

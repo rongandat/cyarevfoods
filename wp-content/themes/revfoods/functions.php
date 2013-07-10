@@ -479,6 +479,7 @@ if (!function_exists('revfoods_comment')) :
     //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
     include ABSPATH . 'wp-content/themes/revfoods/widgets/homevideo.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/RevfoodsImageText.php';
+    include ABSPATH .'wp-content/themes/revfoods/widgets/joinTheRevolution.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/facebookFeeds.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/twitterFeeds.php';
     /* END include widgets */

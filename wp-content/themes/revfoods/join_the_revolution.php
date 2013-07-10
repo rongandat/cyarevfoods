@@ -13,13 +13,7 @@
     #join_revolution .main_content .content {
         width: 455px;
     }
-    #join_revolution .main_content .content h1 {
-        font-family: futurabold;
-        font-size: 86px;
-        color: #59ba47;
-        text-align: left;
-        padding-bottom: 0px;
-    }
+    
     #join_revolution .main_content .content p {
         text-align: left;
         font-family: 'gothambook';
@@ -155,30 +149,7 @@
         padding-top: 95px;
     }
 </style>
-<div id="join_revolution">
-    <div class="main_content">
-        <div class="content">
-            <h1>join the
-                revolution</h1>
-            <p class="content">
-                Lorem ipsum dolor sit amet consultiteur. Erat sit amet lorem dolor. 
-                Lorem ipsum dolor sit amet con. Lorem ipsum dolor sit amet consultiteur. 
-                Erat sit amet lorem dolor. Lorem ipsum dolor sit amet con.
-            </p>
-        </div>
-        <div class="form">
-            <input type="text" value="" placeholder="enter your email address" class="st-forminput" name="email_address">
-            <div class="send_info">
-                <span class="send_me">send me information about...</span>
-                <input id="checkedbox_j1" class="css-checkbox" type="checkbox" name="inschools">
-                <label class="css-label" for="checkedbox_j1">school lunch program</label>
-                <input id="checkedbox_j2" checked="checked" class="css-checkbox" type="checkbox" name="instores">
-                <label for="checkedbox_j2" class="css-label">healthy meal kits</label>
-            </div>
-        </div>
-        <a href="#">sign up</a>
-    </div>
-</div>
+
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Join the revolution sidebar") ) : endif; ?>
 
 <?php get_footer(); ?>
