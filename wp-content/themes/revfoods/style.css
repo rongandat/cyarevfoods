@@ -881,12 +881,12 @@ p.deswhere{
     width: 700px;
     margin: 0 auto;
 }
-p.person{
+div.item p, div.person{
     font-family: gothambook;
     font-size: 13px;
     line-height: 18px;
     color: #333;
-    text-align: left;
+    white-space: initial;
 }
 h3.inschool{
     font-family: futurabold;

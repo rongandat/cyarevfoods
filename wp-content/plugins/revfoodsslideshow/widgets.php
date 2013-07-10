@@ -203,7 +203,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             </style>
                             <div class="sldlogo" style="cursor: pointer;"></div>
                             <div class="clr"></div>
-                            <p class="slddes"><?php echo esc_attr($item->post_content); ?></p>
+                            <div class="slddes"><?php echo $item->post_content; ?></div>
                             <a href="<?php echo get_field('revfoodsslideshow_home_external_link', $item->ID); ?>" class="lc widgetheaderlink fl" target="_blank"><?php echo $instance['readmore']; ?></a>
                             <span class="learnmore fl"></span>
                         </div>
@@ -239,7 +239,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
                             </div>
                             <div class="clr"></div>
-                            <p class="slddes jus"><?php echo esc_attr($item->post_content); ?></p>
+                            <div class="slddes jus"><?php echo $item->post_content; ?></div>
                         </div>
                     <?php } ?>
                 </div>
@@ -261,7 +261,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
                             </div>
                             <div class="clr"></div>
-                            <p class="slddes jus"><?php echo esc_attr($item->post_content); ?></p>
+                            <div class="slddes jus"><?php echo $item->post_content; ?></div>
                         </div>
                     <?php } ?>
                 </div>
@@ -291,7 +291,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 <?php echo $item->post_title; ?>
                             </h3>
 
-                            <p class="slddes person"><?php echo $item->post_content; ?></p>
+                            <div class="slddes person"><?php echo $item->post_content; ?></div>
                         </div>
                     <?php } ?>
                 </div>
@@ -319,7 +319,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 <?php echo $item->post_title; ?>
                             </h3>
 
-                            <p class="slddes person"><?php echo $item->post_content; ?></p>
+                            <div class="slddes person"><?php echo $item->post_content; ?></div>
                         </div>
                     <?php } ?>
                 </div>
