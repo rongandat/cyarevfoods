@@ -7,9 +7,11 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Revolution Fooods | Just another WordPress site</title>
+        <link rel='stylesheet' id='revfoods-style-css'  href='js/bootstrap/css/bootstrap.css' type='text/css' media='all' />
         <link rel='stylesheet' id='revfoods-style-css'  href='style.css' type='text/css' media='all' />
-        
+
         <script type='text/javascript' src='js/jquery/jquery.js?ver=1.8.3'></script>
+        <script type='text/javascript' src='js/bootstrap/js/bootstrap.min.js'></script>
     </head>
     <body>
 
@@ -82,9 +84,108 @@ and open the template in the editor.
                             ur meals are prepared fresh daily by real chefs using natural ingredients. 
                             We serve fresh fruit, a serving of vegetables and rBST free milk with every meal.
                         </p>
-                        <a href="#">sample our offering</a>
+                        <a href="#" id="modal">sample our offering</a>
                     </div>
                 </div>
+
+                <div class="modal_meal_program hide fade">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="modal-body">
+                        <h1>sample lunch and supper option</h1>
+                        <p class="description">we have over 100 entree option. here are just a few</p>
+                        <ul class="sample_lunch">
+                            <li>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                            </li>
+                        </ul>
+
+                        <h1>sample breakfast option</h1>
+                        <p class="description">we have over 100 entree option. here are just a few</p>
+                        <ul class="sample_lunch">
+                            <li>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                                <p>
+                                    <span class="bold">Spagheti and mealballs</span> we have over 100 entree option. here are just a few
+                                </p>
+                               
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                
+                <script>
+                    jQuery('#modal').click(function(){
+                        jQuery('.modal_meal_program').modal();
+                    })
+                </script>
                 <div class="clear"></div>
 
 

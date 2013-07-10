@@ -116,6 +116,10 @@ table{border-collapse: collapse; border-spacing: 0;}
 .clear-l{clear:left;}
 .clear-r{clear:right;}
 
+h1{
+    line-height: 1;
+}
+
 
 /* END Reset
 -------------------------------------------------------------- */
@@ -1355,6 +1359,55 @@ span.topsocial{
     font-family: 'futura';
 }
 
+
+.modal_meal_program {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 37%;
+    margin-left: -280px;
+    outline: medium none;
+    position: absolute;
+    top: 10%;
+    width: 915px;
+    z-index: 1050;
+    
+}
+
+.modal_meal_program .modal-body{
+    padding: 25px;  
+    max-height: none;
+}
+
+.modal_meal_program h1{
+    color: #902b8c;
+    font-size: 40px;
+    font-family: futurabold;
+}
+.modal_meal_program p{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    padding: 0 0 15px 0;
+}
+.modal_meal_program p span.bold{
+    font-family: gothambold;
+}
+.modal_meal_program p.description{
+    padding-top: 5px;
+}
+
+.modal_meal_program ul.sample_lunch li{
+    width: 265px;
+    margin-left: 20px;
+    display: block;
+    float: left;
+}
+
+.modal_meal_program ul.sample_lunch li:first-child{
+    margin-left: 0;
+}
 
 #our_difference{
     background: #75c1d3;
