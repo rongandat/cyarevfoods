@@ -205,7 +205,7 @@ ul.top-menu-1 li a{
 }
 a.logohome{
     display: inline-block;
-    margin: 10px 0px 0px 125px;
+    margin: 10px 0px 15px 125px;
 }
 img.logo{
     width: 244px;
@@ -520,7 +520,7 @@ span.topsocial{
 }
 ul.sub_menu{
     display: inline-block;
-    
+
 }
 ul.sub_menu li{
     display: inline-block;
@@ -1469,7 +1469,16 @@ a.subbt{
     margin-top: 5px;
 } 
 
+#join_revolution a {
+    background: url("images/arrow_pink.png") no-repeat scroll right 3px transparent;
+    color: #db5aad;
+    font-size: 15px;
+    padding: 15px 20px;
+    font-family: 'futura';
+}
+
 .entry-content p textarea{
     margin-top: 5px;
+    width: 302px
 }
 /* EOF Contact Us */
