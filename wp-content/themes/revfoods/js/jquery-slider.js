@@ -221,7 +221,7 @@ jQuery(document).ready( function(){
                     };
     
                     if(i)var e={
-                        left:p-c[b.b][n]+"px"
+                        left:(p-c[b.b][n])+"px"
                     };
                     else if(L)e={
                         top:p-c[b.b][o]+"px"
