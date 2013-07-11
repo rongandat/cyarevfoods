@@ -1707,3 +1707,72 @@ a.subbt{
 
 /* END REV JOINREVOLUTION
 -------------------------------------------------------------- */
+
+
+
+.questionform div.question-form-intro{
+    color: #000000;
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 800px;
+}
+
+.questionform div.question-form-intro{
+    color: #44ACC4;
+    font-family: "futurab";
+    font-size: 35px;
+    margin: 0;
+    text-align: left;
+    line-height: 1;
+}
+
+.questionform div.line {
+    background: none repeat scroll 0 0 #E5E5E5;
+    height: 1px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+.questionform {
+    display: block;
+    font-size: 15px;
+    margin: 0 2px 10px 0;
+    text-align: center;
+    width: 800px;
+    font-family: gothambook
+
+}
+
+.questionform .st-forminput{
+    display: block;
+    margin: 10px 0
+}
+.questionform a.ask{
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-family: 'futurab';
+    font-size: 15px;
+    padding-right: 20px;
+    text-transform: lowercase;
+}
+.questionform select,.question-cat-menu select{
+    -moz-appearance: none;
+    background: url("images/selecarrow.png") no-repeat scroll 283px -2px transparent;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px 30px 2px 2px;
+    width: 360px;
+    margin: 10px 0;
+}
+.question-form-bottom, .question-cat-menu{
+    width: 310px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.question-cat-menu{
+    margin-top: 10px;
+}

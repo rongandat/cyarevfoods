@@ -54,6 +54,7 @@ $html = '<form class="questionform" name="questionform-'. $questionformid . '" i
 <div class="question-form-intro" style="' . $introstyle . '">';						//introduction
 $html .= $content ? $content :  __("Use the form below to ask a question",'qna-forum');
 $html .= '</div>';	
+$html .='<div class="line"></div>';
 
 include_once "coreform.php";				//main part of the form
 $html .= '</form>';
