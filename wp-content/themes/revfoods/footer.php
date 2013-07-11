@@ -39,14 +39,15 @@ $menu_name_4 = $menu_obj_4->name;
         <a href="http://wpvalet.cyahost.com/revfoods/join-the-revolution"><div class="icon"></div></a>
     </div>
     <div class="right">
-        <div class="column1">
+        <?php echo do_shortcode('[nm-mc-form fid="2"]')?>
+<!--        <div class="column1">
             <h3>special offers & updates: </h3>
             <input name="email" class="emailIp" type="text" value="Email*">
             <input id="checkedbox1" type="checkbox" name="inschools" class="css-checkbox" checked="checked"><label for="checkedbox1" class="css-label">in school</label>
             <input id="checkedbox2" type="checkbox" name="instores" class="css-checkbox"><label for="checkedbox2" class="css-label">in store</label>
             <a class="sumbit" onclick="JavaScription();"></a>
 
-        </div>
+        </div>-->
         <div class="column2">
             <h3 class="lc"><?php echo $menu_name_4;?></h3>
             <a href="http://www.facebook.com/RevolutionFoods" target="_blank"><span class="facebook"></span></a>
