@@ -6,7 +6,6 @@ $form = nmMailChimp::getForm($fid);
 $meta = json_decode($form->form_meta);
 
 $arrVars = $meta->vars;
-
 ?>
 <style>
     #join_revolution .main_content .content h1 {
@@ -20,9 +19,11 @@ $arrVars = $meta->vars;
 <form id="nm_mc_form_<?php echo $widget_id ?>" onsubmit="return postToMailChimp(this)">
     <input type="hidden" value="<?php echo $fid ?>" name="nm_mc_form_id" />
     <div id="join_revolution">
+
         <div class="main_content">
             <div class="content">
                 <h1><?php echo $boxTitle; ?></h1>
+                
                 <p class="content">
                     <?php echo $detail; ?>
                 </p>
@@ -45,7 +46,6 @@ $arrVars = $meta->vars;
                 <?php
                 if ($meta->interest) {  //if interests are selected
                     foreach ($meta->interest as $interest) {
-
                         $groups = explode(',', $interest->groups)
                         ?>
                         <div class="send_info">
@@ -55,8 +55,8 @@ $arrVars = $meta->vars;
                             $g = 1;
                             foreach ($groups as $group) {
                                 ?>  
-                                <label for="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>"	class="css-label"><?php echo $group ?></label>
-                                <input type="checkbox" name="group[<?php echo $interest->id ?>][<?php echo $g ?>]" id="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>" class="css-checkbox" value="<?php echo $group ?>">
+                                <input type="checkbox" name="group[<?php echo $interest->id ?>][<?php echo $g ?>]" id="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>_<?php echo $g ?>" class="css-checkbox" value="<?php echo $group ?>">
+                                <label for="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>_<?php echo $g ?>"	class="css-label"><?php echo $group ?></label>
 
                                 <?php
                                 $g++;
@@ -69,12 +69,13 @@ $arrVars = $meta->vars;
                 ?>
 
             </div>
-            <input type="submit" class="nm_mc_button" value="<?php echo $buttonText ?>" id="nm_mc_button-<?php echo $widget_id ?>"  />
+            <a href="javascript:void(0)" onclick="jQuery('#nm_mc_form_<?php echo $widget_id ?>').submit()" class="nm_mc_button" id="nm_mc_button-<?php echo $widget_id ?>">sign up</a>
+            <div id="mc-response-area">
+                </div>
             <?php
             echo '<img style="display:none" id="nm-mc-loading" src="' . plugins_url('images/loading.gif', __FILE__) . '" />';
             ?>
-            <div id="mc-response-area">
-            </div>
+
 
         </div>
     </div>

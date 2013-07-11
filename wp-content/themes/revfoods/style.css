@@ -1477,6 +1477,8 @@ a.subbt{
     font-family: 'futura';
 }
 
+
+
 .entry-content p textarea{
     margin-top: 5px;
     width: 302px
@@ -1553,7 +1555,7 @@ a.subbt{
 }
 
 #join_revolution .css-label {
-    background-image: url("images/checkbox_new.png");
+    background: url("images/checkbox_new.png") no-repeat;
     color: #A2A4A6;
 }
 #join_revolution input.css-checkbox[type="checkbox"] + label.css-label{
@@ -1562,6 +1564,24 @@ a.subbt{
 
 #join_revolution input.css-checkbox[type="checkbox"]:checked + label.css-label {
     background-position: -5px -8px;
+}
+
+#join_revolution #mc-response-area{
+    width: 535px;
+    font-family: gothambook;
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+#mc-response-area{
+    color: #38B0E3;
+}
+
+#footer #mc-response-area{
+    display: block;
+    float: left;
+    padding-top: 5px;
+    width: 100%;
 }
 
 #join_revolution ::-webkit-input-placeholder {

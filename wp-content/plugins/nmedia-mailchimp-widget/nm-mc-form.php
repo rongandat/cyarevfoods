@@ -8,7 +8,7 @@ $arrVars = $meta->vars;
 <form id="nm_mc_form_<?php echo $widget_id ?>" onsubmit="return postToMailChimp(this)">
     <input type="hidden" value="<?php echo $fid ?>" name="nm_mc_form_id" />
     <div class="column1">
-        <h3><?php _e('special offers & updates:');?></h3>
+        <h3><?php _e('special offers & updates:'); ?></h3>
         <?php
         if ($arrVars) {
             foreach ($arrVars as $key => $val):
@@ -16,7 +16,7 @@ $arrVars = $meta->vars;
                 $label = $val->label;
                 $the_id = $tag . '-' . $widget_id;
                 ?>                              
-                <input type="text" name="<?php echo $tag ?>" id="<?php echo $the_id ?>" class="st-forminput" data-required="<?php echo $val->req ?>" placeholder="Email*" />                              
+                <input type="text" name="<?php echo $tag ?>" id="<?php echo $the_id ?>" class="emailIp" data-required="<?php echo $val->req ?>" placeholder="Email*" />                              
                 <?php
             endforeach;
         }
@@ -32,8 +32,8 @@ $arrVars = $meta->vars;
                     $g = 1;
                     foreach ($groups as $group) {
                         ?>  
-                        <label for="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>"	class="css-label"><?php echo $group ?></label>
-                        <input type="checkbox" name="group[<?php echo $interest->id ?>][<?php echo $g ?>]" id="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>" class="css-checkbox" value="<?php echo $group ?>">
+                        <input type="checkbox" name="group[<?php echo $interest->id ?>][<?php echo $g ?>]" id="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>_<?php echo $g ?>" class="css-checkbox" value="<?php echo $group ?>">
+                        <label for="mc_<?php echo $interest->id ?>_<?php echo $widget_id ?>_<?php echo $g ?>"	class="css-label"><?php echo $group ?></label>
 
                         <?php
                         $g++;
@@ -44,7 +44,7 @@ $arrVars = $meta->vars;
             }
         }
         ?>
-        <input type="submit" class="nm_mc_button" value="<?php echo $button_text ?>" id="nm_mc_button-<?php echo $widget_id ?>"  />
+        <a class="sumbit" href="javascript:void(0)" onclick="jQuery('#nm_mc_form_<?php echo $widget_id ?>').submit()"></a>
         <?php
         echo '<img style="display:none" id="nm-mc-loading" src="' . plugins_url('images/loading.gif', __FILE__) . '" />';
         ?>
