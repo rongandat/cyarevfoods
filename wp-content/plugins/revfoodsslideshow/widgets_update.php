@@ -171,21 +171,17 @@ function get_Rev_Foods_SlideShow($instance) {
         } else {
             $title2 = false;
         }
-        $isprd = true;
-        if ((get_field('revfoodsslideshow_option_product', $item0->ID))) {
-            $isprd = true;
-        } else {
-            $isprd = false;
-        }
         if ($instance['description'] != '') {
             $des = true;
         } else {
             $des = false;
         }
+
         if ($islogo) {
             ?>
-                                                                                                    <!--        <pre>
-                                                                                                    </pre>-->
+                                                                                                <!--        <pre>
+            <?php print_r($items); ?>
+                                                                                                </pre>-->
             <div class="RealFoodsInPress" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
                 <div class="topdotted">
                     <div class="topdotted_l fl"></div>
@@ -194,7 +190,7 @@ function get_Rev_Foods_SlideShow($instance) {
                 </div>
                 <div class="clr"></div>
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3 i<?php echo $item->ID ?>">
                             <style type="text/css">
@@ -216,10 +212,6 @@ function get_Rev_Foods_SlideShow($instance) {
             </div>
 
             <?php
-        } elseif ($isprd) {
-            ?>
-        <div class="clr"></div>
-            <?php
         } elseif ($cols == 2) {
             ?>
             <div class="clr"></div>
@@ -237,7 +229,7 @@ function get_Rev_Foods_SlideShow($instance) {
                     }
                 </style>
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem2">
                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -259,7 +251,7 @@ function get_Rev_Foods_SlideShow($instance) {
             ?>
             <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts2" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                <div id="mcts2" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3">
                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -292,7 +284,7 @@ function get_Rev_Foods_SlideShow($instance) {
                         <?php echo $instance['description']; ?>
                     </p>
                 </div>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3">
                             <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
@@ -320,7 +312,7 @@ function get_Rev_Foods_SlideShow($instance) {
                         <?php //echo $instance['description']; ?>
                     </p>
                 </div>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                <div id="mcts1" class="mctsall <?php if($instance['iconnav']==2) echo 'mctnav2';?>">
                     <?php foreach ($items as $item) { ?>
                         <div class="slditem3">
                             <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">

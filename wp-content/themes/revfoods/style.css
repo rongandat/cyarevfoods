@@ -494,7 +494,7 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 245px;
+    width: 240px;
     height: 200px;
     padding: 0px 10px;
     /*background: blue;*/
@@ -881,12 +881,12 @@ p.deswhere{
     width: 700px;
     margin: 0 auto;
 }
-p.person{
+div.item p, div.person{
     font-family: gothambook;
     font-size: 13px;
     line-height: 18px;
     color: #333;
-    text-align: left;
+    white-space: initial;
 }
 h3.inschool{
     font-family: futurabold;
