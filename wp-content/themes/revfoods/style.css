@@ -494,7 +494,7 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 240px;
+    width: 245px;
     height: 200px;
     padding: 0px 10px;
     /*background: blue;*/
@@ -504,6 +504,11 @@ span.topsocial{
     height: 200px;
     padding: 0px 10px;
     /*background: blue;*/
+}
+.slditem1{
+    width: 800px;
+    height: 500px;
+    padding: 0px 10px;
 }
 .sldlogo{
     height: 80px;
@@ -1776,3 +1781,124 @@ a.subbt{
 .question-cat-menu{
     margin-top: 10px;
 }
+/* POPUP instore*/
+.modal_meal_program.insc {
+    background-clip: padding-box;
+    background-color: #eaebeb;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 37%;
+    margin-left: -280px;
+    outline: medium none;
+    /*position: absolute;*/
+    position: fixed;
+    top: 10%;
+    width: 1024px;
+    height: 600px;
+    z-index: 1050;
+
+}
+
+.modal_meal_program .close {
+    color: #000000;
+    display: block;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 20px 0 0;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #FFFFFF;
+    margin-top: 10px;
+    padding: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.modal_meal_program .modal-body{
+    padding: 25px;  
+    max-height: none;
+}
+
+.modal_meal_program h1{
+    color: #902b8c;
+    font-size: 30px;
+    font-family: futurabold;
+    width: 800px; 
+}
+.modal_meal_program p{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    padding: 0 0 15px 0;
+}
+.modal_meal_program p span.bold{
+    font-family: gothambold;
+}
+.modal_meal_program p.description{
+    padding-top: 5px;
+}
+
+.modal_meal_program ul.sample_lunch li{
+    width: 265px;
+    margin-left: 20px;
+    display: block;
+    float: left;
+}
+
+.modal_meal_program ul.sample_lunch li:first-child{
+    margin-left: 0;
+}
+
+#our_difference{
+    background: #75c1d3;
+    height: 650px;
+    position: relative;
+}
+.hide {
+    display: none;
+}
+.fade.in {
+    opacity: 1;
+}
+.sldprd{
+    /*width: 100%;*/
+}
+.mctsall.insc .navPrev {
+    background-position: 0 -31px;
+    top: 200px;
+    left: -60px;
+}
+.mctsall.insc .navNext {
+    background-position: -44px -31px;
+    top: 200px;
+    right: -60px;
+}
+.mctsall.insc{
+    height: 500px;
+}
+.p50{
+    width: 48%;
+    padding: 0px 5px;
+}
+.slditem1.sldprd >div{
+
+}
+.fr.p50{
+    text-align: left;
+    padding-top: 50px;
+}
+.fr.p50 h3{
+    font-size: 22px;
+}
+.fr.p50 a.widgetheaderlink{
+    margin: 0;
+    padding: 10px 5px 10px 0px;
+    font-size: 17px;
+}
+.fr.p50 >p{
+    margin: 40px 0px;    
+}
+/* POPUP instore*/

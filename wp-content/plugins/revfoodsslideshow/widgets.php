@@ -184,8 +184,6 @@ function get_Rev_Foods_SlideShow($instance) {
         }
         if ($islogo) {
             ?>
-                                                                                                    <!--        <pre>
-                                                                                                    </pre>-->
             <div class="RealFoodsInPress" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
                 <div class="topdotted">
                     <div class="topdotted_l fl"></div>
@@ -217,8 +215,73 @@ function get_Rev_Foods_SlideShow($instance) {
 
             <?php
         } elseif ($isprd) {
+             // product
             ?>
-        <div class="clr"></div>
+            <div class="clr"></div>
+            <div class="modal_meal_program insc hide fade">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="clr"></div>
+                <div class="modal-body" style="">
+                    <div id="mcts1" class="mctsall insc <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                        <?php foreach ($items as $item) { ?>
+                            <div class="slditem1 sldprd">
+                                <div class="fl p50" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain; height: 400px;">
+                                    <img class="imgprd imgnutri hide" src="<?php echo get_field('revfoodsslideshow_prd_nutrition', $item->ID); ?>" />
+                                    <img class="imgprd imging hide" src="<?php echo get_field('revfoodsslideshow_prd_ing', $item->ID); ?>" style="padding-top: 40px;"/>
+                                </div>
+                                <div class="fr p50" style="">
+                                    <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                        <?php echo $item->post_title; ?>
+                                    </h3>
+                                    <div class="slddes jus" style="min-height: 180px;"><?php echo $item->post_content; ?></div>
+                                    <div class="clr"></div>
+                                    <p>
+                                        <a  href="javascript:void(0);" target="_blank" class="nutrition lc widgetheaderlink fl"><?php _e('nutrition info'); ?></a>
+                                        <span class="learnmore fl"></span>
+                                        <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
+                                        <span class="learnmore fl"></span>
+                                    </p>
+                                </div>
+                <!--                                <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                <?php echo $item->post_title; ?>
+                                </h3>
+                                <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
+                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                                </div>
+                                <div class="clr"></div>
+                                <div class="slddes jus"><?php echo $item->post_content; ?></div>-->
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <input id="modal" type="button" value="on"/>
+            <script>
+                jQuery('.nutrition').click(function(){
+                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                    var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
+                    if(s=='none'){
+                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').show();
+                    }else{
+                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                    }
+                                
+                })
+                jQuery('.ingredients').click(function(){
+                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                    var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
+                    if(s=='none'){
+                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').show();
+                    }else{
+                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                    }
+                })
+                                                                                
+                jQuery('#modal').click(function(){
+                    jQuery('.modal_meal_program').modal();
+                })
+                                                                                
+            </script>
             <?php
         } elseif ($cols == 2) {
             ?>
@@ -317,7 +380,7 @@ function get_Rev_Foods_SlideShow($instance) {
                 <div class="info">
                     <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                     <p class="deswhere">
-                        <?php //echo $instance['description']; ?>
+                        <?php //echo $instance['description'];  ?>
                     </p>
                 </div>
                 <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
