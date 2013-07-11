@@ -504,6 +504,7 @@ span.topsocial{
     width: 380px;
     height: 200px;
     padding: 0px 10px;
+    float: left;
     /*background: blue;*/
 }
 .slditem1{
