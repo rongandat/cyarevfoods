@@ -6,17 +6,17 @@ jQuery(document).ready( function(){
         {
             sliderId: jQuery(this).attr('id'),
             direction: "horizontal",
-            scrollInterval: 1400,
-            scrollDuration: 800,
-            hoverPause: true,
-            autoAdvance: false,
-            scrollByEachThumb: true,
+            scrollInterval: 2000,
+            scrollDuration: 1000,
+//            hoverPause: true,
+//            autoAdvance: false,
+//            scrollByEachThumb: false,
             circular: true,
-            largeImageSlider: null,
-            inSyncWithLargeImageSlider: true,
+//            largeImageSlider: null,
+//            inSyncWithLargeImageSlider: true,
+//            ScrollAllInView: false,
             license: "mylicense"
         };
-        console.log(mysld[index]);
     });
 
     /* Menucool jQuery Slider v2013.3.18. Copyright www.menucool.com */
@@ -221,14 +221,18 @@ jQuery(document).ready( function(){
                     };
     
                     if(i)var e={
-                        left:(p-c[b.b][n])+"px"
+//                        left:p-c[b.b][n]+"px"
+                        left:p-c[b.b][n]+"px"
+                        
                     };
                     else if(L)e={
                         top:p-c[b.b][o]+"px"
                     };else e={
                         top:-c[b.b][o]+"px"
                     };
-    
+                    console.log(p-c[b.b][n]);
+                    console.log(p);
+                    console.log(c[b.b][n]);
                     a(g).animate(e,h.duration,h.onComplete);
                     f[r]&&(f[E]||j)&&f[r].displaySlide(b.b,1,k)
                 },
@@ -271,7 +275,7 @@ jQuery(document).ready( function(){
                     t=F("navNext");
                     t.setAttribute("onselectstart","return false");
                     t.onclick=function(){
-                        c.To(0)
+                        c.To(0);
                     };
     
                     l[u](t)
@@ -287,7 +291,7 @@ jQuery(document).ready( function(){
                         var a=b.charCodeAt(0).toString();
                         return a.substring(a[k]-1)
                     },b=d.replace(S[a-2],T[a-2]).split("");
-                    //    return"b"+a+b[1]+c(b[0])+c(b[2])
+//                        return"b"+a+b[1]+c(b[0])+c(b[2]);
                     return "mylicense"
                 },
                 h:function(a){
