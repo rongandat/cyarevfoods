@@ -1,13 +1,4 @@
 <?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -60,7 +51,8 @@
                 <span class="topsocial" ></span>
             </div>
             <div class="site-header-3 pfixed" style="<?php if ( is_user_logged_in() ) { echo "top:151px;"; } ?>">
-                <span class="question"><?php _e('QUESTION');?></span>
+                <?php $options = get_option( 'revfoods_theme_options' ); ?>
+                <a href="<?php echo $options['question_url']?>"><span class="question"><?php _e('QUESTION?');?></span></a>
                 <ul class="sub_menu" id="submenu"></ul>
             </div>
 	</header>

@@ -479,12 +479,13 @@ if (!function_exists('revfoods_comment')) :
     //include ABSPATH .'wp-content/themes/revfoods/widgets/RealFoodsForStore.php';
     include ABSPATH . 'wp-content/themes/revfoods/widgets/homevideo.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/RevfoodsImageText.php';
-    include ABSPATH .'wp-content/themes/revfoods/widgets/joinTheRevolution.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/facebookFeeds.php';
     include ABSPATH .'wp-content/themes/revfoods/widgets/twitterFeeds.php';
     /* END include widgets */
     //shortcodes
     include ABSPATH .'wp-content/themes/revfoods/shortcodes/school_inquires.php';
+    
+    require_once ( get_template_directory() . '/theme-options.php' );
 
     register_nav_menus(array(
         'Top-Menu-1' => 'Top menu 1',
