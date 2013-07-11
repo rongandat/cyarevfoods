@@ -8,13 +8,15 @@ jQuery(document).ready( function(){
             direction: "horizontal",
             scrollInterval: 2000,
             scrollDuration: 1000,
-//            hoverPause: true,
-//            autoAdvance: false,
-//            scrollByEachThumb: false,
+            //            slices: 14,
+            //            boxes: 8,
+            hoverPause: true,
+            autoAdvance: false,
+            scrollByEachThumb: true,
             circular: true,
-//            largeImageSlider: null,
-//            inSyncWithLargeImageSlider: true,
-//            ScrollAllInView: false,
+            largeImageSlider: null,
+            inSyncWithLargeImageSlider: true,
+            //            ScrollAllInView: false,
             license: "mylicense"
         };
     });
@@ -23,6 +25,7 @@ jQuery(document).ready( function(){
     (function(a){
         c = new Array();
         for(var i = 0; i<mysld.length; i++){
+            console.log(mysld[i]);
             c[i] = new b(mysld[i]);
         }
         function b(f){
@@ -82,7 +85,7 @@ jQuery(document).ready( function(){
                     d:f.scrollByEachThumb,
                     f:f.circular
                 };
-                    
+                
                 A&&A.b()
             },R=document,S=[/(?:.*\.)?(\w)([\w\-])[^.]*(\w)\.[^.]+$/,/.*([\w\-])\.(\w)(\w)\.[^.]+$/,/^(?:.*\.)?(\w)(\w)\.[^.]+$/,/.*([\w\-])([\w\-])\.com\.[^.]+$/,/^(\w)[^.]*(\w)+$/],G=function(b){
                 var a=document.createElement("div");
@@ -94,7 +97,7 @@ jQuery(document).ready( function(){
                 a[j]=b;
                 return a
             };
-                
+            
             M.prototype={
                 c:function(){
                     g=G(0);
@@ -163,7 +166,7 @@ jQuery(document).ready( function(){
                                 clearTimeout(m);
                                 m=null
                             };
-                            
+                        
                             e[y]=function(){
                                 b.d=0;
                                 if(m==null&&!b.c&&d.b){
@@ -174,7 +177,7 @@ jQuery(document).ready( function(){
                                     },d.c/2)
                                 }
                             };
-                        
+                    
                             if(q){
                                 t[z]=q[z]=e[z];
                                 t[y]=q[y]=e[y]
@@ -221,18 +224,14 @@ jQuery(document).ready( function(){
                     };
     
                     if(i)var e={
-//                        left:p-c[b.b][n]+"px"
                         left:p-c[b.b][n]+"px"
-                        
                     };
                     else if(L)e={
                         top:p-c[b.b][o]+"px"
                     };else e={
                         top:-c[b.b][o]+"px"
                     };
-//                    console.log(p-c[b.b][n]);
-//                    console.log(p);
-//                    console.log(c[b.b][n]);
+    
                     a(g).animate(e,h.duration,h.onComplete);
                     f[r]&&(f[E]||j)&&f[r].displaySlide(b.b,1,k)
                 },
@@ -275,7 +274,7 @@ jQuery(document).ready( function(){
                     t=F("navNext");
                     t.setAttribute("onselectstart","return false");
                     t.onclick=function(){
-                        c.To(0);
+                        c.To(0)
                     };
     
                     l[u](t)
@@ -291,8 +290,8 @@ jQuery(document).ready( function(){
                         var a=b.charCodeAt(0).toString();
                         return a.substring(a[k]-1)
                     },b=d.replace(S[a-2],T[a-2]).split("");
-//                        return"b"+a+b[1]+c(b[0])+c(b[2]);
                     return "mylicense"
+//                    return"b"+a+b[1]+c(b[0])+c(b[2])
                 },
                 h:function(a){
                     b.b=this.p(a);
@@ -301,7 +300,6 @@ jQuery(document).ready( function(){
                     this.g(0,0)
                 },
                 k:function(a){
-                    //    return a.replace("","$1$3$2")
                     return a.replace(/(?:.*\.)?(\w)([\w\-])?[^.]*(\w)\.[^.]*$/,"$1$3$2")
                 },
                 To:function(c){
