@@ -230,9 +230,9 @@ jQuery(document).ready( function(){
                     };else e={
                         top:-c[b.b][o]+"px"
                     };
-                    console.log(p-c[b.b][n]);
-                    console.log(p);
-                    console.log(c[b.b][n]);
+//                    console.log(p-c[b.b][n]);
+//                    console.log(p);
+//                    console.log(c[b.b][n]);
                     a(g).animate(e,h.duration,h.onComplete);
                     f[r]&&(f[E]||j)&&f[r].displaySlide(b.b,1,k)
                 },
