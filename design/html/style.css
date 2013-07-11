@@ -1362,7 +1362,7 @@ span.topsocial{
 
 .modal_meal_program {
     background-clip: padding-box;
-    background-color: #FFFFFF;
+    background-color: #eaebeb;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     left: 37%;
     margin-left: -280px;
@@ -1374,6 +1374,22 @@ span.topsocial{
     
 }
 
+.modal_meal_program .close {
+    color: #000000;
+    display: block;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 20px 0 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    text-shadow: 0 1px 0 #FFFFFF;
+    top: 15px;
+    
+}
+
 .modal_meal_program .modal-body{
     padding: 25px;  
     max-height: none;
@@ -1381,7 +1397,7 @@ span.topsocial{
 
 .modal_meal_program h1{
     color: #902b8c;
-    font-size: 40px;
+    font-size: 30px;
     font-family: futurabold;
 }
 .modal_meal_program p{
