@@ -494,9 +494,10 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 245px;
+    width: 250px;
     height: 200px;
     padding: 0px 10px;
+    float: left;
     /*background: blue;*/
 }
 .slditem2{

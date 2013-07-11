@@ -101,6 +101,7 @@ class Rev_Foods_SlideShow extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('numbercols'); ?>"><?php _e('Number columns:'); ?></label> 
             <select id="<?php echo $this->get_field_id('numbercols'); ?>" name="<?php echo $this->get_field_name('numbercols'); ?>">
+                <option value="1" <?php if ($numbercols == 1) echo 'selected'; ?>>1</option>
                 <option value="2" <?php if ($numbercols == 2) echo 'selected'; ?>>2</option>
                 <option value="3" <?php if ($numbercols == 3) echo 'selected'; ?>>3</option>
             </select>
@@ -157,6 +158,8 @@ function get_Rev_Foods_SlideShow($instance) {
                 'terms' => $cate
         )));
     $items = get_posts($args);
+
+
     if (count($items) > 0) {
         $item0 = $items[0];
         if ((get_field('revfoodsslideshow_option_logo', $item0->ID))) {
@@ -182,8 +185,16 @@ function get_Rev_Foods_SlideShow($instance) {
         } else {
             $des = false;
         }
+        if (count($items) % $cols) {
+            $n = $cols - count($items) % $cols;
+            for ($j = 0; $j < $n; $j++) {
+                $items[] = $items[$j];
+            }
+        }
+        $i = 1;
         if ($islogo) {
             ?>
+            <div class="clr"></div>
             <div class="RealFoodsInPress" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
                 <div class="topdotted">
                     <div class="topdotted_l fl"></div>
@@ -193,225 +204,260 @@ function get_Rev_Foods_SlideShow($instance) {
                 <div class="clr"></div>
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
                 <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
-                    <?php foreach ($items as $item) { ?>
-                        <div class="slditem3 i<?php echo $item->ID ?>">
-                            <style type="text/css">
-                                div.slditem3.i<?php echo $item->ID ?> div.sldlogo{
-                                    background: transparent url('<?php echo get_field('revfoodsslideshow_home_logo_grey', $item->ID); ?>') center center no-repeat;
-                                }
-                                div.slditem3.i<?php echo $item->ID ?> div.sldlogo:hover{
-                                    background: transparent url('<?php echo get_field('revfoodsslideshow_home_logo_full', $item->ID); ?>') center center no-repeat;;
-                                }
-                            </style>
-                            <div class="sldlogo" style="cursor: pointer;"></div>
-                            <div class="clr"></div>
-                            <div class="slddes"><?php echo $item->post_content; ?></div>
-                            <a href="<?php echo get_field('revfoodsslideshow_home_external_link', $item->ID); ?>" class="lc widgetheaderlink fl" target="_blank"><?php echo $instance['readmore']; ?></a>
-                            <span class="learnmore fl"></span>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-
-            <?php
-        } elseif ($isprd) {
-             // product
-            ?>
-            <div class="clr"></div>
-            <div class="modal_meal_program insc hide fade">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <div class="clr"></div>
-                <div class="modal-body" style="">
-                    <div id="mcts1" class="mctsall insc <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                    <div>
                         <?php foreach ($items as $item) { ?>
-                            <div class="slditem1 sldprd">
-                                <div class="fl p50" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain; height: 400px;">
-                                    <img class="imgprd imgnutri hide" src="<?php echo get_field('revfoodsslideshow_prd_nutrition', $item->ID); ?>" />
-                                    <img class="imgprd imging hide" src="<?php echo get_field('revfoodsslideshow_prd_ing', $item->ID); ?>" style="padding-top: 40px;"/>
-                                </div>
-                                <div class="fr p50" style="">
-                                    <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                        <?php echo $item->post_title; ?>
-                                    </h3>
-                                    <div class="slddes jus" style="min-height: 180px;"><?php echo $item->post_content; ?></div>
-                                    <div class="clr"></div>
-                                    <p>
-                                        <a  href="javascript:void(0);" target="_blank" class="nutrition lc widgetheaderlink fl"><?php _e('nutrition info'); ?></a>
-                                        <span class="learnmore fl"></span>
-                                        <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
-                                        <span class="learnmore fl"></span>
-                                    </p>
-                                </div>
-                <!--                                <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                <?php echo $item->post_title; ?>
-                                </h3>
-                                <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
-                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
-                                </div>
+                            <div class="slditem3 i<?php echo $item->ID ?>">
+                                <style type="text/css">
+                                    div.slditem3.i<?php echo $item->ID ?> div.sldlogo{
+                                        background: transparent url('<?php echo get_field('revfoodsslideshow_home_logo_grey', $item->ID); ?>') center center no-repeat;
+                                    }
+                                    div.slditem3.i<?php echo $item->ID ?> div.sldlogo:hover{
+                                        background: transparent url('<?php echo get_field('revfoodsslideshow_home_logo_full', $item->ID); ?>') center center no-repeat;;
+                                    }
+                                </style>
+                                <div class="sldlogo" style="cursor: pointer;"></div>
                                 <div class="clr"></div>
-                                <div class="slddes jus"><?php echo $item->post_content; ?></div>-->
+                                <div class="slddes"><?php echo $item->post_content; ?></div>
+                                <a href="<?php echo get_field('revfoodsslideshow_home_external_link', $item->ID); ?>" class="lc widgetheaderlink fl" target="_blank"><?php echo $instance['readmore']; ?></a>
+                                <span class="learnmore fl"></span>
                             </div>
+                            <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                            </div>
+                            <?php if ($i < count($items)) { ?>
+                                <div>
+                                <?php } ?>
+                            <?php }$i++; ?>
                         <?php } ?>
+
                     </div>
                 </div>
-            </div>
-            <input id="modal" type="button" value="on"/>
-            <script>
-                jQuery('.nutrition').click(function(){
-                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
-                    var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
-                    if(s=='none'){
-                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').show();
-                    }else{
-                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
-                    }
-                                
-                })
-                jQuery('.ingredients').click(function(){
-                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
-                    var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
-                    if(s=='none'){
-                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').show();
-                    }else{
-                        jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
-                    }
-                })
-                                                                                
-                jQuery('#modal').click(function(){
-                    jQuery('.modal_meal_program').modal();
-                })
-                                                                                
-            </script>
-            <?php
-        } elseif ($cols == 2) {
-            ?>
-            <div class="clr"></div>
-            <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
-                <div class="topdotted">
-                    <div class="topdotted_l fl"></div>
-                    <span class="titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
-                    <div class="topdotted_r fr"></div>
-                </div>
+
+                <?php
+            } elseif ($isprd) {
+                // product
+                ?>
                 <div class="clr"></div>
-                <style type="text/css">
-                    #leadership #mcts1 .navNext,
-                    #leadership #mcts1 .navPrev {
-                        top: 80px;
-                    }
-                </style>
-                <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
-                    <?php foreach ($items as $item) { ?>
-                        <div class="slditem2">
-                            <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                <?php echo $item->post_title; ?>
-                            </h3>
-                            <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
-                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                <div class="modal_meal_program insc hide fade">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="clr"></div>
+                    <div class="modal-body" style="">
+                        <div id="mcts1" class="mctsall insc <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                            <div>
+                                <?php foreach ($items as $item) { ?>
+                                    <div class="slditem1 sldprd">
+                                        <div class="fl p50" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain; height: 400px;">
+                                            <img class="imgprd imgnutri hide" src="<?php echo get_field('revfoodsslideshow_prd_nutrition', $item->ID); ?>" />
+                                            <img class="imgprd imging hide" src="<?php echo get_field('revfoodsslideshow_prd_ing', $item->ID); ?>" style="padding-top: 40px;"/>
+                                        </div>
+                                        <div class="fr p50" style="">
+                                            <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                                <?php echo $item->post_title; ?>
+                                            </h3>
+                                            <div class="slddes jus" style="min-height: 180px;"><?php echo $item->post_content; ?></div>
+                                            <div class="clr"></div>
+                                            <p>
+                                                <a  href="javascript:void(0);" target="_blank" class="nutrition lc widgetheaderlink fl"><?php _e('nutrition info'); ?></a>
+                                                <span class="learnmore fl"></span>
+                                                <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
+                                                <span class="learnmore fl"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                    </div>
+                                    <?php if ($i < count($items)) { ?>
+                                        <div>
+                                        <?php } ?>
+                                    <?php }$i++; ?>
+                                <?php } ?>
                             </div>
-                            <div class="clr"></div>
-                            <div class="slddes jus"><?php echo $item->post_content; ?></div>
                         </div>
-                    <?php } ?>
-                </div>
-            </div>
-
-            <div class="clr"></div>
-            <?php
-        } elseif ($cols == 3 && $title2) {
-            ?>
-            <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
-                <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
-                <div id="mcts2" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
-                    <?php foreach ($items as $item) { ?>
-                        <div class="slditem3">
-                            <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                <?php echo $item->post_title; ?>
-                            </h3>
-                            <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
-                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                    </div>
+                    <input id="modal" type="button" value="on"/>
+                    <script>
+                        jQuery('.nutrition').click(function(){
+                            jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                            var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
+                            if(s=='none'){
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').show();
+                            }else{
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                            }
+                                                                    
+                        })
+                        jQuery('.ingredients').click(function(){
+                            jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                            var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
+                            if(s=='none'){
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').show();
+                            }else{
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                            }
+                        })
+                                                                                                                    
+                        jQuery('#modal').click(function(){
+                            jQuery('.modal_meal_program').modal();
+                        })
+                                                                                                                    
+                    </script>
+                    <?php
+                } elseif ($cols == 2) {
+                    ?>
+                    <div class="clr"></div>
+                    <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
+                        <div class="topdotted">
+                            <div class="topdotted_l fl"></div>
+                            <span class="titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
+                            <div class="topdotted_r fr"></div>
+                        </div>
+                        <div class="clr"></div>
+                        <style type="text/css">
+                            #leadership #mcts1 .navNext,
+                            #leadership #mcts1 .navPrev {
+                                top: 80px;
+                            }
+                        </style>
+                        <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
+                        <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                            <div>
+                                <?php foreach ($items as $item) { ?>
+                                    <div class="slditem2">
+                                        <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                            <?php echo $item->post_title; ?>
+                                        </h3>
+                                        <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
+                                            <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                                        </div>
+                                        <div class="clr"></div>
+                                        <div class="slddes jus"><?php echo $item->post_content; ?></div>
+                                    </div>
+                                    <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                    </div>
+                                    <?php if ($i < count($items)) { ?>
+                                        <div>
+                                        <?php } ?>
+                                    <?php }$i++; ?>
+                                <?php } ?>
                             </div>
+                        </div>
+
+                        <div class="clr"></div>
+                        <?php
+                    } elseif ($cols == 3 && $title2) {
+                        ?>
+                        <div id="leadership" style="background-color: <?php echo $instance['bgcolor']; ?>;" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>">
+                            <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
+                            <div id="mcts2" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                                <div>
+                                    <?php foreach ($items as $item) { ?>
+                                        <div class="slditem3">
+                                            <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                                <?php echo $item->post_title; ?>
+                                            </h3>
+                                            <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
+                                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                                            </div>
+                                            <div class="clr"></div>
+                                            <div class="slddes jus"><?php echo $item->post_content; ?></div>
+                                        </div>
+                                        <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                        </div>
+                                        <?php if ($i < count($items)) { ?>
+                                            <div>
+                                            <?php } ?>
+                                        <?php }$i++; ?>
+                                    <?php } ?>
+                                </div>
+                            </div>
+
                             <div class="clr"></div>
-                            <div class="slddes jus"><?php echo $item->post_content; ?></div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
+                            <?php
+                        } elseif ($cols == 3 && $des) {
+                            ?>
+                            <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
+                                <div class = "topdotted">
+                                    <div class = "topdotted_l fl"></div>
+                                    <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
+                                    <div class="topdotted_r fr"></div>
+                                </div>
+                                <div class="clr"></div>
+                                <div class="info">
+                                    <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
+                                    <p class="deswhere">
+                                        <?php echo $instance['description']; ?>
+                                    </p>
+                                </div>
+                                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                                    <div>
+                                        <?php foreach ($items as $item) { ?>
+                                            <div class="slditem3">
+                                                <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                                    <?php echo $item->post_title; ?>
+                                                </h3>
 
-            <div class="clr"></div>
-            <?php
-        } elseif ($cols == 3 && $des) {
-            ?>
-            <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
-                <div class = "topdotted">
-                    <div class = "topdotted_l fl"></div>
-                    <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
-                    <div class="topdotted_r fr"></div>
-                </div>
-                <div class="clr"></div>
-                <div class="info">
-                    <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
-                    <p class="deswhere">
-                        <?php echo $instance['description']; ?>
-                    </p>
-                </div>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
-                    <?php foreach ($items as $item) { ?>
-                        <div class="slditem3">
-                            <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                <?php echo $item->post_title; ?>
-                            </h3>
+                                                <div class="slddes person"><?php echo $item->post_content; ?></div>
+                                            </div>
+                                            <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                            </div>
+                                            <?php if ($i < count($items)) { ?>
+                                                <div>
+                                                <?php } ?>
+                                            <?php }$i++; ?>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <?php
+                            } else {
+                                ?>
+                                <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
+                                    <div class = "topdotted">
+                                        <div class = "topdotted_l fl"></div>
+                                        <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
+                                        <div class="topdotted_r fr"></div>
+                                    </div>
+                                    <div class="clr"></div>
+                                    <div class="info">
+                                        <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
+                                        <p class="deswhere">
+                                            <?php //echo $instance['description'];   ?>
+                                        </p>
+                                    </div>
+                                    <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                                        <div>
+                                            <?php foreach ($items as $item) { ?>
+                                                <div class="slditem3">
+                                                    <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                                        <?php echo $item->post_title; ?>
+                                                    </h3>
 
-                            <div class="slddes person"><?php echo $item->post_content; ?></div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <?php
-        } else {
-            ?>
-            <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
-                <div class = "topdotted">
-                    <div class = "topdotted_l fl"></div>
-                    <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
-                    <div class="topdotted_r fr"></div>
-                </div>
-                <div class="clr"></div>
-                <div class="info">
-                    <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
-                    <p class="deswhere">
-                        <?php //echo $instance['description'];  ?>
-                    </p>
-                </div>
-                <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
-                    <?php foreach ($items as $item) { ?>
-                        <div class="slditem3">
-                            <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                                <?php echo $item->post_title; ?>
-                            </h3>
-
-                            <div class="slddes person"><?php echo $item->post_content; ?></div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-            <?php
-        }
-        ?>
-        <?php if ($instance['add_submenu'] == 'on') { ?>
-            <script>
-                jQuery(document).ready( function(){                            
-                    /*--------------------------------------------------------------------*/                       
-                    var submenu="<?php echo $instance['titlesub']; ?>";
-                    var rel="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>";
-                    jQuery("ul.sub_menu").append("<li class='menu-item'><a rel='"+rel+"' href='#'>"+submenu+"</a></li>");
-                    jQuery('.menu-item').click(function(){                        
-                        var id =jQuery(this).children('a').attr('rel');
-                        jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 115)}, 1000);                         
-                    });
-                });   
-            </script>
-        <?php } ?>  
-        <?php
-    }
-}
+                                                    <div class="slddes person"><?php echo $item->post_content; ?></div>
+                                                </div>
+                                                <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                                </div>
+                                                <?php if ($i < count($items)) { ?>
+                                                    <div>
+                                                    <?php } ?>
+                                                <?php }$i++; ?>
+                                            <?php } ?>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
+                                <?php if ($instance['add_submenu'] == 'on') { ?>
+                                    <script>
+                                        jQuery(document).ready( function(){                            
+                                            /*--------------------------------------------------------------------*/                       
+                                            var submenu="<?php echo $instance['titlesub']; ?>";
+                                            var rel="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>";
+                                            jQuery("ul.sub_menu").append("<li class='menu-item'><a rel='"+rel+"' href='#'>"+submenu+"</a></li>");
+                                            jQuery('.menu-item').click(function(){                        
+                                                var id =jQuery(this).children('a').attr('rel');
+                                                jQuery("html, body").animate({ scrollTop: (jQuery('#'+id).offset().top  - 115)}, 1000);                         
+                                            });
+                                        });   
+                                    </script>
+                                <?php } ?>  
+                                <?php
+                            }
+                        }
