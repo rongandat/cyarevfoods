@@ -27,6 +27,8 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-slider.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js'></script>
+<link rel='stylesheet' id='revfoods-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/bootstrap.css' type='text/css' media='all' />
 </head>
 
 <body <?php body_class(); ?>>
