@@ -144,6 +144,7 @@ function mailchimpSF_signup_form($args = array()) {
             </div><!-- /mc_signup_container -->
         </div><!-- /mc_signup_container -->
     </div><!-- /mc_signup_container -->
+    <div class="clear"></div>
     <?php
     if (!empty($before_widget)) {
         echo $after_widget;
