@@ -45,6 +45,18 @@ function theme_options_do_page() {
 						<label class="description" for="revfoods_theme_options[question_url]"><?php _e( 'Question Link', 'revfoods' ); ?></label>
 					</td>
 				</tr>
+                                <tr valign="top"><th scope="row"><?php _e( 'Legal Link', 'revfoods' ); ?></th>
+					<td>
+						<input id="revfoods_theme_options[legal_url]" class="regular-text" type="text" name="revfoods_theme_options[legal_url]" value="<?php esc_attr_e( $options['legal_url'] ); ?>" />   
+                                                <label class="description" for="revfoods_theme_options[legal_url]"><?php _e( 'Legal link in the ver y bottom line of the footer', 'revfoods' ); ?></label>
+					</td>
+				</tr>
+                                <tr valign="top"><th scope="row"><?php _e( 'Veneer Link', 'revfoods' ); ?></th>
+					<td>
+						<input id="revfoods_theme_options[veneer_url]" class="regular-text" type="text" name="revfoods_theme_options[veneer_url]" value="<?php esc_attr_e( $options['veneer_url'] ); ?>" />
+                                                <label class="description" for="revfoods_theme_options[veneer_url]"><?php _e( 'Veneer link in the ver y bottom line of the footer', 'revfoods' ); ?></label>
+					</td>
+				</tr>
 
 			</table>
 
@@ -61,5 +73,7 @@ function theme_options_do_page() {
  */
 function theme_options_validate( $input ) {
 	$input['question_url'] = wp_filter_nohtml_kses( $input['question_url'] );
+        $input['legal_url'] = wp_filter_nohtml_kses( $input['legal_url'] );
+        $input['veneer_url'] = wp_filter_nohtml_kses( $input['veneer_url'] );
 	return $input;
 }
