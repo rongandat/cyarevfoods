@@ -1529,12 +1529,29 @@ a.subbt{
     padding: 20px 0;
 }
 
-h1.entry-title a{
+h1.entry-title a,h1.entry-title{
     color: #666666;
     font-family: "futurab";
     font-size: 20px;
     text-align: justify;
 }
+
+h3.assistive-text{
+    color: #44acc4;
+    font-family: "futurab";
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px 0
+}
+
+.nav-single{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px 0;
+}
+
+
 
 .entry-content p textarea{
     margin-top: 5px;
@@ -1956,6 +1973,7 @@ h1.entry-title a{
 .fr.p50 >p{
     margin: 40px 0px;    
 }
+
 a.foot_philosophy_href {
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
     color: #000000;
