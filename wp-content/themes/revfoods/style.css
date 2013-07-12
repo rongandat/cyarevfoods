@@ -1434,7 +1434,14 @@ a.subbt{
     font-family: gothambook;
     font-size: 13px;
     line-height: 18px;
-    color: #000;
+    color: #333;
+}
+
+.entry-content td{
+}
+
+.entry-content td:last-child{
+    padding-right: 0
 }
 
 .entry-content p{
@@ -1495,13 +1502,13 @@ a.subbt{
 
 .q_question_list{
     padding: 10px 0;
-    
+
 }
 
 .q_question_list li{
     padding: 10px 0;
     border-top: 1px solid #E8E8E8;
-    
+
 }
 
 .q_question_list li:last-child{
@@ -1972,3 +1979,64 @@ h3.assistive-text{
     margin: 40px 0px;    
 }
 /* POPUP instore*/
+
+
+
+.modal_meal_program {
+    background-clip: padding-box;
+    background-color: #e9e9e9;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 37%;
+    margin-left: -280px;
+    outline: medium none;
+    position: absolute;
+    top: 10%;
+    width: 945px;
+    z-index: 1050;
+
+}
+
+.modal_meal_program .close {
+    display: block;
+    float: right;
+    background: url(images/x.png) no-repeat 0 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.modal_meal_program .modal-body{
+    padding: 40px 0 40px 45px;  
+    max-height: none;
+}
+
+.modal_meal_program h1{
+    font-size: 30px;
+    font-family: futurabold;
+    width: 800px; 
+}
+.modal_meal_program p{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    padding: 0 0 15px 0;
+}
+.modal_meal_program p span.bold{
+    font-family: gothambold;
+}
+.modal_meal_program p.description{
+    padding-top: 5px;
+}
+
+.modal_meal_program ul.sample_lunch li{
+    width: 265px;
+    margin-left: 20px;
+    display: block;
+    float: left;
+}
+
+.modal_meal_program ul.sample_lunch li:first-child{
+    margin-left: 0;
+}

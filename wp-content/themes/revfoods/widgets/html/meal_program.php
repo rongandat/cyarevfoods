@@ -22,69 +22,7 @@
         text-align: left;
         line-height: 1;
     }
-    .modal_meal_program {
-        background-clip: padding-box;
-        background-color: #eaebeb;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-        left: 37%;
-        margin-left: -280px;
-        outline: medium none;
-        position: absolute;
-        top: 10%;
-        width: 915px;
-        z-index: 1050;
-
-    }
-
-    .modal_meal_program .close {
-        color: #000000;
-        display: block;
-        float: right;
-        font-size: 35px;
-        font-weight: bold;
-        line-height: 20px;
-        margin: 0 20px 0 0;
-        opacity: 0.2;
-        text-shadow: 0 1px 0 #FFFFFF;
-        margin-top: 10px;
-
-    }
-
-    .modal_meal_program .modal-body{
-        padding: 25px;  
-        max-height: none;
-    }
-
-    .modal_meal_program h1{
-        color: #902b8c;
-        font-size: 30px;
-        font-family: futurabold;
-        width: 800px; 
-    }
-    .modal_meal_program p{
-        font-family: gothambook;
-        font-size: 13px;
-        line-height: 18px;
-        text-align: left;
-        padding: 0 0 15px 0;
-    }
-    .modal_meal_program p span.bold{
-        font-family: gothambold;
-    }
-    .modal_meal_program p.description{
-        padding-top: 5px;
-    }
-
-    .modal_meal_program ul.sample_lunch li{
-        width: 265px;
-        margin-left: 20px;
-        display: block;
-        float: left;
-    }
-
-    .modal_meal_program ul.sample_lunch li:first-child{
-        margin-left: 0;
-    }
+    
 
 </style>
 <div id="meal_program">
@@ -95,14 +33,14 @@
             <?php echo $instance['content']; ?>
         </p>
         <?php if ($instance['link_target'] == 'pop_up') { ?>
-            <a href="#" id="modal"><?php echo $instance['learn_more_text']; ?></a>
+            <a href="javascript:void(0)" id="modal"><?php echo $instance['learn_more_text']; ?></a>
         <?php } else { ?>
             <a href="<?php echo $instance['link']; ?>" <?php if ($instance['link_target'] == 'new_window') echo 'target="_blank"' ?>><?php echo $instance['learn_more_text']; ?></a>
         <?php } ?>
     </div>
 </div>
 <div class="modal_meal_program hide fade">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
     <div class="modal-body">
     <?php 
     //echo apply_filters('the_content', get_post_field('post_content', 119));
