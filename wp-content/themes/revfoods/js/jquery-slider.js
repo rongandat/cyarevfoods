@@ -16,6 +16,7 @@ jQuery(document).ready( function(){
             circular: true,
             largeImageSlider: null,
             inSyncWithLargeImageSlider: true,
+            m:true,
             //            ScrollAllInView: false,
             license: "mylicense"
         };
@@ -25,7 +26,6 @@ jQuery(document).ready( function(){
     (function(a){
         c = new Array();
         for(var i = 0; i<mysld.length; i++){
-            console.log(mysld[i]);
             c[i] = new b(mysld[i]);
         }
         function b(f){
