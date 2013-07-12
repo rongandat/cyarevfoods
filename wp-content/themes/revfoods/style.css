@@ -956,6 +956,9 @@ h3.inschool{
     border-top: 1px solid #e8e8e8;
     padding: 10px 15px;
 }
+.really_simple_twitter_widget li img{
+    padding-right: 10px;
+}
 .really_simple_twitter_widget li:last-child{
     border-bottom: 1px solid #e8e8e8;
     width: 470px;
