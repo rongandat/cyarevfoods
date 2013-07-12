@@ -2040,3 +2040,23 @@ h3.assistive-text{
 .modal_meal_program ul.sample_lunch li:first-child{
     margin-left: 0;
 }
+
+#comments{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+}
+
+#comments h3#reply-title{
+    padding: 10px 0;
+    color: #44acc4;
+    font-size: 20px;
+    font-family: "futurab";
+}
+
+
+.comment-form-comment textarea{
+    display: block;
+    margin-top: 9px;
+}
