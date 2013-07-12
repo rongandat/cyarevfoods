@@ -256,6 +256,145 @@ function get_Rev_Foods_SlideShow($instance) {
                 </div>
                 <!-- Break -->
                 <div class="modal_meal_program insc hide fade">
+                    <script>
+                        jQuery(document).ready( function(){
+                            flag = 0;
+                            jQuery('.nutrition').live('click',function(){
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                                var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
+                                if(s=='none'){
+                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').show();
+                                }else{
+                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                                }
+                                                                                                                                                                                                                                                        
+                            })
+                            jQuery('.ingredients').live('click',function(){
+                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
+                                var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
+                                if(s=='none'){
+                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').show();
+                                }else{
+                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
+                                }
+                            })
+                            function reset0(){
+                                flag = jQuery('.mctsall.insc.prd .navBullets a.active').attr('rel');
+                                if(flag==1){
+                                    jQuery('.mctsall.insc.prd .navPrev').click();
+                                }else if(flag==2){
+                                    jQuery('.mctsall.insc.prd .navPrev').click();
+                                    setTimeout(jQuery('.mctsall.insc.prd .navPrev').click(),3000);
+                                }else if(flag==3){
+                                    jQuery('.mctsall.insc.prd .navNext').click();
+                                    //                                     jQuery('.mctsall.insc.prd .navPrev').click();
+                                    //                                     jQuery('.mctsall.insc.prd .navPrev').click();
+                                }
+                                console.log(flag);
+                            }                                                                                                                                                                                                             
+                            jQuery('#modal').click(function(){
+                                jQuery('.modal_meal_program').modal();
+                                if(flag==0){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','0px');
+                                }
+                                if(flag==1 || flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                }
+                                if(flag==3){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                }
+                                                                                          
+                            })
+                                                                                                                            
+                            jQuery('.prditem').click(function(){
+                                jQuery('.modal_meal_program').modal();      
+                            })
+                            jQuery('.prditem1').click(function(){
+                                if(flag==0){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','0px');
+                                }
+                                if(flag==1 || flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                }
+                                if(flag==3){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                }
+                                //                                reset0();
+                            })
+                            jQuery('.prditem2').click(function(){
+                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                if(flag==0){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                }
+                                if(flag==3 || flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
+                                }
+                                if(flag==1){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','0px');
+                                }
+                                //                                reset0(); 
+                                //                                jQuery('.mctsall.insc.prd .navNext').click();
+                            })
+                            jQuery('.prditem3').click(function(){
+                                if(flag==0){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
+                                }
+                                if(flag==1){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                }
+                                if(flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','0px');
+                                }
+                                if(flag==3){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                }
+                                //                                reset0(); 
+                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
+                                //                                jQuery('.mctsall.insc.prd .navNext').click();
+                                //                                jQuery('.mctsall.insc.prd .navNext').click();
+                                                                                                        
+                            })
+                            jQuery('.prditem4').click(function(){
+                                if(flag==0){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                }
+                                if(flag==1){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
+                                }
+                                if(flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
+                                }
+                                if(flag==3){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','0px');
+                                }
+                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                //                                reset0(); 
+                                //                                jQuery('.mctsall.insc.prd .navPrev').click();
+                                //                                jQuery('.mctsall.insc.prd .navNext').click();
+                                //                                jQuery('.mctsall.insc.prd .navNext').click();
+                            })
+                            jQuery('.mctsall.insc.prd .navNext').live('click',function(){
+                                //                                if(flag == 3){
+                                //                                    flag = 0;
+                                //                                }else{
+                                //                                    flag++;
+                                //                                }
+                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
+                                flag = jQuery('.mctsall.insc.prd .navBullets a.active').attr('rel');
+                                console.log(flag);
+                            });
+                            jQuery('.mctsall.insc.prd .navPrev').live('click',function(){
+                                //                                if(flag == 0){
+                                //                                    flag = 3;
+                                //                                }else{
+                                //                                    flag--;
+                                //                                }
+                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
+                                flag = jQuery('.mctsall.insc.prd .navBullets a.active').attr('rel');
+                                console.log(flag);
+                            });
+                        })                                                                                                                                   
+                    </script>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="clr"></div>
                     <div class="modal-body" style="">
@@ -301,79 +440,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             </div>
                         </div>
                     </div>
-                    <script>
-                        jQuery(document).ready( function(){
-                            item = [];
-                            jQuery('.modal-body .mctsall.insc.prd > div').each(function (){
-                                item.push('<div class="item" style="display: block; float: left;"><div style="display: block;">' + jQuery(this).html() + '</div></div>');
-                                                                             
-                            });
-                            //                                console.log(item);
-                            jQuery('.nutrition').live('click',function(){
-                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
-                                var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
-                                if(s=='none'){
-                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').show();
-                                }else{
-                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
-                                }
-                                                                                                                                                                    
-                            })
-                            jQuery('.ingredients').live('click',function(){
-                                jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
-                                var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
-                                if(s=='none'){
-                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').show();
-                                }else{
-                                    jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
-                                }
-                            })
-                                                                                                                                                                                                                  
-                            jQuery('#modal').click(function(){
-                                //                                console.debug(item.length);
-                                jQuery('.modal_meal_program').modal();
-                            })
-                                        
-                            jQuery('.prditem').click(function(){
-                                jQuery('.modal_meal_program').modal();
-                                jQuery('.mctsall.insc.prd .navNext').onclick();
-                                                        
-                                //                                jQuery('.modal-body .mctsall.insc.prd > div > div').text('');
-                                //                                var s = jQuery(this).attr('data-name');
-                                //                                console.debug(item.length);
-                                //                                if(s==0){
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                //                                   console.log(00);
-                                //                                }
-                                //                                if(s==1){
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                //                                    console.log(11);
-                                //                                }
-                                //                                if(s==2){
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                //                                    console.log(22);
-                                //                                }
-                                //                                if(s==3){
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                //                                    console.log(33);
-                                //                                }
-                                //                                jQuery('.navBullets a').removeClass();
-                                //                                jQuery('.navBullets a[rel='+s+']').addClass('active');
-                            })
-                        })                                                                                                                                   
-                    </script>
+
                     <?php
                 } elseif ($cols == 2) {
                     ?>

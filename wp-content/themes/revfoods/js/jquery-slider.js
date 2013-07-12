@@ -6,8 +6,8 @@ jQuery(document).ready( function(){
         {
             sliderId: jQuery(this).attr('id'),
             direction: "horizontal",
-            scrollInterval: 2000,
-            scrollDuration: 1000,
+            scrollInterval: 1500,
+            scrollDuration: 800,
             //            slices: 14,
             //            boxes: 8,
             hoverPause: true,
