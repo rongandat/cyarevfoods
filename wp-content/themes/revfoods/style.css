@@ -497,12 +497,14 @@ span.topsocial{
     width: 245px;
     height: 200px;
     padding: 0px 10px;
+    float: left;
     /*background: blue;*/
 }
 .slditem2{
     width: 380px;
     height: 200px;
     padding: 0px 10px;
+    float: left;
     /*background: blue;*/
 }
 .slditem1{
@@ -1944,6 +1946,7 @@ h1.entry-title a,h1.entry-title{
 }
 .fr.p50 h3{
     font-size: 22px;
+    font-family: 'futurab';
 }
 .fr.p50 a.widgetheaderlink{
     margin: 0;
