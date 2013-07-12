@@ -1138,13 +1138,15 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     background: url("images/cham.png") 0px 9px no-repeat;
     width: 4px;
     height: 4px;
-    padding: 0px 15px;
+    padding: 3px 15px;
 }
 #power .text1:hover,#power .text2v:hover{
     color: #dd64b2;
 }
 #power sup{
     font-size: 9px;
+    line-height: 23px;
+    vertical-align: top;
 }
 /* END footer
 -------------------------------------------------------------- */
