@@ -331,7 +331,6 @@ function get_Rev_Foods_SlideShow($instance) {
                             jQuery('#modal').click(function(){
                                 console.debug(item.length);
                                 jQuery('.modal_meal_program').modal();
-                                
                             })
                             jQuery('.prditem').click(function(){
                                 jQuery('.modal_meal_program').modal();
