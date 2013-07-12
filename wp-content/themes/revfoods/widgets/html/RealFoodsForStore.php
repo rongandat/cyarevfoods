@@ -11,6 +11,12 @@
         background: transparent url("<?php echo $image->get_image_src('full'); ?>")  no-repeat;
         height: 650px;
     }
+    .RealFoodsInStore .about_topdotted{
+        padding: 30px 0 40px;
+    }
+    .RealFoodsInStore .dottedour_story{
+        background: #db5aad;
+    }
     .RealFoodsInStore .headline_instore{
         font-family: 'futurab';
         text-transform: lowercase;
@@ -19,17 +25,13 @@
         display: inline-block;
         font-size: <?php echo $instance['headline_font_size'] ?>;
         font-weight: bold;
-        margin: 60px 0px 0px 507px;
+        margin: 0 0px 0px 507px;
         float: left;
     }
 
 </style>
 <div class="RealFoodsInStore" id="<?php echo $instance['show_on'] ?>">
-    <div class="topdotted">
-        <div class="topdotted_l fl"></div>
-        <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title']; ?></span>
-        <div class="topdotted_r fr"></div>
-    </div>
+    <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div class="clr"></div>
     <span class="headline_instore"><?php echo $instance['headline']; ?></span>
     <div class="clr"></div>

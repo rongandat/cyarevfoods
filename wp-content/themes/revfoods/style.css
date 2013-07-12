@@ -609,6 +609,8 @@ ul.sub_menu li a {
 .dottedour_story {
     background: none repeat scroll 0 0 #fff;
     padding: 0 10px;
+    font-family: futura;
+    font-size: 17px;
 }
 #foot_philosophy .titledotted {
     background: #f6f6f6;
@@ -659,30 +661,17 @@ ul.sub_menu li a {
     line-height: 18px;
 }
 #careers .about_topdotted {
-    padding: 27px 0 115px;
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    padding: 26px 0 115px;
+    text-align: right;
+    width: 54%;
+}
+
+#careers .dottedour_story{
     background: none;
 }
-#careers .left-topdotted {
-    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
-    text-align: center;
-    width: 44%;
-    height: 10px;
-    float: left;
-}
-#careers .titledotted1 {
-    background: none;
-    text-align: center;
-    line-height: 12px;
-    float: left;
-    width: 7%;
-}
-#careers .right-topdotted {
-    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
-    text-align: center;
-    width: 44%;
-    height: 10px;
-    float: left;
-}
+
 #careers .main_content {
     background: url('images/job_cycle.png') no-repeat left top;
     width: 374px;

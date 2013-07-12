@@ -19,9 +19,7 @@
 </style>
 <div id="careers">
     <div class="about_topdotted">
-        <div class="left-topdotted"></div>
         <span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span>
-        <div class="right-topdotted"></div>
     </div>
     <div class="main_content">
         <div class="content_text">
