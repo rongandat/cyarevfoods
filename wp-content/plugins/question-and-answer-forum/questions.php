@@ -207,7 +207,7 @@ function q_loginform($redirecturl)
 	$html .= "<input type='hidden' name='redirect_to' value='$redirecturl' />";
 	$html .= "<input type='hidden' name='testcookie' value='1' />";
 	$html .= "<p><input type='submit' name='wp-submit' value='login'</p>";
-	$html .= "<a href='" . get_bloginfo('wpurl') . "/wp-signup.php?callback=?&amp;template=default'>Register</a>";
+	$html .= "<a class='register' href='" . get_bloginfo('wpurl') . "/wp-signup.php?callback=?&amp;template=default'>Register</a>";
 	return $html;
 }
 
