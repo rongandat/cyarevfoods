@@ -246,9 +246,11 @@ function get_Rev_Foods_SlideShow($instance) {
                         </p>
                     </div>
                     <div class="prditems">
-                        <?php $k = 1;
-                        foreach ($items as $item) { ?>
-                            <div class="prditem prditem<?php echo $k++; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
+                        <?php
+                        $k = 0;
+                        foreach ($items as $item) {
+                            ?>
+                            <div data-name="<?php echo $k++; ?>" class="prditem prditem<?php echo $k; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
             <?php } ?>
                     </div>
                 </div>
@@ -257,7 +259,7 @@ function get_Rev_Foods_SlideShow($instance) {
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="clr"></div>
                     <div class="modal-body" style="">
-                        <div id="mcts1" class="mctsall insc <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                        <div id="mcts1" class="mctsall insc prd <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                             <div>
             <?php foreach ($items as $item) { ?>
                                     <div class="slditem1 sldprd">
@@ -301,6 +303,11 @@ function get_Rev_Foods_SlideShow($instance) {
                     </div>
                     <script>
                         jQuery(document).ready( function(){
+                          item = [];
+                                jQuery('.modal-body .mctsall.insc.prd > div').each(function (){
+                                    item.push('<div class="item" style="display: block; float: left;"><div style="display: block;"><div style="display: block;">' + jQuery(this).html() + '</div></div>');
+                                    console.log(this);                 
+                                });
                             jQuery('.nutrition').click(function(){
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                                 var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
@@ -309,7 +316,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 }else{
                                     jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                                 }
-                                                                                                                    
+                                                                                                                                            
                             })
                             jQuery('.ingredients').click(function(){
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
@@ -320,14 +327,47 @@ function get_Rev_Foods_SlideShow($instance) {
                                     jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                                 }
                             })
-                                                                                                                                                                    
+                                                                                                                                                                                          
                             jQuery('#modal').click(function(){
+                                console.debug(item.length);
                                 jQuery('.modal_meal_program').modal();
-                                jQuery('.modal-body .mctsall.insc > div > div').css('left','0');
-                                jQuery('.modal-body .mctsall.insc > div > div').css('left','-1500px');
-//                                jQuery('.navBullets a').removeClass('active');
-//                                jQuery('.navBullets a[rel=2]').addClass('active');
-                                console.log('ffff');
+                                
+                            })
+                            jQuery('.prditem').click(function(){
+                                jQuery('.modal_meal_program').modal();
+                                jQuery('.modal-body .mctsall.insc.prd > div > div').html('');
+                                var s = jQuery(this).attr('data-name');
+                                console.debug(item.length);
+                                if(s==0){
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                   console.log(00);
+                                }
+                                if(s==1){
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                    console.log(11);
+                                }
+                                if(s==2){
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                    console.log(22);
+                                }
+                                if(s==3){
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                    console.log(33);
+                                }
+                                jQuery('.navBullets a').removeClass('active');
+                                jQuery('.navBullets a[rel='+s+']').addClass('active');
                             })
                         })                                                                                                                                   
                     </script>
@@ -450,7 +490,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                     <div class="info">
                                         <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                                         <p class="deswhere">
-            <?php //echo $instance['description'];    ?>
+            <?php //echo $instance['description'];      ?>
                                         </p>
                                     </div>
                                     <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
