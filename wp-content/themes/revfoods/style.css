@@ -1519,7 +1519,7 @@ a.subbt{
 }
 
 
-.question {
+.question.type-question {
     border-bottom: 1px solid #E5E5E5;
     font-family: gothambook;
     font-size: 13px;
