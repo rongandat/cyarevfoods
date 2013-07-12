@@ -261,6 +261,15 @@ function get_Rev_Foods_SlideShow($instance) {
                                                 <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
                                                 <span class="learnmore fl"></span>
                                             </p>
+                                            <?php if (!empty($linkshare)): ?>
+                                                <div class="homesocial">
+                                                    <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $linkshare; ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=403218749733700" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+                                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>">Tweet</a>
+                                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                    <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+                                                    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <?php if ($i % $cols == 0 || $i == count($items)) { ?>
@@ -283,7 +292,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             }else{
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                             }
-                                                                    
+                                                                                
                         })
                         jQuery('.ingredients').click(function(){
                             jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
@@ -294,11 +303,11 @@ function get_Rev_Foods_SlideShow($instance) {
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                             }
                         })
-                                                                                                                    
+                                                                                                                                
                         jQuery('#modal').click(function(){
                             jQuery('.modal_meal_program').modal();
                         })
-                                                                                                                    
+                                                                                                                                
                     </script>
                     <?php
                 } elseif ($cols == 2) {
