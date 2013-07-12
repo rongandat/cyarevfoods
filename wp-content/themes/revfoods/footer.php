@@ -57,7 +57,8 @@ $menu_name_4 = $menu_obj_4->name;
     </div>
 </div>
 <div id="power">
-    <span class="textA">real food for all <sup>TM</sup></span> <a href="" target="_blank" class="text1">legal</a> <span class="text2">copyright &copy; 2013 revolution foods </span><span class="text3">site by <a href="" target="_blank" class="text2v">veneer</a></span>
+    <?php $options = get_option( 'revfoods_theme_options' ); ?>
+    <span class="textA">real food for all <sup>TM</sup></span> <a href="<?php echo $options['legal_url']?>" target="_blank" class="text1">legal</a> <span class="text2">copyright &copy; 2013 revolution foods </span><span class="text3">site by <a href="<?php echo $options['veneer_url']?>" target="_blank" class="text2v">veneer</a></span>
 </div>
 </div><!-- #main .wrapper -->
 <!-- #colophon -->
