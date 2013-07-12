@@ -237,6 +237,32 @@ function get_Rev_Foods_SlideShow($instance) {
                 // product
                 ?>
                 <div class="clr"></div>
+                <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
+                    <div class="info">
+                        <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
+                        <p class="deswhere">
+                            <?php echo $instance['description']; ?>
+                            <span style="display: block; padding: 10px 0px;"><a href="javascript:void(0);" target="_blank" class="foot_philosophy_href" id="modal"><?php echo $instance['readmore']; ?></a></span>
+                        </p>
+                    </div>
+                    <div class="prditems">
+                         <?php $k=1;foreach ($items as $item) { ?>
+                            <div class="prditem prditem<?php echo $k++;?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
+                        <?php }?>
+                    </div>
+                    <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
+                        <?php if(false)foreach ($items as $item) { ?>
+                            <div class="slditem3">
+                                <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
+                                    <?php echo $item->post_title; ?>
+                                </h3>
+
+                                <div class="slddes person"><?php echo $item->post_content; ?></div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <!-- Break -->
                 <div class="modal_meal_program insc hide fade">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="clr"></div>
@@ -261,8 +287,9 @@ function get_Rev_Foods_SlideShow($instance) {
                                                 <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
                                                 <span class="learnmore fl"></span>
                                             </p>
+                                            <?php $linkshare = get_permalink($item->ID); ?>
                                             <?php if (!empty($linkshare)): ?>
-                                                <div class="homesocial">
+                                                <div class="homesocial_instore">
                                                     <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $linkshare; ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=403218749733700" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
                                                     <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>">Tweet</a>
                                                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -282,7 +309,6 @@ function get_Rev_Foods_SlideShow($instance) {
                             </div>
                         </div>
                     </div>
-                    <input id="modal" type="button" value="on"/>
                     <script>
                         jQuery('.nutrition').click(function(){
                             jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
@@ -292,7 +318,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             }else{
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                             }
-                                                                                
+                                                                                                        
                         })
                         jQuery('.ingredients').click(function(){
                             jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
@@ -303,11 +329,11 @@ function get_Rev_Foods_SlideShow($instance) {
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                             }
                         })
-                                                                                                                                
+                                                                                                                                                        
                         jQuery('#modal').click(function(){
                             jQuery('.modal_meal_program').modal();
                         })
-                                                                                                                                
+                                                                                                                                                        
                     </script>
                     <?php
                 } elseif ($cols == 2) {

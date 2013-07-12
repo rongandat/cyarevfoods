@@ -494,7 +494,7 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 245px;
+    width: 248px;
     height: 200px;
     padding: 0px 10px;
     float: left;
@@ -508,7 +508,7 @@ span.topsocial{
     /*background: blue;*/
 }
 .slditem1{
-    width: 800px;
+    width: 730px;
     height: 500px;
     padding: 0px 10px;
 }
@@ -1868,8 +1868,8 @@ h3.assistive-text{
     /*position: absolute;*/
     position: fixed;
     top: 10%;
-    width: 1024px;
-    height: 600px;
+    width: 945px;
+    height: 500px;
     z-index: 1050;
 
 }
@@ -1954,6 +1954,7 @@ h3.assistive-text{
 }
 .mctsall.insc{
     height: 500px;
+    width: 730px;
 }
 .p50{
     width: 48%;
@@ -1969,6 +1970,7 @@ h3.assistive-text{
 .fr.p50 h3{
     font-size: 22px;
     font-family: 'futurab';
+    padding-bottom: 10px;
 }
 .fr.p50 a.widgetheaderlink{
     margin: 0;
@@ -1977,6 +1979,46 @@ h3.assistive-text{
 }
 .fr.p50 >p{
     margin: 40px 0px;    
+}
+
+a.foot_philosophy_href {
+    background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
+    color: #000000;
+    font-size: 15px;
+    padding-right: 20px;
+    font-family: 'futurab';
+}
+.prditems {
+height: 100px;
+padding: 0px 50px;
+}
+.prditem{
+    width: 267px;
+    height: 280px;
+    float: left;
+}
+.prditem1{
+    background: red;
+    margin-top: 30px;
+    height: 215px;
+}
+.prditem2{
+    background: green;
+    margin-top: 20px;
+    height: 240px;
+}
+.prditem3{
+    background: blue;
+    margin-top: 10px;
+    height: 265px;
+}
+.prditem4{
+    background: violet;
+}
+.prditem2,
+.prditem3,
+.prditem4{
+    margin-left: -55px;
 }
 /* POPUP instore*/
 
