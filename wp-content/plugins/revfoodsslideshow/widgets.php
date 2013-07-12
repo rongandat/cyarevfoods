@@ -251,7 +251,7 @@ function get_Rev_Foods_SlideShow($instance) {
                         foreach ($items as $item) {
                             ?>
                             <div data-name="<?php echo $k++; ?>" class="prditem prditem<?php echo $k; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
-            <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
                 <!-- Break -->
@@ -261,7 +261,7 @@ function get_Rev_Foods_SlideShow($instance) {
                     <div class="modal-body" style="">
                         <div id="mcts1" class="mctsall insc prd <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                             <div>
-            <?php foreach ($items as $item) { ?>
+                                <?php foreach ($items as $item) { ?>
                                     <div class="slditem1 sldprd">
                                         <div class="fl p50" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain; height: 400px;">
                                             <img class="imgprd imgnutri hide" src="<?php echo get_field('revfoodsslideshow_prd_nutrition', $item->ID); ?>" />
@@ -269,7 +269,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                         </div>
                                         <div class="fr p50" style="">
                                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                <?php echo $item->post_title; ?>
+                                                <?php echo $item->post_title; ?>
                                             </h3>
                                             <div class="slddes jus" style="min-height: 180px;"><?php echo $item->post_content; ?></div>
                                             <div class="clr"></div>
@@ -280,7 +280,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                                 <span class="learnmore fl"></span>
                                             </p>
                                             <?php $linkshare = get_permalink($item->ID); ?>
-                <?php if (!empty($linkshare)): ?>
+                                            <?php if (!empty($linkshare)): ?>
                                                 <div class="homesocial_instore">
                                                     <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo $linkshare; ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=403218749733700" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
                                                     <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>">Tweet</a>
@@ -288,27 +288,28 @@ function get_Rev_Foods_SlideShow($instance) {
                                                     <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                                                     <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
                                                 </div>
-                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
-                                <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                    <?php if ($i % $cols == 0 || $i == count($items)) { ?>
                                     </div>
-                                        <?php if ($i < count($items)) { ?>
+                                    <?php if ($i < count($items)) { ?>
                                         <div>
                                         <?php } ?>
                                     <?php }$i++; ?>
-            <?php } ?>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                     <script>
                         jQuery(document).ready( function(){
-                          item = [];
-                                jQuery('.modal-body .mctsall.insc.prd > div').each(function (){
-                                    item.push('<div class="item" style="display: block; float: left;"><div style="display: block;"><div style="display: block;">' + jQuery(this).html() + '</div></div>');
-                                    console.log(this);                 
-                                });
-                            jQuery('.nutrition').click(function(){
+                            item = [];
+                            jQuery('.modal-body .mctsall.insc.prd > div').each(function (){
+                                item.push('<div class="item" style="display: block; float: left;"><div style="display: block;">' + jQuery(this).html() + '</div></div>');
+                                                                             
+                            });
+                            //                                console.log(item);
+                            jQuery('.nutrition').live('click',function(){
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                                 var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').css('display');
                                 if(s=='none'){
@@ -316,9 +317,9 @@ function get_Rev_Foods_SlideShow($instance) {
                                 }else{
                                     jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                                 }
-                                                                                                                                            
+                                                                                                                                                                    
                             })
-                            jQuery('.ingredients').click(function(){
+                            jQuery('.ingredients').live('click',function(){
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                                 var s = jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').css('display');
                                 if(s=='none'){
@@ -327,46 +328,49 @@ function get_Rev_Foods_SlideShow($instance) {
                                     jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
                                 }
                             })
-                                                                                                                                                                                          
+                                                                                                                                                                                                                  
                             jQuery('#modal').click(function(){
-                                console.debug(item.length);
+                                //                                console.debug(item.length);
                                 jQuery('.modal_meal_program').modal();
                             })
+                                        
                             jQuery('.prditem').click(function(){
                                 jQuery('.modal_meal_program').modal();
-                                jQuery('.modal-body .mctsall.insc.prd > div > div').html('');
-                                var s = jQuery(this).attr('data-name');
-                                console.debug(item.length);
-                                if(s==0){
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                   console.log(00);
-                                }
-                                if(s==1){
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                    console.log(11);
-                                }
-                                if(s==2){
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                    console.log(22);
-                                }
-                                if(s==3){
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
-                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
-                                    console.log(33);
-                                }
-                                jQuery('.navBullets a').removeClass('active');
-                                jQuery('.navBullets a[rel='+s+']').addClass('active');
+                                jQuery('.mctsall.insc.prd .navNext').onclick();
+                                                        
+                                //                                jQuery('.modal-body .mctsall.insc.prd > div > div').text('');
+                                //                                var s = jQuery(this).attr('data-name');
+                                //                                console.debug(item.length);
+                                //                                if(s==0){
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                //                                   console.log(00);
+                                //                                }
+                                //                                if(s==1){
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                //                                    console.log(11);
+                                //                                }
+                                //                                if(s==2){
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                //                                    console.log(22);
+                                //                                }
+                                //                                if(s==3){
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[3]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[0]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[1]);
+                                //                                    jQuery('.modal-body .mctsall.insc > div > div').append(item[2]);
+                                //                                    console.log(33);
+                                //                                }
+                                //                                jQuery('.navBullets a').removeClass();
+                                //                                jQuery('.navBullets a[rel='+s+']').addClass('active');
                             })
                         })                                                                                                                                   
                     </script>
@@ -390,24 +394,24 @@ function get_Rev_Foods_SlideShow($instance) {
                         <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
                         <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                             <div>
-            <?php foreach ($items as $item) { ?>
+                                <?php foreach ($items as $item) { ?>
                                     <div class="slditem2">
                                         <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                <?php echo $item->post_title; ?>
+                                            <?php echo $item->post_title; ?>
                                         </h3>
                                         <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
-                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                                            <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
                                         </div>
                                         <div class="clr"></div>
                                         <div class="slddes jus"><?php echo $item->post_content; ?></div>
                                     </div>
-                                <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                    <?php if ($i % $cols == 0 || $i == count($items)) { ?>
                                     </div>
-                                        <?php if ($i < count($items)) { ?>
+                                    <?php if ($i < count($items)) { ?>
                                         <div>
                                         <?php } ?>
                                     <?php }$i++; ?>
-            <?php } ?>
+                                <?php } ?>
                             </div>
                         </div>
 
@@ -419,24 +423,24 @@ function get_Rev_Foods_SlideShow($instance) {
                             <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
                             <div id="mcts2" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                                 <div>
-            <?php foreach ($items as $item) { ?>
+                                    <?php foreach ($items as $item) { ?>
                                         <div class="slditem3">
                                             <h3 style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                <?php echo $item->post_title; ?>
+                                                <?php echo $item->post_title; ?>
                                             </h3>
                                             <div class="meta-des" style="color: <?php echo get_field('revfoodsslideshow_title_two_color', $item->ID); ?>;">
-                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
+                                                <?php echo get_field('revfoodsslideshow_title_two', $item->ID); ?>
                                             </div>
                                             <div class="clr"></div>
                                             <div class="slddes jus"><?php echo $item->post_content; ?></div>
                                         </div>
-                                    <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                        <?php if ($i % $cols == 0 || $i == count($items)) { ?>
                                         </div>
-                                            <?php if ($i < count($items)) { ?>
+                                        <?php if ($i < count($items)) { ?>
                                             <div>
                                             <?php } ?>
                                         <?php }$i++; ?>
-            <?php } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
 
@@ -454,26 +458,26 @@ function get_Rev_Foods_SlideShow($instance) {
                                 <div class="info">
                                     <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                                     <p class="deswhere">
-            <?php echo $instance['description']; ?>
+                                        <?php echo $instance['description']; ?>
                                     </p>
                                 </div>
                                 <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                                     <div>
-            <?php foreach ($items as $item) { ?>
+                                        <?php foreach ($items as $item) { ?>
                                             <div class="slditem3">
                                                 <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                <?php echo $item->post_title; ?>
+                                                    <?php echo $item->post_title; ?>
                                                 </h3>
 
                                                 <div class="slddes person"><?php echo $item->post_content; ?></div>
                                             </div>
-                                        <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                            <?php if ($i % $cols == 0 || $i == count($items)) { ?>
                                             </div>
-                                                <?php if ($i < count($items)) { ?>
+                                            <?php if ($i < count($items)) { ?>
                                                 <div>
                                                 <?php } ?>
                                             <?php }$i++; ?>
-            <?php } ?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <?php
@@ -489,32 +493,32 @@ function get_Rev_Foods_SlideShow($instance) {
                                     <div class="info">
                                         <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                                         <p class="deswhere">
-            <?php //echo $instance['description'];      ?>
+                                            <?php //echo $instance['description'];      ?>
                                         </p>
                                     </div>
                                     <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                                         <div>
-            <?php foreach ($items as $item) { ?>
+                                            <?php foreach ($items as $item) { ?>
                                                 <div class="slditem3">
                                                     <h3 class="inschool" style="color: <?php echo get_field('revfoodsslideshow_title_one_color', $item->ID); ?>;">
-                <?php echo $item->post_title; ?>
+                                                        <?php echo $item->post_title; ?>
                                                     </h3>
 
                                                     <div class="slddes person"><?php echo $item->post_content; ?></div>
                                                 </div>
-                                            <?php if ($i % $cols == 0 || $i == count($items)) { ?>
+                                                <?php if ($i % $cols == 0 || $i == count($items)) { ?>
                                                 </div>
-                                                    <?php if ($i < count($items)) { ?>
+                                                <?php if ($i < count($items)) { ?>
                                                     <div>
                                                     <?php } ?>
                                                 <?php }$i++; ?>
-            <?php } ?>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                     <?php
                                 }
                                 ?>
-        <?php if ($instance['add_submenu'] == 'on') { ?>
+                                <?php if ($instance['add_submenu'] == 'on') { ?>
                                     <script>
                                         jQuery(document).ready( function(){                            
                                             /*--------------------------------------------------------------------*/                       
