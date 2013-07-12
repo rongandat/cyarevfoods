@@ -609,6 +609,8 @@ ul.sub_menu li a {
 .dottedour_story {
     background: none repeat scroll 0 0 #fff;
     padding: 0 10px;
+    font-family: futura;
+    font-size: 17px;
 }
 #foot_philosophy .titledotted {
     background: #f6f6f6;
@@ -659,30 +661,17 @@ ul.sub_menu li a {
     line-height: 18px;
 }
 #careers .about_topdotted {
-    padding: 27px 0 115px;
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    padding: 26px 0 115px;
+    text-align: right;
+    width: 54%;
+}
+
+#careers .dottedour_story{
     background: none;
 }
-#careers .left-topdotted {
-    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
-    text-align: center;
-    width: 44%;
-    height: 10px;
-    float: left;
-}
-#careers .titledotted1 {
-    background: none;
-    text-align: center;
-    line-height: 12px;
-    float: left;
-    width: 7%;
-}
-#careers .right-topdotted {
-    background: url("images/bg_dotted.png") repeat-x scroll 0 0 transparent;
-    text-align: center;
-    width: 44%;
-    height: 10px;
-    float: left;
-}
+
 #careers .main_content {
     background: url('images/job_cycle.png') no-repeat left top;
     width: 374px;
@@ -1138,13 +1127,15 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
     background: url("images/cham.png") 0px 9px no-repeat;
     width: 4px;
     height: 4px;
-    padding: 0px 15px;
+    padding: 3px 15px;
 }
 #power .text1:hover,#power .text2v:hover{
     color: #dd64b2;
 }
 #power sup{
     font-size: 9px;
+    line-height: 23px;
+    vertical-align: top;
 }
 /* END footer
 -------------------------------------------------------------- */
@@ -1434,7 +1425,14 @@ a.subbt{
     font-family: gothambook;
     font-size: 13px;
     line-height: 18px;
-    color: #000;
+    color: #333;
+}
+
+.entry-content td{
+}
+
+.entry-content td:last-child{
+    padding-right: 0
 }
 
 .entry-content p{
@@ -1495,13 +1493,13 @@ a.subbt{
 
 .q_question_list{
     padding: 10px 0;
-    
+
 }
 
 .q_question_list li{
     padding: 10px 0;
     border-top: 1px solid #E8E8E8;
-    
+
 }
 
 .q_question_list li:last-child{
@@ -2018,3 +2016,84 @@ padding: 0px 50px;
     
 } 
 /* POPUP instore*/
+
+
+
+.modal_meal_program {
+    background-clip: padding-box;
+    background-color: #e9e9e9;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 37%;
+    margin-left: -280px;
+    outline: medium none;
+    position: absolute;
+    top: 10%;
+    width: 945px;
+    z-index: 1050;
+
+}
+
+.modal_meal_program .close {
+    display: block;
+    float: right;
+    background: url(images/x.png) no-repeat 0 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.modal_meal_program .modal-body{
+    padding: 40px 0 40px 45px;  
+    max-height: none;
+}
+
+.modal_meal_program h1{
+    font-size: 30px;
+    font-family: futurabold;
+    width: 800px; 
+}
+.modal_meal_program p{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    padding: 0 0 15px 0;
+}
+.modal_meal_program p span.bold{
+    font-family: gothambold;
+}
+.modal_meal_program p.description{
+    padding-top: 5px;
+}
+
+.modal_meal_program ul.sample_lunch li{
+    width: 265px;
+    margin-left: 20px;
+    display: block;
+    float: left;
+}
+
+.modal_meal_program ul.sample_lunch li:first-child{
+    margin-left: 0;
+}
+
+#comments{
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+}
+
+#comments h3#reply-title{
+    padding: 10px 0;
+    color: #44acc4;
+    font-size: 20px;
+    font-family: "futurab";
+}
+
+
+.comment-form-comment textarea{
+    display: block;
+    margin-top: 9px;
+}

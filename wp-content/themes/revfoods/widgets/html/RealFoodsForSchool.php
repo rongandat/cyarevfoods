@@ -11,6 +11,12 @@
         height: 650px;
         background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  repeat-x;
     }
+    .RealFoodsInSchool .about_topdotted{
+        padding: 30px 0 55px;
+    }
+    .RealFoodsInSchool .dottedour_story{
+        background: #fff;
+    }
     .RealFoodsInSchool .widgetstitleschool {
         margin: 30px 0px 30px 70px;
         width: 288px;
@@ -24,16 +30,12 @@
         width: 100px;
         font-weight: bold;
         display: inline-block;
-        padding: 45px 40px 0px 65px;
+        padding: 0 40px 0px 65px;
     }
 
 </style>
 <div class="RealFoodsInSchool" id="<?php echo $instance['show_on'] ?>">
-    <div class="topdotted">
-        <div class="topdotted_l fl"></div>
-        <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title']; ?></span>
-        <div class="topdotted_r fr"></div>
-    </div>
+    <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div class="clr"></div>
     <div class="widgetstitleschool lc">
         <span class="title_inschool_1"></span>

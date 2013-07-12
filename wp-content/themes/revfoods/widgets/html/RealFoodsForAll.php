@@ -12,6 +12,12 @@
         background: #fff;
         background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  repeat-x;
     }
+    .RealFoodsForAll .about_topdotted{
+         padding: 30px 0 145px;
+    }
+    .RealFoodsForAll .dottedour_story{
+        background: #f6f6f6;
+    }
     .RealFoodsForAll .widget_header {
         font-family: 'futurab';
         font-size: <?php echo $instance['headline_font_size'] ?>;
@@ -19,7 +25,7 @@
         color: <?php echo $instance['headline_font_color'] ?>;
         width: 400px;
         height: 165px;
-        margin: 150px 0px 0px 70px;
+        margin: 0 0px 0px 70px;
     }
     .RealFoodsForAll .widgetheader_content{
         color: #333;
@@ -32,11 +38,8 @@
 
 </style>
 <div class="RealFoodsForAll" id="<?php echo $instance['show_on'] ?>">
-    <div class="topdotted">
-        <div class="topdotted_l fl"></div>
-        <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title'] ?></span>
-        <div class="topdotted_r fr"></div>
-    </div>
+    
+    <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title'] ?></span></div>
     <div class="clr"></div>
     <h1 class="widget_header lc"><?php echo $instance['headline'] ?></h1>
     <p class="gtbook widgetheader_content">
