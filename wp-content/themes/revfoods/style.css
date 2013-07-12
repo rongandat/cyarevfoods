@@ -494,17 +494,15 @@ span.topsocial{
     font-size: 48px;
 }
 .slditem3{
-    width: 250px;
+    width: 245px;
     height: 200px;
     padding: 0px 10px;
-    float: left;
     /*background: blue;*/
 }
 .slditem2{
     width: 380px;
     height: 200px;
     padding: 0px 10px;
-    float: left;
     /*background: blue;*/
 }
 .slditem1{
@@ -1428,9 +1426,6 @@ a.subbt{
 
 /* BOF Contact Us */
 .entry-content{
-    width: 800px;
-    margin: 0 auto;
-    padding: 25px 0;
     font-family: gothambook;
     font-size: 13px;
     line-height: 18px;
@@ -1447,7 +1442,7 @@ a.subbt{
     overflow: hidden;
 }
 
-.entry-content p input[type='text'],.entry-content p input[type='email'],.entry-content p input[type='tel']{
+.entry-content p input[type='text'],.entry-content p input[type='email'],.entry-content p input[type='tel'],.entry-content p input[type='password']{
     margin-top: 5px;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -1476,6 +1471,15 @@ a.subbt{
     margin-top: 5px;
 } 
 
+.entry-content a.register{
+    font-size: 17px;
+    background: url('images/om_arrow.png') no-repeat right 3px;
+    font-family: 'futurab';
+    padding: 0 20px 0;
+    font-family: 'futura';
+    text-transform: lowercase;
+}
+
 #join_revolution a {
     background: url("images/arrow_pink.png") no-repeat scroll right 3px transparent;
     color: #db5aad;
@@ -1484,7 +1488,48 @@ a.subbt{
     font-family: 'futura';
 }
 
+.q_question_list{
+    padding: 10px 0;
+    
+}
 
+.q_question_list li{
+    padding: 10px 0;
+    border-top: 1px solid #E8E8E8;
+    
+}
+
+.q_question_list li:last-child{
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.archive-header h1.archive-title{
+    color: #44ACC4;
+    font-family: "futurab";
+    font-size: 35px;
+    padding: 10px 0 30px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.archive-header .entry-content p{
+    margin: 10px 0;
+}
+
+
+.question {
+    border-bottom: 1px solid #E5E5E5;
+    font-family: gothambook;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 20px 0;
+}
+
+h1.entry-title a{
+    color: #666666;
+    font-family: "futurab";
+    font-size: 20px;
+    text-align: justify;
+}
 
 .entry-content p textarea{
     margin-top: 5px;
