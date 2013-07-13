@@ -306,26 +306,26 @@ function get_Rev_Foods_SlideShow($instance) {
                             }
                         }
                         function showpopp(){
-                            jQuery('.fk1').show();
-                            jQuery('.fk2').show();
+                            jQuery('.fk1').fadeIn("slow");
+                            jQuery('.fk2').fadeIn("slow");
                         }
                         jQuery('.fkclose').click(function(){
-                            jQuery('.fk1').hide();
-                            jQuery('.fk2').hide();
+                            jQuery('.fk1').fadeOut("slow");
+                            jQuery('.fk2').fadeOut("slow");
                         });
                         jQuery('#m_cts1_1 a.navPrev').click(function(){
                             jQuery('.item'+cur_s).hide();
                             setcur(0);
-                            jQuery('.item'+cur_s).show();
+                            jQuery('.item'+cur_s).fadeIn("slow");
                         });
                         jQuery('#m_cts1_1 a.navNext').click(function(){
                             jQuery('.item'+cur_s).hide();
                             setcur(1);
-                            jQuery('.item'+cur_s).show();
+                            jQuery('.item'+cur_s).fadeIn("slow");
                         });
                         function showitem(i){
                             jQuery('#m_cts1_1 .item').hide();
-                            jQuery('#m_cts1_1 .item'+i).show();
+                            jQuery('#m_cts1_1 .item'+i).fadeIn("slow");
                         }
                         jQuery('.nutrition').live('click',function(){
                             jQuery(this).parent().parent().siblings('.fl.p50').find('.imging').hide();
