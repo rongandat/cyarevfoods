@@ -313,8 +313,11 @@ function get_Rev_Foods_SlideShow($instance) {
                                 if(flag==0){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','0px');
                                 }
-                                if(flag==1 || flag==2){
+                                if(flag==1){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
+                                }
+                                if(flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
                                 }
                                 if(flag==3){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
@@ -326,8 +329,11 @@ function get_Rev_Foods_SlideShow($instance) {
                                 if(flag==0){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','-750px');
                                 }
-                                if(flag==3 || flag==2){
+                                if(flag==3){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','-1500px');
+                                }
+                                if(flag==2){
+                                    jQuery('.mctsall.insc.prd > div > div').css('left','-2270px');
                                 }
                                 if(flag==1){
                                     jQuery('.mctsall.insc.prd > div > div').css('left','0px');
@@ -379,7 +385,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 //                                }else{
                                 //                                    flag++;
                                 //                                }
-                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
+                                                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
                                 flag = jQuery('.mctsall.insc.prd .navBullets a.active').attr('rel');
                                 console.log(flag);
                             });
@@ -389,7 +395,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                 //                                }else{
                                 //                                    flag--;
                                 //                                }
-                                //                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
+//                                                                jQuery('.mctsall.insc.prd > div > div').css('left','0');
                                 flag = jQuery('.mctsall.insc.prd .navBullets a.active').attr('rel');
                                 console.log(flag);
                             });
