@@ -1987,6 +1987,7 @@ a.foot_philosophy_href {
     width: 267px;
     height: 280px;
     float: left;
+    cursor: pointer;
 }
 .prditem1{
     background: red;

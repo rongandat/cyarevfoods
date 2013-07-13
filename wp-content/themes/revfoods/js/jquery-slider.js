@@ -6,8 +6,8 @@ jQuery(document).ready( function(){
         {
             sliderId: jQuery(this).attr('id'),
             direction: "horizontal",
-            scrollInterval: 2000,
-            scrollDuration: 1000,
+            scrollInterval: 1500,
+            scrollDuration: 800,
             //            slices: 14,
             //            boxes: 8,
             hoverPause: true,
@@ -16,7 +16,6 @@ jQuery(document).ready( function(){
             circular: true,
             largeImageSlider: null,
             inSyncWithLargeImageSlider: true,
-            m:true,
             //            ScrollAllInView: false,
             license: "mylicense"
         };
@@ -26,6 +25,7 @@ jQuery(document).ready( function(){
     (function(a){
         c = new Array();
         for(var i = 0; i<mysld.length; i++){
+            console.log(mysld[i]);
             c[i] = new b(mysld[i]);
         }
         function b(f){
