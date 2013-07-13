@@ -1151,6 +1151,21 @@ END note
 
 
 
+@media (max-width: 1024px) {
+    .topdotted_l, .topdotted_r{
+        width: 35%;
+    }
+}
+@media (max-width: 750px) {
+    .topdotted_l, .topdotted_r{
+        width: 25%;
+    }
+}
+@media (max-width: 460px) {
+    .topdotted_l, .topdotted_r{
+        width: 10%;
+    }
+}
 @media (max-width: 1000px) {
     .site-header, .wrapper, site-footer {
         margin: 0 auto;
