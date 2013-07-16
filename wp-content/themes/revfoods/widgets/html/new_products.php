@@ -8,7 +8,8 @@
 </script>
 <style>
     #new_products {
-        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat top center;
+        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;
+        background-size: cover;
         height: 522px;
     }  
     #new_products h1 span {
