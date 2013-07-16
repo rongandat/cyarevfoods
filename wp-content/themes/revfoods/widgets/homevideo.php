@@ -74,7 +74,7 @@ class Revfoods_HomeVideo extends WP_Widget {
             $textshowvideo = 'watch video';
         }
         ?>
-        <div class="homebn" style="background: transparent url('<?php echo $url; ?>') no-repeat;">
+        <div class="homebn" style="background: transparent url('<?php echo $url; ?>') no-repeat; background-size: cover;">
             <div class="homevideo">
                 <?php echo $codeembed;?>
                 <!--<iframe width="350" height="200" src="//www.youtube.com/embed/pa2IDTWvRls" frameborder="0" allowfullscreen></iframe>-->

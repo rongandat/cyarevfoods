@@ -10,7 +10,8 @@
     .RealFoodsForAll{
         height: 650px;
         background: #fff;
-        background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  repeat-x;
+        background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  no-repeat;
+        background-size: cover;
     }
     .RealFoodsForAll .about_topdotted{
          padding: 30px 0 145px;

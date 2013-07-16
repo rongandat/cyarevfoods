@@ -9,7 +9,8 @@
 <style>
     .RealFoodsInSchool{
         height: 650px;
-        background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  repeat-x;
+        background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  no-repeat;
+        background-size: cover;
     }
     .RealFoodsInSchool .about_topdotted{
         padding: 30px 0 55px;
@@ -19,8 +20,8 @@
     }
     .RealFoodsInSchool .widgetstitleschool {
         margin: 30px 0px 30px 70px;
-        width: 288px;
-        height: 288px;
+        width: 1px;
+        height: 50%;
         background: transparent;
         border-radius: 144px;
     }

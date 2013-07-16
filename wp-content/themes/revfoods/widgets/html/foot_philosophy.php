@@ -8,7 +8,7 @@
 </script>
 <style>
     #foot_philosophy {
-        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat top left;
+        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;
         height: 583px;
     }
     #foot_philosophy .main_content h1 {

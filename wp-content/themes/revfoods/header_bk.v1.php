@@ -54,11 +54,11 @@
                         $urllogo = get_template_directory_uri().'/images/logo.png';
                     endif;
                 ?>
-                <a class="logohome" href="<?php echo home_url();?>">
+                <a class="logohome fl" href="<?php echo home_url();?>">
                     <img src="<?php echo esc_url( $urllogo ); ?>" class="logo" />
                 </a>
-                <?php wp_nav_menu( array( 'theme_location' => 'Top-Menu-2', 'container'=>'','menu_class' => 'top-menu-2' ) ); ?>
-                <?php wp_nav_menu( array( 'theme_location' => 'Top-Menu-Social', 'container'=>'','menu_class' => 'top-menu-social' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'Top-Menu-2', 'container'=>'','menu_class' => 'top-menu-2 fl' ) ); ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'Top-Menu-Social', 'container'=>'','menu_class' => 'top-menu-social fl' ) ); ?>
                 <span class="topsocial" ></span>
             </div>
             <div class="site-header-3 pfixed" style="<?php if ( is_user_logged_in() ) { echo "top:151px;"; } ?>">

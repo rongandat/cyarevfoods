@@ -237,14 +237,14 @@ function get_Rev_Foods_SlideShow($instance) {
                 // product
                 ?>
                 <div class="fk1" style="display: none; top: 0; left: 0;width: 100%; height: 100%; background: #000; opacity: 0.8; position: fixed; z-index: 500"></div>
-                <div class="fk2" style=" display: none; top: 50px; left: 50%; margin-left: -460px;width: 950px; height: 600px; background: #EAEBEB; position: fixed; z-index: 600">
+                <div class="fk2" style=" display: none; top: 50px; left: 5%; width: 90%; height: 600px; background: #EAEBEB; position: fixed; z-index: 600">
                     <button  style="font-size: 46px; padding: 10px;" type="button" class="close fkclose" data-dismiss="modal" aria-hidden="true">×</button>
-                    <div id="m_cts1_1" class="mctsall insc prd " style="background-image: none;">
-                        <div style="display: block; position: relative; overflow: hidden; width: 730px; height: 550px;">
-                            <div style="display: block; width: 3040px; position: absolute;">
+                    <div id="m_cts1_1" class="mctsall insc prd " style="background-image: none; width: 85%; margin-top: 30px;">
+                        <div style="display: block; position: relative; overflow: hidden; width: 100%; height: 550px;">
+                            <div style="display: block; /*width: 3040px; position: absolute;*/">
                                 <?php $k = 0; ?>
                                 <?php foreach ($items as $item) { ?>
-                                    <div data-name="<?php echo $k; ?>" class="item item<?php echo $k; ?>" style="display: block; float: left;">
+                                    <div data-name="<?php echo $k; ?>" class="item item<?php echo $k; ?>" style="display: none; float: left; width: 100%;">
                                         <div style="display: block;">
                                             <div class="slditem1 sldprd" style="left: 0px;">
                                                 <div class="fl p50" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain; height: 400px;">
@@ -319,14 +319,14 @@ function get_Rev_Foods_SlideShow($instance) {
                             jQuery('.fk2').fadeOut("slow");
                         });
                         jQuery('#m_cts1_1 a.navPrev').click(function(){
-                            jQuery('.item'+cur_s).hide();
+                            jQuery('#m_cts1_1 .item').hide();
                             setcur(0);
-                            jQuery('.item'+cur_s).fadeIn("slow");
+                            jQuery('#m_cts1_1 .item'+cur_s).fadeIn("slow");
                         });
                         jQuery('#m_cts1_1 a.navNext').click(function(){
-                            jQuery('.item'+cur_s).hide();
+                            jQuery('#m_cts1_1 .item').hide();
                             setcur(1);
-                            jQuery('.item'+cur_s).fadeIn("slow");
+                            jQuery('#m_cts1_1 .item'+cur_s).fadeIn("slow");
                         });
                         function showitem(i){
                             jQuery('#m_cts1_1 .item').hide();
@@ -384,13 +384,15 @@ function get_Rev_Foods_SlideShow($instance) {
                             <span style="display: block; padding: 10px 0px;"><a href="javascript:void(0);" target="_blank" class="foot_philosophy_href" id="modal"><?php echo $instance['readmore']; ?></a></span>
                         </p>
                     </div>
-                    <div class="prditems">
+                    <div class="prditems" style="text-align: center;">
+                        <div style="display: inline-block">
                         <?php
                         $k = 0;
                         foreach ($items as $item) {
                             ?>
                             <div data-name="<?php echo $k++; ?>" class="prditem prditem<?php echo $k; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
                         <?php } ?>
+                        </div>
                     </div>
                 </div>
                 <!-- Break -->

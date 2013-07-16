@@ -156,12 +156,12 @@ table{border-collapse: collapse; border-spacing: 0;}
 site-footer
 {
     margin: 0 auto;
-    width: 100%;
+    width: 1024px;
 
 }
 .pfixed{
     position: fixed;
-    width: 100%;
+    width: 1024px;
     z-index: 100;
     /*border: 1px solid red;*/
 }
@@ -178,7 +178,6 @@ site-footer
     top: 20px;
     height: 103px;
     background: #FFFFFF;
-    text-align: center;
 }
 .site-header-3{
     top: 123px;
@@ -206,11 +205,11 @@ ul.top-menu-1 li a{
 }
 a.logohome{
     display: inline-block;
+    margin: 10px 0px 15px 125px;
 }
 img.logo{
     width: 244px;
     height: 88px;
-    margin-top: -15px;
 }
 ul.top-menu-2{
     display: inline-block;
@@ -332,7 +331,7 @@ span.topsocial{
     position: relative;
     background: transparent url("images/bg_homebn.png") no-repeat;
     height: 520px;
-    width: 100%;
+    width: 1024px;
 }
 .homebn_right{
     padding: 50px 100px 40px 60px;
@@ -470,12 +469,12 @@ span.topsocial{
 }
 .gtbook.widgetheaderdes.instore{
     width: 470px;
-    margin-left: 0;
+    margin-left: 507px;
     color: #fff;
     height: auto;
 }
 .lc.widgetheaderlink.instore{
-    margin-left: 0;
+    margin-left: 507px;
 }
 .RealFoodsInStore .learnmore{
     /*margin-right: 151px;*/
@@ -509,7 +508,7 @@ span.topsocial{
     /*background: blue;*/
 }
 .slditem1{
-    /*width: 950px;*/
+    width: 730px;
     height: 500px;
     padding: 0px 10px;
 }
@@ -666,7 +665,7 @@ ul.sub_menu li a {
     display: block;
     padding: 26px 0 115px;
     text-align: right;
-    width: 100%;
+    width: 54%;
 }
 
 #careers .dottedour_story{
@@ -875,7 +874,8 @@ p.deswhere{
     text-align: center;
 }
 .where_we_server .info {
-    margin: 0 130px;
+    width: 700px;
+    margin: 0 auto;
 }
 div.item p, div.person{
     font-family: gothambook;
@@ -967,7 +967,7 @@ h3.inschool{
 -------------------------------------------------------------- */
 #footer {
     background: url("images/footer_bg.png") #4d4d4d repeat-x;
-    width: 100%;
+    width: 1024px;
     height: 327px;
     font-size: 14px;
     margin: 0 auto;
@@ -975,7 +975,7 @@ h3.inschool{
 }
 #footer .left {
     float: left;
-    width: auto;
+    width: 355px;
     margin-top: 67px;
     margin-left: 80px;
 }
@@ -1023,23 +1023,19 @@ h3.inschool{
 }
 #footer .center{
     float: left;
-    width: auto;
+    width: 135px;
     margin-top: 50px;
-    position: absolute;
-    left: 50%;
-    margin-left: -65px;
 }
 #footer .center .icon {
     background: url("images/iconlarg.png") no-repeat;
     width: 135px;
     height: 135px;
-    margin: 0 auto;
 }
 #footer .right{
-    float: right;
+    float: left;
     margin-top: 67px;
-    margin-right:100px;
-    width: auto;
+    margin-right:115px;
+    width: 330px;
 }
 #footer .right .column1{
     float: left;
@@ -1950,7 +1946,7 @@ h3.assistive-text{
     opacity: 1;
 }
 .sldprd{
-    width: 98%;
+    /*width: 100%;*/
 }
 .mctsall.insc .navPrev {
     background-position: 0 -31px;

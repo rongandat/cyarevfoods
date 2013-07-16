@@ -8,8 +8,9 @@
 </script>
 <style>
     #careers {
-        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat left top;
+        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;
         height: 655px;
+        background-size: cover;
     }
     #careers .main_content h1 {
         font-size: <?php echo $instance['headline_font_size'] ?>;
@@ -18,9 +19,11 @@
     }
 </style>
 <div id="careers">
-    <div class="about_topdotted">
-        <span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span>
-    </div>
+    <div class="topdotted">
+                    <div class="topdotted_l fl"></div>
+                    <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title']; ?></span>
+                    <div class="topdotted_r fr"></div>
+                </div>
     <div class="main_content">
         <div class="content_text">
             <h1><?php echo $instance['headline']; ?></h1>
