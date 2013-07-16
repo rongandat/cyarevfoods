@@ -39,7 +39,9 @@ $menu_name_4 = $menu_obj_4->name;
         <a href="http://wpvalet.cyahost.com/revfoods/join-the-revolution"><div class="icon"></div></a>
     </div>
     <div class="right">
+        <div style="" class="fl">
         <?php echo do_shortcode('[nm-mc-form fid="2"]')?>
+        </div>
 <!--        <div class="column1">
             <h3>special offers & updates: </h3>
             <input name="email" class="emailIp" type="text" value="Email*">
