@@ -10,7 +10,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta charset="<?php bloginfo( 'charset' ); ?>" xmlns:fb="http://ogp.me/ns/fb#"/>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -29,6 +29,15 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js'></script>
 <link rel='stylesheet' id='revfoods-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/bootstrap.css' type='text/css' media='all' />
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=403218749733700";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 </head>
 
 <body <?php body_class(); ?>>
