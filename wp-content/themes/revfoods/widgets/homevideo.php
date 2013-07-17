@@ -76,6 +76,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         ?>
         <div class="homebn" style="background: transparent url('<?php echo $url; ?>') no-repeat; background-size: cover;">
             <div class="homevideo">
+                <span class="close homevideoclose" style="position: absolute;right: -20px;top: -15px;font-weight: bold;color: #FFF;">×</span>
                 <?php echo $codeembed;?>
                 <!--<iframe width="350" height="200" src="//www.youtube.com/embed/pa2IDTWvRls" frameborder="0" allowfullscreen></iframe>-->
             </div>
@@ -89,7 +90,7 @@ class Revfoods_HomeVideo extends WP_Widget {
             <?php if(!empty($linkshare)):?>
             <div class="homesocial">
                 <fb:like href="<?php echo $linkshare;?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare;?>">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare;?>" data-text="<?php echo get_title_des($linkshare);?>">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare;?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                 <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>

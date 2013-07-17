@@ -10,4 +10,7 @@ jQuery(document).ready(function(){
     jQuery( "a#watch-video" ).click(function(){
             jQuery( "div.homevideo" ).show();
     });
+    jQuery( ".homevideoclose" ).click(function(){
+            jQuery( "div.homevideo" ).hide();
+    });
 });

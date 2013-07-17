@@ -24,7 +24,7 @@
         font-size: <?php echo $instance['headline_font_size'] ?>;
         font-weight: bold;
         color: <?php echo $instance['headline_font_color'] ?>;
-        width: 400px;
+        width: 500px;
         height: 165px;
         margin: 0 0px 0px 70px;
     }

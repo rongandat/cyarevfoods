@@ -266,13 +266,8 @@ function get_Rev_Foods_SlideShow($instance) {
                                                     <?php $linkshare = get_permalink($item->ID); ?>
                                                     <?php if (!empty($linkshare)): ?>
                                                     <div class="homesocial_instore" style="clear: both;">
-                                                        <style>
-                                                            #u_0_6{
-                                                                width: 250px;
-                                                            }
-                                                        </style>
                                                         <fb:like href="<?php echo $linkshare;?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
-                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>">Tweet</a>
+                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo get_title_des($linkshare);?>">Tweet</a>
                                                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                             <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                                                             <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
@@ -385,7 +380,7 @@ function get_Rev_Foods_SlideShow($instance) {
                         </p>
                     </div>
                     <div class="prditems" style="text-align: center;">
-                        <div style="display: inline-block">
+                        <div style="display: inline-block; min-width: 903px;">
                         <?php
                         $k = 0;
                         foreach ($items as $item) {

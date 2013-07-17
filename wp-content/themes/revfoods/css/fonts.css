@@ -21,10 +21,11 @@
     font-family: 'gothamx';
     src: url('../fonts/gotham/GothamXNarrow-Book.otf');
 }
-@font-face {
+/*@font-face {
     font-family: 'futura';
     src: url('../fonts/futura/FutuMd__.ttf');
-}
+}*/
+@font-face {font-family: 'futura';src: url('../fonts/futura/27B799_0_0.eot');src: url('../fonts/futura/27B799_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/futura/27B799_0_0.woff') format('woff'),url('../fonts/futura/27B799_0_0.ttf') format('truetype');}
 @font-face {
     font-family: 'futurab';
     src: url('../fonts/futura/Futura Bold BT.ttf');
