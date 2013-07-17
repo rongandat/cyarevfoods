@@ -496,7 +496,14 @@ if (!function_exists('revfoods_comment')) :
         'Bottom-Menu-3' => 'Bottom menu 3',
         'Bottom-Menu-Social' => 'Bottom menu Social'
     ));
-
+function get_title_des($link){
+    $tags = get_meta_tags($link);
+    if(empty($tags['title'])){
+        return '';
+    }else{
+    return  $tags['title'].' - '.$tags['description'];
+    }
+}
 
     /* END ADD CYA
  ---------------------------------------------*/

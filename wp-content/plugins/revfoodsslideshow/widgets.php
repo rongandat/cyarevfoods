@@ -263,11 +263,18 @@ function get_Rev_Foods_SlideShow($instance) {
                                                         <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
                                                         <span class="learnmore fl"></span>
                                                     </p>
+                                                   
                                                     <?php $linkshare = get_permalink($item->ID); ?>
+                                                     <?php
+                                                        $des_social =  get_title_des($linkshare);
+                                                        if(empty($des_social)){
+                                                            $des_social = $item->post_title.' - '.$linkshare;
+                                                        }
+                                                     ?>
                                                     <?php if (!empty($linkshare)): ?>
                                                     <div class="homesocial_instore" style="clear: both;">
                                                         <fb:like href="<?php echo $linkshare;?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
-                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo get_title_des($linkshare);?>">Tweet</a>
+                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo $des_social;?>">Tweet</a>
                                                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                             <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                                                             <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
