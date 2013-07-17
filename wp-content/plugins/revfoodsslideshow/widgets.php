@@ -268,7 +268,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                                      <?php
                                                         $des_social =  get_title_des($linkshare);
                                                         if(empty($des_social)){
-                                                            $des_social = $item->post_title.' - '.$linkshare;
+                                                            $des_social = $item->post_title;
                                                         }
                                                      ?>
                                                     <?php if (!empty($linkshare)): ?>
