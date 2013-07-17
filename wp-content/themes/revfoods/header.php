@@ -10,7 +10,6 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-    <meta name="twitter:title" content="Liberty Reserve Boom Game">
 <meta charset="<?php bloginfo( 'charset' ); ?>" xmlns:fb="http://ogp.me/ns/fb#"/>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
