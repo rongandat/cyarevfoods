@@ -10,6 +10,7 @@
     #our_kind_of_partners {
         height: 645px;
         background: url("<?php echo $image->get_image_src('full'); ?>") no-repeat center top;
+        background-size: cover;
     }
     #our_kind_of_partners h1 {
         font-family: futurabold;
