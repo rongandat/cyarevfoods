@@ -21,7 +21,7 @@
     .RealFoodsInSchool .widgetstitleschool {
         margin: 30px 0px 30px 70px;
         width: 1px;
-        height: 50%;
+        height: 40%;
         background: transparent;
         border-radius: 144px;
     }
@@ -35,7 +35,7 @@
     }
 
 </style>
-<div class="RealFoodsInSchool" id="<?php echo $instance['show_on'] ?>">
+<div class="RealFoodsInSchool jhome" id="<?php echo $instance['show_on'] ?>">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div class="clr"></div>
     <div class="widgetstitleschool lc">
@@ -47,3 +47,12 @@
     </p>
     <a href="<?php echo $instance['link']; ?>" <?php if ($instance['link_target'] == 'new_window') echo 'target="_blank"' ?>  class="lc widgetheaderlink fl"><?php echo $instance['learn_more_text']; ?></a><span class="learnmore fl"></span>
 </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                if(h>650){
+                    jQuery('.RealFoodsInSchool.jhome').css('height', h);
+                }
+            })
+        </script>

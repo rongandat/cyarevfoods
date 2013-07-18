@@ -74,7 +74,14 @@ class Revfoods_HomeVideo extends WP_Widget {
             $textshowvideo = 'watch video';
         }
         ?>
-        <div class="homebn" style="background: transparent url('<?php echo $url; ?>') no-repeat; background-size: cover;">
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*523/1024;
+                jQuery('.homebn.jhome').css('height', h);
+            })
+        </script>
+        <div class="homebn jhome" style="background: transparent url('<?php echo $url; ?>') no-repeat; background-size: cover;">
             <div class="homevideo">
                 <span class="close homevideoclose" style="position: absolute;right: -20px;top: -15px;font-weight: bold;color: #FFF;">×</span>
                 <?php echo $codeembed;?>

@@ -195,12 +195,13 @@ function get_Rev_Foods_SlideShow($instance) {
         if ($islogo) {
             ?>
             <div class="clr"></div>
-            <div class="RealFoodsInPress" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
-                <div class="topdotted">
+            <div class="RealFoodsInPress jhome" id="<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style="background-color: <?php echo $instance['bgcolor']; ?>;">
+<!--                <div class="topdotted">
                     <div class="topdotted_l fl"></div>
                     <span class="titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
                     <div class="topdotted_r fr"></div>
-                </div>
+                </div>-->
+                <div class="about_topdotted"><span class="titledotted1 dottedour_story" style="background-color: <?php echo $instance['bgcolor']; ?>;"><?php echo $instance['title']; ?></span></div>
                 <div class="clr"></div>
                 <p class="presstitle ftrb" style="color: <?php echo $instance['titlecolor']; ?>; font-size: <?php echo $instance['titlefontsize']; ?>;"><?php echo $instance['title']; ?></p>
                 <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
@@ -263,18 +264,18 @@ function get_Rev_Foods_SlideShow($instance) {
                                                         <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>
                                                         <span class="learnmore fl"></span>
                                                     </p>
-                                                   
+
                                                     <?php $linkshare = get_permalink($item->ID); ?>
-                                                     <?php
-                                                        $des_social =  get_title_des($linkshare);
-                                                        if(empty($des_social)){
-                                                            $des_social = $item->post_title;
-                                                        }
-                                                     ?>
+                                                    <?php
+                                                    $des_social = get_title_des($linkshare);
+                                                    if (empty($des_social)) {
+                                                        $des_social = $item->post_title;
+                                                    }
+                                                    ?>
                                                     <?php if (!empty($linkshare)): ?>
-                                                    <div class="homesocial_instore" style="clear: both;">
-                                                        <fb:like href="<?php echo $linkshare;?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
-                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo $des_social;?>">Tweet</a>
+                                                        <div class="homesocial_instore" style="clear: both;">
+                                                            <fb:like href="<?php echo $linkshare; ?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
+                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo $des_social; ?>">Tweet</a>
                                                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                             <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                                                             <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
@@ -342,7 +343,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             }else{
                                 jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
                             }
-                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                            
                         })
                         jQuery('.ingredients').live('click',function(){
                             jQuery(this).parent().parent().siblings('.fl.p50').find('.imgnutri').hide();
@@ -357,7 +358,7 @@ function get_Rev_Foods_SlideShow($instance) {
                             showpopp()
                             showitem(0);
                         })
-                                                                                                                                                                                                    
+                                                                                                                                                                                                                
                         jQuery('.prditem').click(function(){
                             showpopp();
                         })
@@ -369,11 +370,11 @@ function get_Rev_Foods_SlideShow($instance) {
                         })
                         jQuery('.prditem3').click(function(){
                             showitem(2);
-                                                                    
+                                                                                
                         })
                         jQuery('.prditem4').click(function(){
                             showitem(3);
-                                                                    
+                                                                                
                         })
                     })
                 </script>
@@ -388,12 +389,12 @@ function get_Rev_Foods_SlideShow($instance) {
                     </div>
                     <div class="prditems" style="text-align: center;">
                         <div style="display: inline-block; min-width: 903px;">
-                        <?php
-                        $k = 0;
-                        foreach ($items as $item) {
-                            ?>
-                            <div data-name="<?php echo $k++; ?>" class="prditem prditem<?php echo $k; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
-                        <?php } ?>
+                            <?php
+                            $k = 0;
+                            foreach ($items as $item) {
+                                ?>
+                                <div data-name="<?php echo $k++; ?>" class="prditem prditem<?php echo $k; ?>" style="background: transparent url('<?php echo get_field('revfoodsslideshow_prd_thumb', $item->ID); ?>') no-repeat 50% 50%;background-size: contain;"></div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

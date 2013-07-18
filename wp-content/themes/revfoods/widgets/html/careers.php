@@ -18,7 +18,7 @@
         color: <?php echo $instance['headline_font_color'] ?>;
     }
 </style>
-<div id="careers">
+<div id="careers" class="jabout">
     <div class="topdotted">
                     <div class="topdotted_l fl"></div>
                     <span class="titledotted dottedrealfoodsforall"><?php echo $instance['title']; ?></span>
@@ -32,3 +32,10 @@
         </div>
     </div>
 </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                jQuery('#careers.jabout').css('height', h);
+            })
+        </script>

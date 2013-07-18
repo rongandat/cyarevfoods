@@ -35,7 +35,7 @@
         
     }
 </style>
-<div id="meals_served">
+<div id="meals_served" class="jschool">
     <div class="real_foot"><h1><?php echo $instance['headline']; ?></h1></div>
 </div>
 <div class="clear"></div>
@@ -45,3 +45,10 @@
     </div>
 </div>
 <div class="clear"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                jQuery('#meals_served.jschool').css('height', h);
+            })
+        </script>

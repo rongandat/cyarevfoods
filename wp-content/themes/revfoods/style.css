@@ -371,8 +371,10 @@ span.topsocial{
     display: none;
 }
 .homesocial{
+    position: absolute;
     height: auto;
-    margin: 125px 0px 0px 50px;
+    bottom: 50px;
+    left: 50px;
     text-align: left;
 }
 
@@ -384,7 +386,7 @@ span.topsocial{
 {
     height: 16px;
     background:transparent url("images/bg_dotted.png")  repeat-x;
-    width: 40%;
+    width: 45%;
 }
 .titledotted{
     padding: 0px 5px;
@@ -394,7 +396,7 @@ span.topsocial{
     font-family: 'futura';
     margin: 0 auto;
     float: left;
-    width: 190px;
+    width: 8%;
     text-align: center;
 }
 .dottedrealfoodsforall{
@@ -977,7 +979,7 @@ h3.inschool{
     float: left;
     width: auto;
     margin-top: 67px;
-    margin-left: 80px;
+    margin-left: 60px;
 }
 #footer .column{
     float: left;
@@ -1038,7 +1040,7 @@ h3.inschool{
 #footer .right{
     float: right;
     margin-top: 67px;
-    margin-right:100px;
+    margin-right:60px;
     width: auto;
 }
 #footer .right .column1{
@@ -1113,7 +1115,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 
 #power {
-    width: 1024px;
+    /*width: 1024px;*/
     margin: 5px auto;
     text-align: center;
     font-family: 'gothammedium';
@@ -1155,12 +1157,42 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
  -  add class (message) for menu bottom 3.
 END note
 -----------------------------------------------------------------*/
-
+@media (max-width: 850px) {
+    #nutritional_education .main_image{
+        padding: 0;
+        width: 48%;
+    }
+    #nutritional_education .main_content{
+        float: right;
+        width: 48%;
+    }
+    #footer .center{
+        margin-left: -15px;
+    }
+    #footer .center .icon{
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+    }
+    .site-header .topsocial{
+        display: none;
+    }
+    .gtbook.widgetheaderdes.instore{
+        width: 400px;
+        float: right;
+    }
+    .RealFoodsInStore.jhome .headline_instore{
+        float: right;
+    }
+    .lc.widgetheaderlink.instore{
+        margin-left: 117px;
+    }
+}
 
 
 @media (max-width: 1024px) {
     .topdotted_l, .topdotted_r{
-        width: 35%;
+        /*width: 35%;*/
     }
 }
 @media (max-width: 750px) {

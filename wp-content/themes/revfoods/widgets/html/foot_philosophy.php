@@ -9,6 +9,7 @@
 <style>
     #foot_philosophy {
         background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;
+        background-size: cover;
         height: 583px;
     }
     #foot_philosophy .main_content h1 {
@@ -17,7 +18,7 @@
         font-family: futurabold;
     }
 </style>
-<div id="foot_philosophy">
+<div id="foot_philosophy" class="jabout">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div class="main_content">
         <h1><?php echo $instance['headline']; ?></h1>
@@ -26,3 +27,10 @@
     </div>
     <div class="clear"></div>
 </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                jQuery('#foot_philosophy.jabout').css('height', h);
+            })
+        </script>

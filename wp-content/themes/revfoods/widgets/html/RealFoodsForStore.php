@@ -30,7 +30,7 @@
     }
 
 </style>
-<div class="RealFoodsInStore" id="<?php echo $instance['show_on'] ?>">
+<div class="RealFoodsInStore jhome" id="<?php echo $instance['show_on'] ?>">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div style="width: 520px;" class="fr">
         <div class="clr"></div>
@@ -44,3 +44,10 @@
     </div>
 
 </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                jQuery('.RealFoodsInStore.jhome').css('height', h);
+            })
+        </script>

@@ -38,7 +38,7 @@
     }
 
 </style>
-<div class="RealFoodsForAll" id="<?php echo $instance['show_on'] ?>">
+<div class="RealFoodsForAll jhome" id="<?php echo $instance['show_on'] ?>">
     
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title'] ?></span></div>
     <div class="clr"></div>
@@ -49,3 +49,13 @@
     <a href="<?php echo $instance['link'] ?>" <?php if ($instance['link_target'] == 'new_window') echo 'target="_blank"' ?> class="lc widgetheaderlink fl"><?php echo $instance['learn_more_text']; ?></a><span class="learnmore fl"></span>
 </div>
 <div class="clr"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                if(h>650){
+                    jQuery('.RealFoodsForAll.jhome').css('height', h);
+                }
+                
+            })
+        </script>
