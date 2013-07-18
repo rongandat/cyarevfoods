@@ -10,6 +10,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/ico.png" type="image/x-icon" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" xmlns:fb="http://ogp.me/ns/fb#"/>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
