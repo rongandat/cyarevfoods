@@ -35,10 +35,11 @@ function postToMailChimp(frm)
 			}
 			else
 			{
+                            //console.log('1');
 				jQuery(frm).find("#nm-mc-loading").hide();
 				jQuery(frm).find("#mc-response-area").html(resp.message);
 				jQuery(frm).find("input[type=text]").val("");
-				jQuery(frm).find("input:checkbox").attr("checked", '');
+				//jQuery(frm).find("input:checkbox").attr("checked", '');
 			}
 	},'json');
 	
