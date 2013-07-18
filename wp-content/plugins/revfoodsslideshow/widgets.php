@@ -474,11 +474,12 @@ function get_Rev_Foods_SlideShow($instance) {
                     } elseif ($cols == 3 && $des) {
                         ?>
                         <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
-                            <div class = "topdotted">
+<!--                            <div class = "topdotted">
                                 <div class = "topdotted_l fl"></div>
                                 <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
                                 <div class="topdotted_r fr"></div>
-                            </div>
+                            </div>-->
+<div class="about_topdotted"><span class="titledotted1 dottedour_story" style = "background-color: <?php echo $instance['bgcolor']; ?>;"><?php echo $instance['titlesub']; ?></span></div>
                             <div class="clr"></div>
                             <div class="info">
                                 <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
@@ -509,11 +510,12 @@ function get_Rev_Foods_SlideShow($instance) {
                         } else {
                             ?>
                             <div class = "where_we_server" id = "<?php echo strtolower(str_replace(" ", "", $instance['titlesub'])); ?>" style = "background-color: <?php echo $instance['bgcolor']; ?>;">
-                                <div class = "topdotted">
+<!--                                <div class = "topdotted">
                                     <div class = "topdotted_l fl"></div>
                                     <span class = "titledotted dottedrealfoodsforall"><?php echo $instance['titlesub']; ?></span>
                                     <div class="topdotted_r fr"></div>
-                                </div>
+                                </div>-->
+                                <div class="about_topdotted"><span class="titledotted1 dottedour_story" style = "background-color: <?php echo $instance['bgcolor']; ?>;"><?php echo $instance['titlesub']; ?></span></div>
                                 <div class="clr"></div>
                                 <div class="info">
                                     <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>

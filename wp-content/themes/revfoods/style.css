@@ -853,10 +853,11 @@ ul.sub_menu li a {
     font-family: 'futurab';
 }
 #in_school_products .image {
-    float: left;
-    margin-left: 45px;
+    float: right;
+    margin-right: 45px;
 }
 #the_buzz .image {
+    width: 40%;
     padding: 60px 40px 0 90px;
     float: left;
 }
@@ -911,7 +912,7 @@ h3.inschool{
 #meal_kits .main_content {
     width: 340px;
     float: right;
-    margin-right: 140px;
+    margin-right: 50px;
 }
 #meal_kits .main_content p {
     color: #333;
@@ -925,7 +926,7 @@ h3.inschool{
     margin: 10px 0;
     padding: 8px 0 0 40px;
     color: #82be14;
-    font-family: 'gotham';
+    font-family: 'gothammedium';
     font-size: 13px;
 }
 #meal_kits .main_content p.info {
@@ -1355,8 +1356,8 @@ END note
 
 
     #in_school_products .image {
-        float: left;
-        margin-left: 45px;
+        float: right;
+        margin-right: 30px;
         width: 36%;
     }
 
@@ -1817,8 +1818,8 @@ h3.assistive-text{
     background: #fff;
 }
 #twitter_share .main_content {
-    padding: 155px 30px 0 95px;
-    width: 365px;
+    padding: 155px 0px 0 50px;
+    width: 25%;
     float: left;
 }
 #twitter_share h1 {
@@ -1845,8 +1846,10 @@ h3.assistive-text{
     font-family: 'futura';
 }
 #twitter_share .image {
-    float: left;
+    width: 60%;
+    float: right;
     padding-top: 95px;
+    padding-right: 50px;
 }
 
 /* END REV JOINREVOLUTION
@@ -1938,7 +1941,7 @@ h3.assistive-text{
 }
 
 .modal_meal_program .close {
-    color: #000000;
+/*    color: #000000;
     display: block;
     float: right;
     font-size: 35px;
@@ -1952,7 +1955,7 @@ h3.assistive-text{
     cursor: pointer;
     background: rgba(0, 0, 0, 0);
     border: 0;
-    -webkit-appearance: none;
+    -webkit-appearance: none;*/
 }
 
 .modal_meal_program .modal-body{
@@ -2106,12 +2109,12 @@ a.foot_philosophy_href {
 }
 
 .modal_meal_program .close {
-    display: block;
+/*    display: block;
     float: right;
     background: url(images/x.png) no-repeat 0 0;
     width: 30px;
     height: 30px;
-    margin-top: 10px;
+    margin-top: 10px;*/
 
 }
 

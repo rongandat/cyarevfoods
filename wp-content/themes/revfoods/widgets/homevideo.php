@@ -76,7 +76,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         ?>
         <script type="text/javascript">
             jQuery(document).ready(function(){
-                var w =  screen.width;
+                var w =  jQuery(window).width();
                 var h = w*523/1024;
                 jQuery('.homebn.jhome').css('height', h);
             })

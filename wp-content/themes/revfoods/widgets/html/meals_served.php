@@ -48,7 +48,7 @@
 <div class="clear"></div>
         <script type="text/javascript">
             jQuery(document).ready(function(){
-                var w =  screen.width;
+                var w =  jQuery(window).width();
                 var h = w*431/1024;
                 jQuery('#meals_served.jschool').css('height', h);
             })

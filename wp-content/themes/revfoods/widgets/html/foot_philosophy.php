@@ -29,7 +29,7 @@
 </div>
         <script type="text/javascript">
             jQuery(document).ready(function(){
-                var w =  screen.width;
+                var w =  jQuery(window).width();
                 var h = w*650/1024;
                 jQuery('#foot_philosophy.jabout').css('height', h);
             })

@@ -39,8 +39,8 @@
         <?php } ?>
     </div>
 </div>
-<div class="modal_meal_program hide fade">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+<div class="modal_meal_program hide fade" style="width: 90%; left: 5%; right: 5%; margin: 0;">
+    <button style="font-size: 46px; padding: 10px;" type="button" class="close fkclose" data-dismiss="modal" aria-hidden="true">×</button>
     <div class="modal-body">
     <?php 
     //echo apply_filters('the_content', get_post_field('post_content', 119));

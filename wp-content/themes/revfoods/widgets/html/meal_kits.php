@@ -8,7 +8,8 @@
 </script>
 <style>
     #meal_kits {
-        background: url('<?php echo $image->get_image_src('full'); ?>') no-repeat bottom left;
+        background: url('<?php echo $image->get_image_src('full'); ?>') no-repeat;
+        background-size: cover;
         height: 650px;
         background-color: <?php echo $instance['bg_color'] ?>;
     } 
@@ -18,7 +19,7 @@
         font-size: <?php echo $instance['headline_font_size'] ?>;
     }
 </style>
-<div id="<?php echo $instance['show_on'] ?>">
+<div id="<?php echo $instance['show_on'] ?>" class="mealkitsinstore jstore">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
     <div class="main_content">
         <h1><?php echo $instance['headline']; ?></h1>
@@ -26,3 +27,10 @@
     </div>
 </div>
 <div class="clear"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  jQuery(window).width();
+                var h = w*650/1024;
+                    jQuery('.mealkitsinstore.jstore').css('height', h);
+            })
+        </script>
