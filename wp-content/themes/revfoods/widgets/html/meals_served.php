@@ -8,6 +8,7 @@
 </script>
 <style>
     #meals_served {
+        position: relative;
         height: 520px;
         background: url("<?php echo $image->get_image_src('full'); ?>") no-repeat center top;
         background-size: cover;
@@ -48,7 +49,7 @@
         <script type="text/javascript">
             jQuery(document).ready(function(){
                 var w =  screen.width;
-                var h = w*650/1024;
+                var h = w*431/1024;
                 jQuery('#meals_served.jschool').css('height', h);
             })
         </script>

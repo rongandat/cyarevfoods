@@ -766,9 +766,10 @@ ul.sub_menu li a {
     font-family: gothamblack;
 }
 #meals_served .real_foot {
-    margin: 180px 25px 0 0;
-    float: right;
-    width: 200px;
+    position: absolute;
+    top:15%;
+    right: 25px;
+    width: 220px;
     height: 196px;
     background: url(images/real_foot_for_all.png) no-repeat center left;
 }
@@ -806,7 +807,7 @@ ul.sub_menu li a {
     font-family: 'futurab';
 }
 #our_kind_of_partners .main_content {
-    width: 320px;
+    width: 340px;
     float: right;
     padding: 115px 40px 0 0;
 }
@@ -1158,6 +1159,7 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 END note
 -----------------------------------------------------------------*/
 @media (max-width: 850px) {
+
     #nutritional_education .main_image{
         padding: 0;
         width: 48%;
@@ -1186,6 +1188,22 @@ END note
     }
     .lc.widgetheaderlink.instore{
         margin-left: 117px;
+    }
+    .topdotted_l, .topdotted_r{
+        width: 40%;
+    }
+    .titledotted{
+        width: 15%;
+    }
+    .mctsall .navPrev,
+    .mctsall.mctnav2 .navPrev{
+        top: -100px;
+        left: 10px;
+    }
+    .mctsall .navNext,
+    .mctsall.mctnav2 .navNext{
+        top: -100px;
+        right: 10px;
     }
 }
 

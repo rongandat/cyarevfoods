@@ -19,7 +19,7 @@
         text-align: left;
     }
 </style>
-<div id="our_kind_of_partners">
+<div id="our_kind_of_partners" class="jschool">
     <div class="main_content">
         <h1><?php echo $instance['headline']; ?></h1>
         <?php echo $instance['content']; ?>
@@ -28,3 +28,10 @@
     <div class="clear"></div>
 </div>
 <div class="clear"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var w =  screen.width;
+                var h = w*650/1024;
+                    jQuery('#our_kind_of_partners.jschool').css('height', h);
+            })
+        </script>
