@@ -141,7 +141,7 @@ class Revfoods_Image_Text extends WP_Widget {
                 <option value="real_food_in_store" <?php if ($instance['show_on'] == 'real_food_in_store') echo "selected='true'"; ?>><?php _e('Real food in store on Home page'); ?></option>
                 <option value="our_mission" <?php if ($instance['show_on'] == 'our_mission') echo "selected='true'"; ?>><?php _e('Our mission on About page'); ?></option>
                 <option value="our_story" <?php if ($instance['show_on'] == 'our_story') echo "selected='true'"; ?>><?php _e('Our story on About page'); ?></option>
-                <option value="foot_philosophy" <?php if ($instance['show_on'] == 'foot_philosophy') echo "selected='true'"; ?>><?php _e('Foot philosophy on About page'); ?></option>
+                <option value="foot_philosophy" <?php if ($instance['show_on'] == 'foot_philosophy') echo "selected='true'"; ?>><?php _e('Food philosophy on About page'); ?></option>
                 <option value="nutritional_education" <?php if ($instance['show_on'] == 'nutritional_education') echo "selected='true'"; ?>><?php _e('Nutritional education on About page'); ?></option>
                 <option value="careers" <?php if ($instance['show_on'] == 'careers') echo "selected='true'"; ?>><?php _e('Careers on About page'); ?></option>
                 <option value="meals_served" <?php if ($instance['show_on'] == 'meals_served') echo "selected='true'"; ?>><?php _e('Meals served on In Schools page'); ?></option>

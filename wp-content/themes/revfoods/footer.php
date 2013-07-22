@@ -36,7 +36,7 @@ $menu_name_4 = $menu_obj_4->name;
         </div>
     </div>
     <div class="center">
-        <a href="http://wpvalet.cyahost.com/revfoods/join-the-revolution"><div class="icon"></div></a>
+        <a href="http://revfoods.luxcerclients.com/join-the-revolution/"><div class="icon"></div></a>
     </div>
     <div class="right">
         <div style="" class="fl">

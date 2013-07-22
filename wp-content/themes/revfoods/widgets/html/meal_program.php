@@ -4,7 +4,7 @@
             var id = jQuery(this).children('a').attr('rel');
             jQuery("html, body").animate({scrollTop: (jQuery('#' + id).offset().top - 115)}, 1000);
         });
-        jQuery('#modal').click(function() {
+        jQuery('#modal').click(function(e) {
             jQuery('.modal_meal_program').modal();
         });
     });
@@ -39,7 +39,7 @@
         <?php } ?>
     </div>
 </div>
-<div class="modal_meal_program hide fade" style="width: 90%; left: 5%; right: 5%; margin: 0;">
+<div class="modal_meal_program hide fade" style="position: fixed;top:20px;overflow: auto;height: 600px;width: 90%; left: 5%; right: 5%; margin: 0;">
     <button style="font-size: 46px; padding: 10px;" type="button" class="close fkclose" data-dismiss="modal" aria-hidden="true">×</button>
     <div class="modal-body">
     <?php 
