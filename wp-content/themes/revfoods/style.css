@@ -175,6 +175,9 @@ site-footer
     background: #4D4D4D;
 }
 .site-header-2{
+    /*    width: 1024px;
+        left: 50%;
+        margin-left: -512px;*/
     top: 20px;
     height: 103px;
     background: #FFFFFF;
@@ -210,11 +213,12 @@ a.logohome{
 img.logo{
     width: 244px;
     height: 88px;
-    margin-top: -21px;
+    margin-top: 5px;
+    /*margin-left: 130px;*/
 }
 ul.top-menu-2{
     display: inline-block;
-    margin: 50px 20px 0px 34px;
+    margin: 48px 20px 0px 45px;
 }
 ul.top-menu-2 li{
     display: inline-block;
@@ -253,11 +257,10 @@ ul.top-menu-3 li a:hover{
     color: #000;
 }
 span.question {
+    padding: 5px;
     font-family: 'futura';
     font-size: 10.5px;
     font-weight: bold;
-    position: absolute;
-    right: 50px;
     box-shadow: 0px 2px 15px #AAA;
     width: 90px;
     height: 22px;
@@ -268,7 +271,7 @@ span.question {
 }
 ul.top-menu-social{
     display: inline-block;
-    margin: 46px 0px 0px 0px;
+    margin: 48px 0px 0px 0px;
 }
 ul.top-menu-social li{
     display: inline-block;
@@ -432,6 +435,7 @@ span.topsocial{
 .widgetheaderdes.inschool{
     width: 345px;
     padding-bottom: 20px;
+    padding-top: 400px;
 }
 .widgetheaderlink{
     display: block;
@@ -478,6 +482,7 @@ span.topsocial{
     margin-left: 0;
     color: #fff;
     height: auto;
+    margin-top: 20px;
 }
 .lc.widgetheaderlink.instore{
     margin-left: 0;
@@ -495,7 +500,7 @@ span.topsocial{
 }
 .presstitle{
     text-align: center;
-    padding: 100px 0px 50px 0px;
+    padding: 60px 0px 50px 0px;
     color: #45ACC4;
     font-size: 48px;
 }
@@ -533,11 +538,13 @@ span.topsocial{
 }
 ul.sub_menu{
     display: inline-block;
+    /*    float: left;
+        margin-left: 290px;*/
 
 }
 ul.sub_menu li{
     display: inline-block;
-    padding: 15px 0px;
+    padding: 11px 0px 12px 0px;
 }
 ul.sub_menu li a {
     font-family: 'futura';
@@ -568,7 +575,10 @@ ul.sub_menu li a {
     font-weight: bold;
 }
 #our_mission .om_content {
-    padding: 90px 75px;
+    margin: 0 auto;
+    max-width: 870px;
+    padding: 90px 10px;
+    line-height: 48px;
 }
 #our_mission .om_content div.om_description {
     color: #fff;
@@ -685,7 +695,8 @@ ul.sub_menu li a {
     width: 374px;
     height: 374px;
     float: right;
-    margin: 0 140px;
+    margin: 70px 140px;
+    
 }
 #careers .content_text {
     margin: 60px 40px 0 80px;
@@ -695,7 +706,7 @@ ul.sub_menu li a {
     font-family: 'gothambook';
     color: #fff;
     margin: 10px 0 15px;
-    line-height: 13px;
+    line-height: 18px;
 }
 #careers .content_text a.careers_href {
     background: url("images/om_arrow.png") no-repeat scroll right 3px transparent;
@@ -772,6 +783,7 @@ ul.sub_menu li a {
     font-family: gothamblack;
 }
 #meals_served .real_foot {
+    display: none;
     position: absolute;
     top:15%;
     right: 25px;
@@ -817,7 +829,7 @@ a.foot_philosophy_link{
 #our_kind_of_partners .main_content {
     width: 340px;
     float: right;
-    padding: 115px 40px 0 0;
+    padding: 115px 5px 0 0;
 }
 #our_kind_of_partners .main_content p {
     margin: 10px 0;
@@ -833,6 +845,8 @@ a.foot_philosophy_link{
     padding-right: 20px;
     font-family: 'futura';
     font-weight: bold;
+    margin-top: 10px;
+display: inline-block;
 }
 #in_school_products .about_topdotted {
     padding: 30px 0 85px;
@@ -873,7 +887,7 @@ a.foot_philosophy_link{
 }
 #the_buzz .main_content {
     margin-right: 50px;
-    float: right;
+    float: left;
     padding: 190px 0 0 0;
     width: 290px;
 }
@@ -894,7 +908,7 @@ p.deswhere{
 }
 div.item p, div.person{
     font-family: gothambook;
-    font-size: 13px;
+    font-size: 11.6px;
     line-height: 18px;
     color: #333;
     white-space: initial;
@@ -923,7 +937,7 @@ h3.inschool{
 #meal_kits .main_content {
     width: 340px;
     float: right;
-    margin-right: 50px;
+    margin-right: 140px;
 }
 #meal_kits .main_content p {
     color: #333;
@@ -980,9 +994,14 @@ h3.inschool{
 
 /* BEGIN footer
 -------------------------------------------------------------- */
+
+#footer div.fff{
+    width: 1024px;
+    margin: 0 auto;
+}
 #footer {
     background: url("images/footer_bg.png") #4d4d4d repeat-x;
-    width: 100%;
+    
     height: 327px;
     font-size: 14px;
     margin: 0 auto;
@@ -996,7 +1015,7 @@ h3.inschool{
 }
 #footer .column{
     float: left;
-    width: 100px;
+    width: 110px;
     padding-left: 5px;
 }
 #footer .column.col3{
@@ -1059,7 +1078,7 @@ h3.inschool{
 #footer .right .column1{
     float: left;
     width: 205px;
-    margin: 0px 30px;
+    margin: 0px 40px;
 }
 #footer .right h3{
     color: #52a444;
@@ -2045,6 +2064,7 @@ h3.assistive-text{
 .fr.p50{
     text-align: left;
     padding-top: 50px;
+    width: 46%;
 }
 .fr.p50 h3{
     font-size: 22px;
@@ -2193,3 +2213,13 @@ a.foot_philosophy_href {
     display: block;
     margin-top: 9px;
 }
+ul.sub_menu li:first-child a{
+    color: #000;
+}
+
+/* begin joing page*/
+#nmedia_mail_chimp-2{
+ margin: 0 auto;
+ width: 1024px;
+}
+/* end joing page*/

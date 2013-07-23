@@ -16,6 +16,7 @@
         font-size: <?php echo $instance['headline_font_size'] ?>;
         font-family: futurabold;
         color: <?php echo $instance['headline_font_color'] ?>;
+        line-height: 37px;
     }
 </style>
 <div id="careers" class="jabout">

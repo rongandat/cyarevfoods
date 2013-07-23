@@ -10,7 +10,7 @@ jQuery(document).ready( function(){
             scrollDuration: 800,
             //            slices: 14,
             //            boxes: 8,
-            hoverPause: true,
+            hoverPause: false,
             autoAdvance: false,
             scrollByEachThumb: true,
             circular: true,

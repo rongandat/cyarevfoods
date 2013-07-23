@@ -19,7 +19,7 @@ class Rev_Foods_SlideShow extends WP_Widget {
         $instance['add_submenu'] = strip_tags($new_instance['add_submenu']);
         $instance['numbercols'] = strip_tags($new_instance['numbercols']);
         $instance['title'] = strip_tags($new_instance['title']);
-        $instance['description'] = strip_tags($new_instance['description']);
+        $instance['description'] = $new_instance['description'];
         $instance['readmore'] = strip_tags($new_instance['readmore']);
         $instance['titlefontsize'] = strip_tags($new_instance['titlefontsize']);
         $instance['titlecolor'] = strip_tags($new_instance['titlecolor']);
@@ -238,10 +238,10 @@ function get_Rev_Foods_SlideShow($instance) {
                 // product
                 ?>
                 <div class="fk1" style="display: none; top: 0; left: 0;width: 100%; height: 100%; background: #000; opacity: 0.8; position: fixed; z-index: 500"></div>
-                <div class="fk2" style=" display: none; top: 50px; left: 5%; width: 90%; height: 600px; background: #EAEBEB; position: fixed; z-index: 600">
+                <div class="fk2" style=" display: none; top: 50px; left: 50%; margin-left: -475px; width: 950px; height: 580px; background: #EAEBEB; position: fixed; z-index: 600">
                     <button  style="font-size: 46px; padding: 10px;" type="button" class="close fkclose" data-dismiss="modal" aria-hidden="true">×</button>
                     <div id="m_cts1_1" class="mctsall insc prd " style="background-image: none; width: 85%; margin-top: 30px;">
-                        <div style="display: block; position: relative; overflow: hidden; width: 100%; height: 550px;">
+                        <div style="display: block; position: relative; width: 100%; height: 550px;">
                             <div style="display: block; /*width: 3040px; position: absolute;*/">
                                 <?php $k = 0; ?>
                                 <?php foreach ($items as $item) { ?>
@@ -274,7 +274,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                                     ?>
                                                     <?php if (!empty($linkshare)): ?>
                                                         <div class="homesocial_instore" style="clear: both;">
-                                                            <fb:like href="<?php echo $linkshare; ?>" send="false" layout="button_count" width="450" show_faces="false" style="width: 100px;"></fb:like>
+                                                            <fb:like href="<?php echo $linkshare; ?>" send="false" layout="button_count" width="350" show_faces="false" style="width: 100px;"></fb:like>
                                                             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $linkshare; ?>" data-text="<?php echo $des_social; ?>">Tweet</a>
                                                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                                             <a href="//pinterest.com/pin/create/button/?url=<?php echo $linkshare; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>

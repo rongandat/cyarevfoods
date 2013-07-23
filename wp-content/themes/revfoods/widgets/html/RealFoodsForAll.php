@@ -7,11 +7,15 @@
     });
 </script>
 <style>
-    .RealFoodsForAll{
+    .RealFoodsForAll div.rrr{
+        width: 1024px;
+        margin: 0 auto;
         height: 650px;
+    }
+    .RealFoodsForAll { 
         background: #fff;
         background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  no-repeat;
-        background-size: cover;
+        /*background-size: cover;*/
     }
     .RealFoodsForAll .about_topdotted{
          padding: 30px 0 145px;
@@ -39,7 +43,7 @@
 
 </style>
 <div class="RealFoodsForAll jhome" id="<?php echo $instance['show_on'] ?>">
-    
+    <div class="rrr">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title'] ?></span></div>
     <div class="clr"></div>
     <h1 class="widget_header lc"><?php echo $instance['headline'] ?></h1>
@@ -47,9 +51,10 @@
         <?php echo $instance['content'] ?>
     </p>
     <a href="<?php echo $instance['link'] ?>" <?php if ($instance['link_target'] == 'new_window') echo 'target="_blank"' ?> class="lc widgetheaderlink fl"><?php echo $instance['learn_more_text']; ?></a><span class="learnmore fl"></span>
+    </div>
 </div>
 <div class="clr"></div>
-        <script type="text/javascript">
+<!--        <script type="text/javascript">
             jQuery(document).ready(function(){
                 var w =  screen.width;
                 var h = w*650/1024;
@@ -58,4 +63,4 @@
                 }
                 
             })
-        </script>
+        </script>-->

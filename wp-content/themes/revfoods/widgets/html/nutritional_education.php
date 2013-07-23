@@ -16,10 +16,13 @@
         font-family: futurabold;
         color: <?php echo $instance['headline_font_color'] ?>;
         font-size: <?php echo $instance['headline_font_size'] ?>;
+        line-height: 50px;
+    margin-bottom: 15px;
     }
 </style>
 <div id="<?php echo $instance['show_on'] ?>">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
+    <div style="max-width: 1024px; margin: 0 auto;">
     <div class="main_image">
         <img src='<?php echo $image->get_image_src("full"); ?>'/>
     </div>
@@ -27,5 +30,6 @@
     <div class="main_content">
         <h1><?php echo $instance['headline']; ?></h1>
         <?php echo $instance['content']; ?>
+    </div>
     </div>
 </div>

@@ -19,6 +19,7 @@
         background: #db5aad;
     }
     .RealFoodsInStore .headline_instore{
+        margin-top: 85px;
         font-family: 'futurab';
         text-transform: lowercase;
         color: <?php echo $instance['headline_font_color'] ?>;
@@ -27,6 +28,7 @@
         font-size: <?php echo $instance['headline_font_size'] ?>;
         font-weight: bold;
         float: left;
+        line-height: 70px;
     }
 
 </style>

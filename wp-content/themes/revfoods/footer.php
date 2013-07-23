@@ -21,18 +21,19 @@ $menu_name_4 = $menu_obj_4->name;
 ?>
 
 <div id="footer">
+    <div class="fff">
     <div class="left">
         <div class="column">
-            <h3 class="ftr"><?php echo $menu_name_1;?></h3>
+            <h3 class="ftr"><?php echo $menu_name_1; ?></h3>
             <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-1', 'container' => '', 'menu_class' => '')); ?>
         </div>
         <div class="column">
-            <h3 class="ftr"><?php echo $menu_name_2;?></h3>
+            <h3 class="ftr"><?php echo $menu_name_2; ?></h3>
             <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-2', 'container' => '', 'menu_class' => '')); ?>
         </div>
         <div class="column col3">
-            <h3 class="ftr"><?php echo $menu_name_3;?></h3>
-            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-3', 'container' => '', 'menu_class' => '','link_after'      => '<span class="message"></span>',)); ?>
+            <h3 class="ftr"><?php echo $menu_name_3; ?></h3>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-3', 'container' => '', 'menu_class' => '', 'link_after' => '<span class="message"></span>',)); ?>
         </div>
     </div>
     <div class="center">
@@ -40,32 +41,42 @@ $menu_name_4 = $menu_obj_4->name;
     </div>
     <div class="right">
         <div style="" class="fl">
-        <?php echo do_shortcode('[nm-mc-form fid="2"]')?>
+            <?php echo do_shortcode('[nm-mc-form fid="2"]') ?>
         </div>
-<!--        <div class="column1">
-            <h3>special offers & updates: </h3>
-            <input name="email" class="emailIp" type="text" value="Email*">
-            <input id="checkedbox1" type="checkbox" name="inschools" class="css-checkbox" checked="checked"><label for="checkedbox1" class="css-label">in school</label>
-            <input id="checkedbox2" type="checkbox" name="instores" class="css-checkbox"><label for="checkedbox2" class="css-label">in store</label>
-            <a class="sumbit" onclick="JavaScription();"></a>
-
-        </div>-->
+        <!--        <div class="column1">
+                    <h3>special offers & updates: </h3>
+                    <input name="email" class="emailIp" type="text" value="Email*">
+                    <input id="checkedbox1" type="checkbox" name="inschools" class="css-checkbox" checked="checked"><label for="checkedbox1" class="css-label">in school</label>
+                    <input id="checkedbox2" type="checkbox" name="instores" class="css-checkbox"><label for="checkedbox2" class="css-label">in store</label>
+                    <a class="sumbit" onclick="JavaScription();"></a>
+        
+                </div>-->
         <div class="column2">
-            <h3 class="lc"><?php echo $menu_name_4;?></h3>
+            <h3 class="lc"><?php echo $menu_name_4; ?></h3>
             <a href="http://www.facebook.com/RevolutionFoods" target="_blank"><span class="facebook"></span></a>
             <a href="https://twitter.com/RevolutionFoods" target="_blank"><span class="twet"></span></a>
-            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-Social', 'container' => '', 'menu_class' => 'bottom-menu-social','link_after' => '<span></span>',)); ?>
+            <?php wp_nav_menu(array('theme_location' => 'Bottom-Menu-Social', 'container' => '', 'menu_class' => 'bottom-menu-social', 'link_after' => '<span></span>',)); ?>
         </div>
+    </div>
     </div>
 </div>
 <div id="power">
-    <?php $options = get_option( 'revfoods_theme_options' ); ?>
-    <span class="textA">real food for all<sup>TM</sup></span> <a href="<?php echo $options['legal_url']?>" target="_blank" class="text1">legal</a> <span class="text2">copyright &copy; 2013 revolution foods </span><span class="text3">site by <a href="<?php echo $options['veneer_url']?>" target="_blank" class="text2v">veneer</a></span>
+    <?php $options = get_option('revfoods_theme_options'); ?>
+    <span class="textA">real food for all<sup>TM</sup></span> <a href="<?php echo $options['legal_url'] ?>" target="_blank" class="text1">legal</a> <span class="text2">copyright &copy; 2013 revolution foods </span><span class="text3">site by <a href="<?php echo $options['veneer_url'] ?>" target="_blank" class="text2v">veneer</a></span>
 </div>
 </div><!-- #main .wrapper -->
 <!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<?php if (is_home()) { ?>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('ul.sub_menu li a').each(function(){
+                jQuery(this).css('color','#a2a4a6');
+            });
+        });
+    </script>
+<?php } ?>
 </body>
 </html>

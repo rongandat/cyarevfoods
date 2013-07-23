@@ -7,6 +7,10 @@
     });
 </script>
 <style>
+    #in_school_products div.innn{
+        margin: 0 auto;
+        width: 1024px;
+    }
     #in_school_products {
         height: 655px;
         background-color: <?php echo $instance['bg_color'] ?>;
@@ -16,11 +20,13 @@
         color: <?php echo $instance['headline_font_color'] ?>;
         font-size: <?php echo $instance['headline_font_size'] ?>;
         text-align: left;
+        line-height: 50px;
     }
 
 </style>
 <div id="in_school_products">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title']; ?></span></div>
+    <div class="innn">
     <div class="main_content">
         <h1><?php echo $instance['headline']; ?></h1>
         <p class="description">
@@ -31,5 +37,6 @@
     <div class="image">
         <img src="<?php echo $image->get_image_src('full'); ?>"/>
     </div>
+        </div>
 </div>
 <div class="clear"></div>

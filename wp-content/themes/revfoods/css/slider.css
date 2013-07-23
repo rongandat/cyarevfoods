@@ -34,12 +34,12 @@
     background: url('../images/panelicon.png') no-repeat;
     display:inline-block; z-index:5; cursor:pointer;
 }
-.mctsall .navPrev {background-position:0 -31px;top:15px;left:-60px;}
+.mctsall .navPrev {background-position:0 -31px;top:50px;left:-60px;}
 .mctsall.mctnav2 .navPrev {background-position:-115px -2px;top:30px;left:-60px;}
 
 .mctsall .navPrevDisabled, .mctsall .navPrevDisabled:hover {background-position:0 0;cursor:default;}
 
-.mctsall .navNext {background-position:-44px -31px;top:15px;right:-60px;}
+.mctsall .navNext {background-position:-44px -31px;top:50px;right:-60px;}
 .mctsall.mctnav2 .navNext {background-position:-115px -46px;top:30px;right:-60px;}
 /*.mctsall .navNext:hover {background-position:-16px -44px;}*/ 
 .mctsall .navNextDisabled, .mctsall .navNextDisabled:hover {background-position:-16px 0; cursor:default;} 
@@ -55,7 +55,10 @@
    user-select: none;
    
 }
-       
+.mctsall a.navPlay,
+.mctsall a.navPause{
+    display: none;
+}       
 /*---------built-in navigation bullets--------*/
 /* Note: the navBullets won't be available when "scrollByEachThumb" was set to false in the Javascript.*/
 .mctsall .navBullets
