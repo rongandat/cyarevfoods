@@ -10,11 +10,10 @@
     .RealFoodsForAll div.rrr{
         width: 1024px;
         margin: 0 auto;
-        height: 650px;
     }
     .RealFoodsForAll { 
-        background: #fff;
-        background: #F6F6F6 url("<?php echo $image->get_image_src('full'); ?>")  no-repeat;
+        height: 650px;
+        background: <?php echo $instance['bg_color']; ?> url("<?php echo $image->get_image_src('full'); ?>")  no-repeat center top;
         /*background-size: cover;*/
     }
     .RealFoodsForAll .about_topdotted{
@@ -43,9 +42,9 @@
 
 </style>
 <div class="RealFoodsForAll jhome" id="<?php echo $instance['show_on'] ?>">
-    <div class="rrr">
     <div class="about_topdotted"><span class="titledotted1 dottedour_story"><?php echo $instance['title'] ?></span></div>
     <div class="clr"></div>
+     <div class="rrr">
     <h1 class="widget_header lc"><?php echo $instance['headline'] ?></h1>
     <p class="gtbook widgetheader_content">
         <?php echo $instance['content'] ?>

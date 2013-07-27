@@ -91,7 +91,9 @@ class Revfoods_HomeVideo extends WP_Widget {
                 <h1 class="homebn_title">
                     <?php echo $title; ?>
                 </h1>
+                <?php if(!empty($linkshare)):?>
                 <a href="javascript:void(0)" id="watch-video"><?php echo $textshowvideo;?></a>
+                <?php endif;?>
             </div>
             <div class="clr"></div>
             <?php if(!empty($linkshare)):?>

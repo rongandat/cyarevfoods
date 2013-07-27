@@ -16,9 +16,9 @@
 </style>
 <div class="jfb">
     <div class="about_topdotted" style="height: 30px;"><span class="titledotted1 dottedour_story" style="background: #f6f6f6;">food philosophy</span></div>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/rev_joinrevolution_fb.jpg" />
+    <a href="https://www.facebook.com/RevolutionFoods"><img src="<?php echo get_template_directory_uri(); ?>/images/rev_joinrevolution_fb.jpg" /></a>
 </div>
 <div class="jtw">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/rev_joinrevolution_tw.jpg" />
+    <a href="https://twitter.com/revolutionfoods"><img src="<?php echo get_template_directory_uri(); ?>/images/rev_joinrevolution_tw.jpg" /></a>
 </div>
 <?php get_footer(); ?>

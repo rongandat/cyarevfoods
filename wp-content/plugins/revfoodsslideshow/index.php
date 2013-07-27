@@ -25,7 +25,7 @@ function RevFoods_SlideShow() {
         'public' => true,
         'show_ui' => true,
         'hierarchical' => true,
-        'supports' => array('title', 'editor', 'custom-fields'),)
+        'supports' => array('title', 'editor', 'custom-fields','page-attributes'),)
     );
 
     register_taxonomy('revfoodsss_cat', 'revfoodsslideshow', array(

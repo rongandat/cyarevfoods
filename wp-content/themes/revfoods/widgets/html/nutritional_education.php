@@ -16,7 +16,7 @@
         font-family: futurabold;
         color: <?php echo $instance['headline_font_color'] ?>;
         font-size: <?php echo $instance['headline_font_size'] ?>;
-        line-height: 50px;
+        line-height: 53px;
     margin-bottom: 15px;
     }
 </style>

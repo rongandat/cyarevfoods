@@ -11,20 +11,20 @@
 </script>
 <style>
     #foot_philosophy {
-        background: <?php echo $instance['bg_color']; ?>;
+        background: <?php echo $instance['bg_color']; ?> url('<?php echo $image->get_image_src("full"); ?>') no-repeat center top;
         background-size: cover;
-        height: 645px;
+        height: 650px;
     }
     #foot_philosophy > div.ppp{
-        background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;
-        background-size: cover;
-        height: 645px;
+        /*background: url('<?php echo $image->get_image_src("full"); ?>') no-repeat 50% 50%;*/
+        /*background-size: cover;*/
+        /*height: 645px;*/
     }
     #foot_philosophy .main_content h1 {
         font-size: <?php echo $instance['headline_font_size'] ?>;
         color: <?php echo $instance['headline_font_color'] ?>;
         font-family: futurabold;
-        line-height: 50px;
+        line-height: 53px;
         margin-bottom: 20px;
     }
 </style>
