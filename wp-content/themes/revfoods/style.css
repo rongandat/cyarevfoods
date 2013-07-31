@@ -546,6 +546,9 @@ ul.sub_menu li{
     display: inline-block;
     padding: 11px 0px 12px 0px;
 }
+ul.sub_menu li a:hover {
+    color: #000;
+}
 ul.sub_menu li a {
     font-family: 'futuram';
     /*font-weight: bold;*/
@@ -1127,6 +1130,7 @@ input[type=checkbox].css-checkbox + label.css-label {
     cursor: pointer;
     padding-right: 15px;
     margin-top: 15px;
+    font-family: 'futura';
 }
 
 input[type=checkbox].css-checkbox:checked + label.css-label {

@@ -35,9 +35,9 @@ class Revfoods_Join_The_Revolution extends WP_Widget {
                     <div class="send_info">
                         <span class="send_me">send me information about...</span>
                         <input id="checkedbox_j1" class="css-checkbox" type="checkbox" name="inschools">
-                        <label class="css-label" for="checkedbox_j1">school lunch program</label>
+                        <label class="css-label" for="checkedbox_j1">In Schools</label>
                         <input id="checkedbox_j2" checked="checked" class="css-checkbox" type="checkbox" name="instores">
-                        <label for="checkedbox_j2" class="css-label">healthy meal kits</label>
+                        <label for="checkedbox_j2" class="css-label">Instore</label>
                     </div>
                 </div>
                 <a href="#">sign up</a>

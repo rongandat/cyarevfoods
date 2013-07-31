@@ -36,7 +36,7 @@
         font-size: 13px;
         line-height: 18px;
         width: 280px;
-        height: 100px;
+        /*height: 100px;*/
         margin: 0px 0px 0px 70px;
     }
 

@@ -187,12 +187,12 @@ function get_Rev_Foods_SlideShow($instance) {
         } else {
             $des = false;
         }
-        if (count($items) % $cols) {
-            $n = $cols - count($items) % $cols;
-            for ($j = 0; $j < $n; $j++) {
-                $items[] = $items[$j];
-            }
-        }
+//        if (count($items) % $cols) {
+//            $n = $cols - count($items) % $cols;
+//            for ($j = 0; $j < $n; $j++) {
+//                $items[] = $items[$j];
+//            }
+//        }
         $i = 1;
         if ($islogo) {
             ?>
@@ -277,7 +277,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                                     <?php // echo $so['fb-url']; ?>
                                                         <div class="homesocial_instore" style="clear: both;">
                                                             <fb:like href="<?php echo $so['fb-url']; ?>" send="false" layout="button_count" width="350" show_faces="false" style="width: 100px;"></fb:like>
-                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $so['fb-url']; ?>/#RealFoodForAll" data-text="<?php echo $so['tw']; ?>">Tweet</a>
+                                                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $so['fb-url']; ?>/ #RealFoodForAll" data-text="<?php echo $so['tw']; ?>">Tweet</a>
                                                             <a href="//pinterest.com/pin/create/button/?url=<?php echo $so['pin-url']; ?>&media=<?php echo get_template_directory_uri(); ?>/images/<?php echo $so['pin-img']; ?>&description=<?php echo $so['pin-des']; ?>" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
                                                             
                                                         </div>

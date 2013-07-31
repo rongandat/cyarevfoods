@@ -8,15 +8,12 @@ jQuery(document).ready( function(){
             direction: "horizontal",
             scrollInterval: 1500,
             scrollDuration: 800,
-            //            slices: 14,
-            //            boxes: 8,
             hoverPause: false,
             autoAdvance: false,
             scrollByEachThumb: true,
             circular: true,
             largeImageSlider: null,
-            inSyncWithLargeImageSlider: true,
-            //            ScrollAllInView: false,
+            inSyncWithLargeImageSlider: false,
             license: "mylicense"
         };
     });
