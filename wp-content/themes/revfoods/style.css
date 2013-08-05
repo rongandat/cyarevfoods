@@ -337,6 +337,7 @@ span.topsocial{
     background: transparent url("images/bg_homebn.png") no-repeat;
     height: 520px;
     width: 100%;
+    cursor: pointer;
 }
 .homebn_right{
     padding: 50px 100px 40px 60px;
@@ -348,12 +349,21 @@ span.topsocial{
     border-bottom-left-radius: 20px;
 }
 .homebn_right.fr {
+    position: absolute;
+    right: 0;
+    z-index: 10;
     font-size: 33px;
     padding-bottom: 15px;
     text-align: center;
     font-weight: bold;
     color: #FFF;
     font-family: 'futurab';
+}
+a.homelinkimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
 }
 #watch-video {
     background: url("images/arrow_right_baner.png") no-repeat scroll right 2px rgba(0, 0, 0, 0);
@@ -367,12 +377,11 @@ span.topsocial{
 }
 .homevideo{
     position: absolute;
-    width: 350px;
-    height: 198px;
+    width: 100%;
+    height: 100%;
     background: #fff;
-    right: 35px;
-    top: 125px;
     display: none;
+    z-index: 6;
 }
 .homesocial{
     position: absolute;
@@ -380,6 +389,7 @@ span.topsocial{
     bottom: 50px;
     left: 50px;
     text-align: left;
+    z-index: 6;
 }
 
 .topdotted{
@@ -1067,7 +1077,8 @@ h3.inschool{
     margin-left: -65px;
 }
 #footer .center .icon {
-    background: url("images/iconlarg.png") no-repeat;
+    /*background: url("images/iconlarg.png") no-repeat;*/
+    background: url("images/jointheteam.png") no-repeat;
     width: 135px;
     height: 135px;
     margin: 0 auto;

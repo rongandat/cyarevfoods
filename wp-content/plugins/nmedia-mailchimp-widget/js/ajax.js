@@ -1,6 +1,6 @@
 // JavaScript Document
 jQuery(function($){
-	
+	jQuery('.send_info').find("input:checkbox").attr("checked", '');
 	$('.nm_mc_form').find('ul').css({'margin':0,'padding':0});
 	$('.nm_mc_form').find('ul li').css({'list-style':'none','border':'none','margin':0,'padding':0});
 });
@@ -21,30 +21,35 @@ function postToMailChimp(frm)
 	data = data + '&action=nm_mailchimp_subscribe';
 	
 	//console.log(data);	
-		
-	jQuery.post(mailchimp_vars.ajaxurl, data, function(resp){
-		
-			jQuery(frm).find("#nm-mc-loading").hide();
-			
-			//console.log(resp);
-			if(resp.status == 'failed'){
-				jQuery(frm).find("#mc-response-area").html(resp.message);				
-			}else if(resp.status == 'success' && mailchimp_vars.redirect_to != '')
-			{
-				window.location = mailchimp_vars.redirect_to;
-			}
-			else
-			{
-                            //console.log('1');
-				jQuery(frm).find("#nm-mc-loading").hide();
-				jQuery(frm).find("#mc-response-area").html(resp.message);
-				jQuery(frm).find("input[type=text]").val("");
-				//jQuery(frm).find("input:checkbox").attr("checked", '');
-			}
-	},'json');
-	
+	if(jQuery(frm).find("input:checkbox").is(':checked')){	
+            jQuery.post(mailchimp_vars.ajaxurl, data, function(resp){
+
+                            jQuery(frm).find("#nm-mc-loading").hide();
+
+                            //console.log(resp);
+                            if(resp.status == 'failed'){
+                                    jQuery(frm).find("#mc-response-area").html(resp.message);				
+                            }else if(resp.status == 'success' && mailchimp_vars.redirect_to != '')
+                            {
+                                    window.location = mailchimp_vars.redirect_to;
+                            }
+                            else
+                            {
+                                //console.log('1');
+                                    jQuery(frm).find("#nm-mc-loading").hide();
+                                    jQuery(frm).find("#mc-response-area").html(resp.message);
+                                    jQuery(frm).find("input[type=text]").val("");
+                                    //jQuery(frm).find("input:checkbox").attr("checked", '');
+                            }
+            },'json');
+
+            
+        }
+        else{
+            jQuery(frm).find("#nm-mc-loading").hide();
+            jQuery(frm).find("#mc-response-area").html('<div class="nm_mc_error">You have to check at least a group</div>');
+        }
 	return false;
-	
 }
 
 function php_serialize(obj)

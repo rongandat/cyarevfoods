@@ -11,7 +11,7 @@
 </script>
 <style>
     #foot_philosophy {
-        background: <?php echo $instance['bg_color']; ?> url('<?php echo $image->get_image_src("full"); ?>') no-repeat center top;
+        background: <?php echo $instance['bg_color']; ?> url('<?php echo $image->get_image_src("full"); ?>') no-repeat top left;
         background-size: cover;
         height: 650px;
     }
@@ -55,10 +55,10 @@
         ?>
     </div>    
 </div>
-<!--<script type="text/javascript">
+<script type="text/javascript">
     jQuery(document).ready(function(){
         var w =  jQuery(window).width();
         var h = w*650/1024;
         jQuery('#foot_philosophy.jabout').css('height', h);
     })
-</script>-->
+</script>

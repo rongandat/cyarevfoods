@@ -11,7 +11,7 @@ jQuery(document).ready( function(){
             hoverPause: false,
             autoAdvance: false,
             scrollByEachThumb: true,
-            circular: true,
+            circular: false,
             largeImageSlider: null,
             inSyncWithLargeImageSlider: false,
             license: "mylicense"
