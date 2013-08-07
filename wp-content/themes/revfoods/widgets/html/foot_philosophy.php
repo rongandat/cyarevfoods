@@ -11,7 +11,7 @@
 </script>
 <style>
     #foot_philosophy {
-        background: <?php echo $instance['bg_color']; ?> url('<?php echo $image->get_image_src("full"); ?>') no-repeat top left;
+        background: <?php echo $instance['bg_color']; ?> url('<?php echo $image->get_image_src("full"); ?>') no-repeat center top;
         background-size: cover;
         height: 650px;
     }
@@ -48,17 +48,23 @@
     <div class="modal-body">
         <?php
         //echo apply_filters('the_content', get_post_field('post_content', 119));
-        include ABSPATH . 'wp-content/themes/revfoods/widgets/lib/simple_html_dom.php';
-        $html = file_get_html($instance['link']);
-        foreach ($html->find('.entry-content') as $element)
-            echo $element;
+        $pid = url_to_postid($instance['link']);
+        if($pid){
+            $p = get_post($pid);
+            echo $p->post_content;
+        }
+        
+//        include ABSPATH . 'wp-content/themes/revfoods/widgets/lib/simple_html_dom.php';
+//        $html = file_get_html($instance['link']);
+//        foreach ($html->find('.entry-content') as $element)
+//            echo $element;
         ?>
     </div>    
 </div>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     jQuery(document).ready(function(){
         var w =  jQuery(window).width();
         var h = w*650/1024;
         jQuery('#foot_philosophy.jabout').css('height', h);
     })
-</script>
+</script>-->

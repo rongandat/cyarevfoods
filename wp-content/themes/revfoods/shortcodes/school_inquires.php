@@ -14,7 +14,7 @@ function revfoods_school_inquires($atts, $content = null) {
 
 function revfoods_get_form() {
         $s = '';
-        $s .='<div id="inquiryform">';
+        $s .='<div id="inquiryform" class="inquiryform">';
         $s .='<h1>'.__('school inquiry form','revfoods').'</h1>';
         $s .='<p>'.__('Thanks you for your interest in Revolution Foods meal-service for your school. Please fill out as much of the folling infor-mation as you can,and a Revolution Foods representative will get bank to you as soon as possible.').'</p>';
         $s .='<div class="line"></div>';
@@ -85,7 +85,7 @@ function revfoods_get_form() {
         
         $s .= <<<EOF
               <script type="text/javascript">        
-             jQuery( "#datepicker" ).datepicker();
+             //jQuery( "#datepicker" ).datepicker();
             jQuery(document).ready(function() {
                 jQuery('.lich').click(function(){
                 })

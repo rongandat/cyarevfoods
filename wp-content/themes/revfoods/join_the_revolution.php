@@ -21,4 +21,9 @@
 <div class="jtw">
     <a href="https://twitter.com/revolutionfoods" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/rev_joinrevolution_tw.jpg" /></a>
 </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('.site-header-3').css('background',"transparent url('<?php echo get_template_directory_uri(); ?>/images/bg_header_3_.jpg') repeat-x");
+            })
+        </script>
 <?php get_footer(); ?>

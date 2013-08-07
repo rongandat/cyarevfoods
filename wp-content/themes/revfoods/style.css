@@ -539,7 +539,7 @@ a.homelinkimg{
 }
 .slddes{
     white-space: normal;
-    height: 50px;
+    height: 220px;
     font-family: 'gothambook';
     font-size: 12px;
     color: #333;
@@ -1461,31 +1461,42 @@ END note
 }
 
 /*============== BEGIN Inquiry form=================*/
-#inquiryform {
+.inquiryform {
     width: 800px;
     margin: 0 auto;
     font-family: "gothambook";
     padding: 25px 0;
 }
-#inquiryform h1 {
+.inquiryform h1,
+.inquiryform_wrapper .inquiryform h3.gform_title {
     color: #44acc4;
     font-size: 35px;
     margin: 0px;
     font-family: "futurab";
 }
-#inquiryform p{
-    margin: 10px 0px 60px;
+.inquiryform_wrapper .gform_description,
+.inquiryform p{
+    margin: 20px 0px 50px;
+    display: block;
 }
-#inquiryform div.line {
+.inquiryform div.line {
     background: #E5E5E5;
     width: 100%;
     height: 1px;
+    margin-bottom: 30px;
+}
+.gform_wrapper .left_label label.gfield_label{
+    font-weight: normal;
+}
+.gform_wrapper ul.gform_fields li.gsection{
+    margin: 0;
     margin-bottom: 30px;
 }
 .st-form-line{
     display: block;
     padding: 8px 0px;
 }
+.formsl label,
 .st-labeltext{
     display:block;
     float:left;
@@ -1495,13 +1506,20 @@ END note
     padding-top:3px;
     padding-right:10px;
 }
-.st-forminput{
+li.st-forminput input,
+input.st-forminput{
     background:#fff url(images/forminput-bg.png) repeat-x top;
     border:1px solid #D2D4D4;
     border-top:1px solid #A5A6A6;
     color:#A5A5A5;
     padding: 0px 6px;
     height: 27px;
+}
+li.st-forminput.w330 input{
+    width: 330px;
+}
+.gform_wrapper  li.st-forminput.w500 input{
+    width: 500px;
 }
 .lich {
     background: url("images/datepicker-bg.png") no-repeat right top;
@@ -1519,15 +1537,21 @@ span.error{
     width:310px;
     overflow:hidden;
 }
-
+div.ginput_container{
+   width: 800px; 
+}
+.gform_wrapper .left_label label.gfield_label{
+    width: 30%;
+}
 .formsl select{
-    width: 360px;
+    width: 284px !important;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     padding: 3px 30px 2px 2px;
-    background: transparent url("images/selecarrow.png") no-repeat 283px -2px;
+    background: transparent url("images/selecarrow.png") no-repeat 255px -2px;
     border-radius: 5px;
+    margin-left: 135px;
 }
 a.subbt{
     background: url("images/submitf.png") no-repeat;
@@ -2269,5 +2293,43 @@ div#preview_form_container input[type="text"]{
     color: #A5A5A5;
     padding: 0px 6px;
     height: 27px;
+}
+.sldlogolink{
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+}
+
+/*update*/
+.ui-datepicker{
+    display: block;
+}
+body #ui-datepicker-div{
+    background: #E6E6E6;
+    padding: 10px 5px 5px 5px;
+    border: 2px solid #C1C1C1;
+    width: 190px !important;
+}
+table.ui-datepicker td a{
+    font-size: 11px;
+}
+#ui-datepicker-div .ui-datepicker-header select{
+    font-size: 11px;
+}
+#ui-datepicker-div .ui-datepicker-header select.ui-datepicker-new-month{
+    left: 33px;
+}
+#ui-datepicker-div .ui-datepicker-header select.ui-datepicker-new-year{
+    left: 113px;
+}
+#ui-datepicker-div table.ui-datepicker td a{
+    padding: 4px;
+}
+#ui-datepicker-div .ui-datepicker-next{
+    left: 170px;
+}
+#ui-datepicker-div .ui-datepicker-header select{
+    top:8px;
+    padding: 3px;
 }
 /* end join page*/

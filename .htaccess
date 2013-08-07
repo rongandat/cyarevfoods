@@ -10,12 +10,12 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # BEGIN - PASS Login
-# AuthUserFile /home/wpvaletc/public_html/revfoods/.htpasswd
-# AuthGroupFile /dev/null
-# AuthName "Please enter your ID and password"
-# AuthType Basic
-# require valid-user
-# order deny,allow
+ AuthUserFile /home/wpvaletc/public_html/revfoods/.htpasswd
+ AuthGroupFile /dev/null
+ AuthName "Please enter your ID and password"
+ AuthType Basic
+ require valid-user
+ order deny,allow
 # END - PASS Login
 
 # END WordPress

@@ -67,9 +67,9 @@ class Revfoods_HomeVideo extends WP_Widget {
 
         $image = new WidgetImageField($this, $image_id);
 
-        if (empty($title)) {
-            $title = 'Lorem ipsum doloret sit amet consultiteur';
-        }
+//        if (empty($title)) {
+//            $title = 'Lorem ipsum doloret sit amet consultiteur';
+//        }
         if (empty($image_id)) {
             $url = get_template_directory_uri() . '/images/bg_homebn.png';
         } else {
@@ -92,7 +92,7 @@ class Revfoods_HomeVideo extends WP_Widget {
         
             <div class="homebn jhome" style="background: transparent url('<?php echo $url; ?>') no-repeat; background-size: cover;">
                 <?php if(!empty($link)){?>
-                <a href="<?php echo $link;?>" target="_blank" class="homelinkimg"></a>
+                <a href="<?php echo $link;?>"  class="homelinkimg"></a>
                 <?php }?>
                 <div class="homevideo">
                     <!--<span class="close homevideoclose" style="position: absolute;right: -20px;top: -15px;font-weight: bold;color: #FFF;">×</span>-->

@@ -209,6 +209,7 @@ function get_Rev_Foods_SlideShow($instance) {
                 <div id="mcts1" class="mctsall <?php if ($instance['iconnav'] == 2) echo 'mctnav2'; ?>">
                     <!--<div>-->
                         <?php foreach ($items as $item) { ?>
+                        <?php $link_logo = get_field('home_external_link_logo', $item->ID);?>
                             <div class="slditem3 i<?php echo $item->ID ?>">
                                 <style type="text/css">
                                     div.slditem3.i<?php echo $item->ID ?> div.sldlogo{
@@ -218,7 +219,11 @@ function get_Rev_Foods_SlideShow($instance) {
                                         background: transparent url('<?php echo get_field('revfoodsslideshow_home_logo_full', $item->ID); ?>') center center no-repeat;;
                                     }
                                 </style>
-                                <div class="sldlogo" style="cursor: pointer;"></div>
+                                <div class="sldlogo" style="cursor: pointer;">
+                                    <?php if($link_logo){ ?>
+                                    <a class="sldlogolink" href="<?php echo $link_logo;?>" target="_blank"></a>
+                                    <?php } ?>
+                                </div>
                                 <div class="clr"></div>
                                 <div class="slddes"><?php echo $item->post_content; ?></div>
                                 <a href="<?php echo get_field('revfoodsslideshow_home_external_link', $item->ID); ?>" class="lc widgetheaderlink fl" target="_blank"><?php echo $instance['readmore']; ?></a>
@@ -401,7 +406,7 @@ function get_Rev_Foods_SlideShow($instance) {
                         <p class="presstitle ftrb" style="padding-bottom: 0;font-size: <?php echo $instance['titlefontsize']; ?>;color: <?php echo $instance['titlecolor']; ?>;"><?php echo $instance['title']; ?></p>
                         <p class="deswhere">
                             <?php echo $instance['description']; ?>
-                            <span style="display: block; padding: 10px 0px;"><a href="javascript:void(0);" target="_blank" class="foot_philosophy_href" id="modal"><?php echo $instance['readmore']; ?></a></span>
+                            <span style="display: block; padding: 10px 0px;"><a href="javascript:void(0);"  class="foot_philosophy_href" id="modal"><?php echo $instance['readmore']; ?></a></span>
                         </p>
                     </div>
                     <div class="prditems" style="text-align: center;">
