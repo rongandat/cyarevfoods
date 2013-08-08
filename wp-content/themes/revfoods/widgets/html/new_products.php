@@ -20,7 +20,7 @@
     }
 </style>
 <div id="<?php echo $instance['show_on'] ?>" class="newprdinstore jstore">
-   <h1><span><?php echo $instance['headline'] ?></span></h1>
+   <!--<h1><span><?php echo $instance['headline'] ?></span></h1>-->
 </div>
 <div class="clear"></div>
         <script type="text/javascript">
