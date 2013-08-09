@@ -142,6 +142,9 @@ table{border-collapse: collapse; border-spacing: 0;}
     margin: 10px 0px 0px 10px;
     cursor: pointer;
 }
+a{
+    text-decoration: none;
+}
 /* END General
 -------------------------------------------------------------- */
 /* BEGIN head
@@ -987,14 +990,37 @@ h3.inschool{
 
 .really_simple_twitter_widget li{
     border-top: 1px solid #e8e8e8;
-    padding: 10px 15px;
+    padding: 12px 50px 12px 0px;
+    min-height: 50px;
+    /*background: #fff url("images/tw_bg.jpg") no-repeat top left;*/
+    position: relative;
+    font-family: 'gothambook';
+    font-size: 13px;
 }
-.really_simple_twitter_widget li img{
-    padding-right: 10px;
+.really_simple_twitter_widget li a{
+    color: #C2252F;
+    font-family: 'gothambook';
+}
+.really_simple_twitter_widget li a:first-child{
+    color: #999AA6;
+}
+.really_simple_twitter_widget .twitter-timestamp{
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+.really_simple_twitter_widget .imgavata {
+    width: 48px;
+    float: left;
+    margin: 12px;
+}
+.grayitem{
+    color: #999999;
+    font-size: 12px;
 }
 .really_simple_twitter_widget li:last-child{
     border-bottom: 1px solid #e8e8e8;
-    width: 470px;
+    /*width: 470px;*/
 }
 .really_simple_twitter_widget li .twitter-timestamp{
     float: right;
@@ -1538,7 +1564,7 @@ span.error{
     overflow:hidden;
 }
 div.ginput_container{
-   width: 800px; 
+    width: 800px; 
 }
 .gform_wrapper .left_label label.gfield_label{
     width: 30%;
@@ -1835,7 +1861,7 @@ h3.assistive-text{
 
 
 #facebook_share{
-    height: 650px;
+    height: 700px;
     background: #f6f6f6;
 
 }
@@ -1882,6 +1908,7 @@ h3.assistive-text{
     font-size: 15px;
     padding-right: 20px;
     font-family: 'futura';
+    font-weight: bold;
 }
 
 #twitter_share {
@@ -1890,7 +1917,7 @@ h3.assistive-text{
 }
 #twitter_share .main_content {
     padding: 155px 0px 0 50px;
-    width: 25%;
+    width: 380px;
     float: left;
 }
 #twitter_share h1 {
@@ -1914,13 +1941,13 @@ h3.assistive-text{
     color: #000000;
     font-size: 15px;
     padding-right: 20px;
+    font-weight: bold;
     font-family: 'futura';
 }
 #twitter_share .image {
-    width: 60%;
+    width: 540px;
     float: right;
     padding-top: 95px;
-    padding-right: 50px;
 }
 
 /* END REV JOINREVOLUTION
@@ -2331,5 +2358,12 @@ table.ui-datepicker td a{
 #ui-datepicker-div .ui-datepicker-header select{
     top:8px;
     padding: 3px;
+}
+.fbm {
+    margin: 0 auto;
+    width: 1024px;
+}
+.fbm .content a{
+    font-weight: bold;
 }
 /* end join page*/

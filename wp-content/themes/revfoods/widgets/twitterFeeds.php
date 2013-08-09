@@ -109,9 +109,13 @@ class TwitterFeedWidget extends WP_Widget {
         extract($args);
         ?>
         <style>
-
+            #twitter_share .twm{
+                width: 1024px;
+                margin: 0 auto;
+            }
         </style>
         <div id="twitter_share">
+            <div class="twm">
             <div class="main_content">
                 <h1><?php echo $instance['title']; ?></h1>
                 <div class="content">
@@ -121,6 +125,7 @@ class TwitterFeedWidget extends WP_Widget {
             </div>
             <div class="image">
         <?php echo $this->really_simple_twitter_messages($instance); ?>
+            </div>
             </div>
         </div>
         <?php
@@ -358,7 +363,7 @@ class TwitterFeedWidget extends WP_Widget {
 
             // RECOVER ORIGINAL MESSAGE FOR RETWEETS
             if (count($message['retweeted_status']) > 0) {
-                $msg = 'RT @' . $message['retweeted_status']['user']['screen_name'] . ': ' . $message['retweeted_status']['text'];
+                $msg = '<b>Revolution</b> <span class="grayitem">@' . $message['retweeted_status']['user']['screen_name'] . '</span><br> ' . $message['retweeted_status']['text'];
 
                 if ($options['thumbnail_retweets']) {
                     $message = $message['retweeted_status'];
@@ -378,7 +383,7 @@ class TwitterFeedWidget extends WP_Widget {
 
             // TODO: LINK
             if ($options['thumbnail'] and $message['user']['profile_image_url_https'] != '') {
-                $out .= '<img src="' . $message['user']['profile_image_url_https'] . '" />';
+                $out .= '<div class="imgavata"><img src="' . $message['user']['profile_image_url_https'] . '" /></div>';
             }
             if ($options['hyperlinks']) {
                 if ($options['replace_link_text'] != '') {

@@ -267,7 +267,7 @@ class FacebookPageFeedWidget extends WP_Widget {
                 width: 415px;
                 border: 1px solid #c3cee1;
                 float: left;
-                margin: 0 40px 0 125px;
+                margin: 0 40px 0 50px;
             }
 
             .facebook_feed .content_header{
@@ -294,7 +294,7 @@ class FacebookPageFeedWidget extends WP_Widget {
 
             .fbf_desc{
                 padding: 0 15px;
-                font-family: gothambold; 
+                font-family: gothambook; 
                 font-size: 13px;   
                 line-height: 18px;
                 color: #000;
@@ -307,7 +307,7 @@ class FacebookPageFeedWidget extends WP_Widget {
                 padding: 5px 5px 0;
             }
 
-            
+
         </style>
         <?php
         $title = $instance['title'];
@@ -315,20 +315,23 @@ class FacebookPageFeedWidget extends WP_Widget {
         ?>
         <div id="facebook_share">
             <div class="about_topdotted"><span class="titledotted1 dottedour_story">follow us</span></div>
-            <div class="facebook_feed">
-                <div class="arrow"></div>
-                <?php echo fbf_facebook_messages($instance); ?>
-            </div>
-            <div class="main_content">
-                <h1>
-                    <?php echo $title ?>
-                </h1>
-                <div class="content">
-                    <?php echo $instance['content']; ?>
+            <div class="fbm">
+                <div class="facebook_feed">
+                    <div class="arrow"></div>
+                    <?php echo fbf_facebook_messages($instance); ?>
                 </div>
-                <a href="<?php echo $instance['link']; ?>" target="_blank"><?php echo $instance['link_text']; ?></a>
+                <div class="main_content">
+                    <h1>
+                        <?php echo $title ?>
+                    </h1>
+                    <div class="content">
+                        <?php echo $instance['content']; ?>
+                    </div>
+                    <a href="<?php echo $instance['link']; ?>" target="_blank"><?php echo $instance['link_text']; ?></a>
+                </div>
             </div>
         </div>
+        <div class="clr"></div>
         <?php
         echo $after_widget;
     }
