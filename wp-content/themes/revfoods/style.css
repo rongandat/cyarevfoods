@@ -2231,6 +2231,7 @@ a.foot_philosophy_href {
 .modal_meal_program .modal-body{
     padding: 40px 0 40px 45px;  
     max-height: none;
+    font-family: 'gothambook';
 }
 
 .modal_meal_program h1{

@@ -268,7 +268,7 @@ function get_Rev_Foods_SlideShow($instance) {
                                                         <?php echo $item->post_content;?>
                                                     </div>
                                                     <div class="clr"></div>
-                                                    <p>
+                                                    <p style="padding-top: 25px;">
                                                         <a  href="javascript:void(0);" target="_blank" class="nutrition lc widgetheaderlink fl"><?php _e('nutrition info'); ?></a>
                                                         <span class="learnmore fl"></span>
                                                         <a href="javascript:void(0);" target="_blank" class="ingredients lc widgetheaderlink fl" style="padding-left: 40px;"><?php _e('ingredients'); ?></a>

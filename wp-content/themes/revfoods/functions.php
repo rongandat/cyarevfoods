@@ -510,41 +510,41 @@ if (!function_exists('revfoods_comment')) :
         $so = array(
             'rev-ham' => array(
                 'fb-title' => 'Revolution Foods build your own meal kits!',
-                'fb-url' => 'http://revfoods.luxcerclients.com/in-stores/?prd=rev-ham',
+                'fb-url' => 'http://www.revfoods.com/in-stores/?prd=rev-ham',
                 'fb-des' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Ham & Cheddar #RealFoodForAll',
                 'fb-img' => 'fb-hamcheddar.jpg',
                 'tw' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Ham & Cheddar #RealFoodForAll',
-                'pin-url' => 'http://revfoods.luxcerclients.com/in-stores',
+                'pin-url' => 'http://www.revfoods.com/in-stores',
                 'pin-des' => 'No Artificial Anything%3F New @revolutionfoods build-your-own meal kit in Ham %26 Cheddar %23RealFoodForAll',
                 'pin-img' => 'pin-hamcheddar.jpg'
             ),
             'rev-turkey' => array(
                 'fb-title' => 'Revolution Foods build your own meal kits!',
-                'fb-url' => 'http://revfoods.luxcerclients.com/in-stores/?prd=rev-turkey',
+                'fb-url' => 'http://www.revfoods.com/in-stores/?prd=rev-turkey',
                 'fb-des' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Turkey & Cheddar #RealFoodForAll',
                 'fb-img' => 'fb-turkeycheddar.jpg',
                 'tw' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Turkey & Cheddar #RealFoodForAll',
-                'pin-url' => 'http://revfoods.luxcerclients.com/in-stores',
+                'pin-url' => 'http://www.revfoods.com/in-stores',
                 'pin-des' => 'No Artificial Anything%3F New @revolutionfoods build-your-own meal kit in Turkey %26 Cheddar %23RealFoodForAll',
                 'pin-img' => 'pin-turkeycheddar.jpg'
             ),
             'rev-pizza' => array(
                 'fb-title' => 'Revolution Foods build your own meal kits!',
-                'fb-url' => 'http://revfoods.luxcerclients.com/in-stores/?prd=rev-pizza',
+                'fb-url' => 'http://www.revfoods.com/in-stores/?prd=rev-pizza',
                 'fb-des' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Cheese Pizza #RealFoodForAll',
                 'fb-img' => 'fb-pizza.jpg',
                 'tw' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Cheese Pizza #RealFoodForAll',
                 'pin-des' => 'No Artificial Anything%3F New @revolutionfoods build-your-own meal kit in Cheese Pizza %23RealFoodForAll',
-                'pin-url' => 'http://revfoods.luxcerclients.com/in-stores',
+                'pin-url' => 'http://www.revfoods.com/in-stores',
                 'pin-img' => 'pin-pizza.jpg'
             ),
             'rev-peanut' => array(
                 'fb-title' => 'Revolution Foods build your own meal kits!',
-                'fb-url' => 'http://revfoods.luxcerclients.com/in-stores/?prd=rev-peanut',
+                'fb-url' => 'http://www.revfoods.com/in-stores/?prd=rev-peanut',
                 'fb-des' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Peanut Butter & Jelly#RealFoodForAll',
                 'fb-img' => 'fb-pbj.jpg',
                 'tw' => 'No Artificial Anything? New @revolutionfoods build-your-own meal kit in Peanut Butter & Jelly #RealFoodForAll',
-                'pin-url' => 'http://revfoods.luxcerclients.com/in-stores',
+                'pin-url' => 'http://www.revfoods.com/in-stores',
                 'pin-des' => 'No Artificial Anything%3F New @revolutionfoods build-your-own meal kit in Peanut Butter %26 Jelly %23RealFoodForAll',
                 'pin-img' => 'pin-pbj.jpg'
             ),

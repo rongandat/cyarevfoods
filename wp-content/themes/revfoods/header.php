@@ -23,7 +23,7 @@
         }
         ?>
         <meta property="og:title" content="Revolution Foods build your own meal kits!" />
-        <meta property="og:url" content="http://revfoods.luxcerclients.com/in-stores/?prd=<?php echo $s_lug; ?>" />
+        <meta property="og:url" content="http://www.revfoods.com/in-stores/?prd=<?php echo $s_lug; ?>" />
         <meta property="og:image" content="<?php echo $fb_img; ?>" />
         <meta property="og:description" content="<?php echo $fb_des; ?>" />
 
