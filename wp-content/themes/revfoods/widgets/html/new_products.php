@@ -19,14 +19,16 @@
         color: <?php echo $instance['headline_font_color'] ?>;
     }
 </style>
-<div id="<?php echo $instance['show_on'] ?>" class="newprdinstore jstore">
-   <!--<h1><span><?php echo $instance['headline'] ?></span></h1>-->
-</div>
+<a href="<?php echo $instance['link'] ?>" <?php if ($instance['link_target'] == 'new_window') echo 'target="_blank"' ?>>
+    <div id="<?php echo $instance['show_on'] ?>" class="newprdinstore jstore">
+       <!--<h1><span><?php echo $instance['headline'] ?></span></h1>-->
+    </div>
+</a>
 <div class="clear"></div>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                var w =  jQuery(window).width();
-                var h = w*552/1024;
-                    jQuery('.newprdinstore.jstore').css('height', h);
-            })
-        </script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        var w =  jQuery(window).width();
+        var h = w*552/1024;
+        jQuery('.newprdinstore.jstore').css('height', h);
+    })
+</script>
